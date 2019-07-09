@@ -1,0 +1,29 @@
+#event-grid {
+	margin: auto;
+	display: grid;
+	grid-template-columns: auto auto;
+	padding-bottom: 2vh;
+}
+
+.events {
+	text-decoration: none;
+	margin: auto;
+}
+
+.home {
+	color: white;
+	width: 100%;
+	height: 100vh;
+	overflow: auto;
+	background: black;
+}
+
+/* mobile devices */
+
+@media only screen and (max-width: 480px) {
+	#event-grid {
+		display: flex;
+		flex-direction: column;
+		padding-bottom: 0vh;
+	}
+}
