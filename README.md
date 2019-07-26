@@ -1,5 +1,6 @@
 # Excel 2019 Website
-
+*DO NOT PUSH TO MASTER*
+*CREATE BRANCH AND PUSH TO BRANCH, SEND MERGE REQUEST*
 Start dev server
 ```bash
 npm start
