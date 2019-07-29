@@ -1,0 +1,11 @@
+.header {
+    width: 100vw;
+}
+
+.title {
+    color: aliceblue;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 3rem;
+}

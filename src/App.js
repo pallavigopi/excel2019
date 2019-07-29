@@ -10,6 +10,9 @@ const Home = asyncComponent(HomeImport)
 const TestPageImport = () => import('pages/sample-component')
 const TestPage = asyncComponent(TestPageImport)
 
+const EventsImport = () => import('pages/events')
+const Events = asyncComponent(EventsImport)
+
 export default class App extends React.Component {
     render() {
         return(
@@ -17,6 +20,7 @@ export default class App extends React.Component {
                 <Switch>
                     <Route path="/home" component={Home} />
                     <Route path="/test" component={TestPage} />
+                    <Route path="/events" component={Events} />
                     <Route exact path="/" component={Home} />
                 </Switch>
             </div>
