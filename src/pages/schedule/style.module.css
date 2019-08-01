@@ -1,0 +1,33 @@
+.schedule-container {
+    margin: 30px auto;
+    background-color: white;
+    width: 70%;
+}
+
+.schedule-header--container {
+    width: 100%;
+}
+
+.schedule-title {
+    margin: 30px auto;
+    text-align: center;
+}
+
+.schedule-filter--btn {
+    position: absolute;
+    right: 16%;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.schedule-filter--btn:hover {
+    color: red;
+}
+
+.schedule-tabs--container {
+    width: 100%;
+}
+
+.schedule-noevent--container {
+    
+}
