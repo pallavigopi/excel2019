@@ -22,16 +22,7 @@ const ScheduleEventCard = (props) => {
 
     return(
         <div className={styles["schedule-event--container"]}>
-            
-            <div className={styles["event-image"]}><img src={props.data.img} /></div>
-            <div className={styles["event-desc"]}>
-                <span>{props.data.name}</span>
-                <div className={styles["event-detail"]}>
-                  <span>{props.data.venue}</span>
-                  <span>{props.data.time}</span>
-                </div>
-            </div>
-            <div className={styles["event-date"]}><span>{props.data.date}</span></div>              
+            {props.data}
         </div>
     )
 }
