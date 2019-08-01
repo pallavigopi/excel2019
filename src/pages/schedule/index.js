@@ -54,7 +54,20 @@ export default class Schedule extends React.Component {
         
         this.state = {
             events: [
-                //add your test events here
+                {
+                    name: "Event One Name",
+                    venue: "Event One Venue",
+                    date: "1st Oct ",
+                    time: "10:00am - 12:00am",
+                    img: "../../img/ibetologo.png"
+                },
+                {
+                    name: "Event One Name",
+                    venue: "Event One Venue",
+                    date: "1st Oct ",
+                    time: "10:00am - 12:00am",
+                    img: "../../img/ibetologo.png"
+                }
             ],
             showFilterPopup: false,
             days: [1,2,3],
@@ -80,6 +93,7 @@ export default class Schedule extends React.Component {
 
     render() {
         return(
+            <div className={styles["schedule"]}>
             <div className={styles["schedule-container"]}>
                 <div className={styles["schedule-filter--btn"]} onClick={this.showFilterPopup}>
                     Filter
@@ -116,6 +130,7 @@ export default class Schedule extends React.Component {
                     }
                 </div>
             </div>
+        </div>    
         )
     }
 }
