@@ -1,29 +1,32 @@
 .event-card {
     position: relative;
-    height: 16rem;
-    width: 24rem;
-    margin: auto auto;
+    width: 25rem;
+    margin: 0.3rem auto;
     border-radius: 4px;
     color: white;
     z-index: 0;
     display: flex;
     flex-direction: column;
-    background-color: #424242;
-    padding: 1em;
-    box-shadow: 0 8px 20px -6px black;
+    background-color: #dbd8e3;
+    box-shadow: 0 8px 20px -1px black;
     font-family: 'Montserrat', sans-serif;
     text-decoration: none;
 }
 
 .event {
+    background-color: #048a68;
     text-decoration: none;
+    height: 6rem;
+    padding: 1rem;
 }
 
 .event-logo {
+    padding: 0.5rem;
+    height: 9rem;
     margin: auto auto;
 }
 
-.event-name{
+.event-name {
     margin-bottom: 0.5rem;
     text-decoration: none;
 }
@@ -36,6 +39,39 @@
     max-height: 9.5rem;
 }
 
-.learn-more {
+.learnmore-container {
     display: none;
+}
+
+@media screen and (max-width: 800px) {
+    .event-card {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .event-card {
+        width: 100vw;
+        border-radius: 0px;
+    }
+
+    .event-description {
+        
+    }
+
+    .learnmore-container{
+        display: block;
+        background-color: #048a68;
+        padding: 1rem;
+    }
+
+    .learn-more {
+        margin: auto auto;
+        width: 90vw;
+        padding: 0.7rem;
+        background-color: #048a68;
+        color: white;
+        border: 2px solid white;
+        text-decoration: none;
+    }
 }

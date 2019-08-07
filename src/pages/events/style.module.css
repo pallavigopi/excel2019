@@ -1,15 +1,13 @@
 html,body{
     width: 100%;
-    background-color: #353535
+    background-color: #212121;
 }
 
 #event-grid {
-    padding: 2rem;
-	margin: auto auto;
+    padding: 1rem 3rem;
     display: grid;
-    grid-auto-columns: 1fr;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    grid-gap: 1.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr));
+    grid-gap: 1em;
 }
 
 .header {
@@ -22,4 +20,16 @@ html,body{
     text-align: center;
     margin-top: 2rem;
     font-size: 3rem;
+}
+
+@media screen and (max-width: 600px) {
+    #event-grid {
+        grid-template-columns: auto;
+        padding: 0rem;
+        grid-gap: 1px;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
 }
