@@ -79,7 +79,7 @@ const ScheduleFilter = (props) => {
                                 props.data.time.map(val => {
                                     return(
                                         <label value={val} className={styles["filter-time-checkbox"]}>
-                                            <Checkbox
+                                            <Checkbox 
                                                 checked={props.currentTime.includes(val)}
                                                 value={val}
                                                 color="primary"

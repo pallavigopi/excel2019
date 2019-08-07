@@ -168,7 +168,7 @@ class Schedule extends React.Component {
                             {
                                 this.state.days.map((val) => {
                                     return (
-                                        <Tab style={{fontSize: 17, fontWeight: 600}} value={val} label={`Day ${val}`} {...{id:`simple-tab-${val}`, 'aria-controls': `simple-tabpanel-${val}`}} />
+                                        <Tab style={{fontSize: 16, fontWeight: 600}} value={val} label={`Day ${val}`} {...{id:`simple-tab-${val}`, 'aria-controls': `simple-tabpanel-${val}`}} />
                                     )
                                 })
                             }
