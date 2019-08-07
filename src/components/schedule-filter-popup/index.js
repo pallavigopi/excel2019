@@ -2,8 +2,16 @@ import React from 'react'
 
 import styles from './style.module.css'
 import Slide from '@material-ui/core/Slide'
-import { Dialog, DialogTitle, DialogContent, Checkbox } from '@material-ui/core'
-import Radio from '@material-ui/core/Radio'
+import { 
+    Dialog, 
+    DialogTitle, 
+    DialogContent, 
+    Checkbox, 
+    DialogActions,
+    Radio,
+    Button
+} 
+from '@material-ui/core'
 
 // modify the transition for the popup here
 const Transition = (props) => {
@@ -85,6 +93,9 @@ const ScheduleFilter = (props) => {
                         </div>
                     </div>
                 </DialogContent>
+                <DialogActions>
+                    <Button onClick={props.resetFilter} style={{color: "#ff4500"}}>RESET</Button>
+                </DialogActions>
             </Dialog>
     )
 }

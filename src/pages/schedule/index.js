@@ -56,30 +56,14 @@ class Schedule extends React.Component {
         super(props)
         
         this.state = {
-            events: [
-                {
-                    name: "Event One Name",
-                    venue: "Event One Venue",
-                    date: "1st Oct",
-                    time: "10:00am - 12:00am",
-                    img: "../../img/ibetologo.png",
-                    day: 1,
-                    daytime: "morning",
-                },
-                {
-                    name: "Event One Name",
-                    venue: "Event One Venue",
-                    date: "1st Oct",
-                    time: "10:00am - 12:00am",
-                    img: "../../img/ibetologo.png",
-                    day: 2,
-                    daytime: "evening"
-                    
-                }
-            ],
+            events: [],
             filter: {
                 types: ["computer-science", "electronics", "all", "electrical","exhinitions", "robotics","workshops", "talks"],
                 time: ["morning", "afternoon", "evening"],
+                default : {
+                    type: "computer-science",
+                    time: ["morning", "afternoon", "evening"]
+                }
             },
             showFilterPopup: false,
             days: [1,2,3],
@@ -90,10 +74,36 @@ class Schedule extends React.Component {
         }
 
         this.changeDay = this.changeDay.bind(this)
+        this.totalEvents = [
+            {
+                name: "Event One Name",
+                venue: "Event One Venue",
+                date: "1st Oct",
+                time: "10:00am - 12:00am",
+                img: "../../img/ibetologo.png",
+                day: 1,
+                category: "computer-science",
+                daytime: "morning",
+            },
+            {
+                name: "Event One Name",
+                venue: "Event One Venue",
+                date: "1st Oct",
+                time: "10:00am - 12:00am",
+                img: "../../img/ibetologo.png",
+                category: "electrical",
+                day: 2,
+                daytime: "evening"
+                
+            }
+        ]
     }
 
     componentWillMount() {
         // get data from cms and update the state
+        this.setState({
+            events: this.totalEvents.filter(event => event.day === this.state.currentDay)
+        })
     }
 
     showFilterPopup = () => {
@@ -105,7 +115,10 @@ class Schedule extends React.Component {
     }
 
     resetFilter = () => {
-
+        this.setState({
+            currentCategory: this.state.filter.default.type,
+            currentTime: this.state.filter.default.time
+        })
     }
 
     modifyFilters = (e, filter) => {
@@ -135,6 +148,7 @@ class Schedule extends React.Component {
         if(val>=1 && val<=3)
             this.setState({
                 currentDay: val,
+                events: this.totalEvents.filter(event => event.day === val)
             })
     }
 
@@ -165,9 +179,19 @@ class Schedule extends React.Component {
                     {
                         this.state.events.length ? (
                             this.state.events.map((data, idx) => {
-                                if(data.day === this.state.currentDay) {
+                                console.log(data)
+                                if(this.state.currentCategory === "all") 
                                     return <ScheduleEventCard data={data} id={idx} />   
-                                }
+
+                                if(data.category === this.state.currentCategory && this.state.currentTime.includes(data.daytime)) 
+                                    return <ScheduleEventCard data={data} id={idx} />  
+
+                                return (
+                                    <div className={styles["schedule-noevent--container"]}>
+                                        {/* IF THERE ARE NO EVENTS TO DISPLAY */}
+                                        No Events To Display
+                                    </div>
+                                )
                             })
                         ) : (
                             <div className={styles["schedule-noevent--container"]}>
