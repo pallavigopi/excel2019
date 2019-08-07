@@ -1,0 +1,89 @@
+.filter-container {
+    margin-top: -46vh;
+}
+
+.filter-title--container {
+    background-color: rgba(0, 0, 0, 1);
+    text-align: center;
+    width: 50vw;
+    padding: 10px;
+}
+
+.filter-title {
+    color: orangered;
+    font-size: 30px;
+}
+
+.filter-close-btn {
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    font-size: 30px;
+    color: orangered;
+}
+
+.filter-content--container {
+    padding: 10px;
+    width:50vw;
+}
+
+.filter-type--container {
+    margin: 30px 0px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(40px, auto));
+    grid-template-rows: repeat(2, minmax(30px, auto));
+    grid-row-gap: 20px;
+}
+
+.filter-type-checkbox {
+    cursor: pointer;
+}
+
+.filter-time--container {
+    width: 100%;
+    margin: 20px 10px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.filter-time-checkbox {
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+@media only screen and (max-width: 660px) {
+    .filter-title--container {
+        width: 65vw;
+    }
+
+    .filter-content--container {
+        width: 65vw;
+    }
+
+    .filter-container {
+        margin-top: -36vh;
+    }
+}
+
+@media only screen and (max-width: 1248px) {
+    .filter-type--container {
+        grid-template-columns: repeat(3, minmax(90px, auto));
+        grid-template-rows: repeat(autofill, minmax(50px, auto));
+    }    
+}
+
+@media only screen and (max-width: 768px) {
+    .filter-type--container {
+        grid-template-columns: repeat(2, minmax(120px, auto));
+        grid-template-rows: repeat(autofill, minmax(100px, auto));
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .filter-container {
+        margin-top: -30vh;
+    }
+
+}

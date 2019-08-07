@@ -8,6 +8,10 @@ import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
 
 import styles from './style.module.css'
+import { read } from 'fs';
+
+const ScheduleFilterImport = () => import('components/schedule-filter-popup')
+const ScheduleFilter = asyncComponent(ScheduleFilterImport)
 
 const ScheduleEventCardImport = () => import('components/schedule-event-card')
 const ScheduleEventCard = asyncComponent(ScheduleEventCardImport)
@@ -46,8 +50,7 @@ dont add data anywhere inside the component everything will be provided dynamica
 
 */
 
-
-export default class Schedule extends React.Component {
+class Schedule extends React.Component {
 
     constructor(props) {
         super(props)
@@ -57,24 +60,40 @@ export default class Schedule extends React.Component {
                 {
                     name: "Event One Name",
                     venue: "Event One Venue",
-                    date: "1st Oct ",
+                    date: "1st Oct",
                     time: "10:00am - 12:00am",
-                    img: "../../img/ibetologo.png"
+                    img: "../../img/ibetologo.png",
+                    day: 1,
+                    daytime: "morning",
                 },
                 {
                     name: "Event One Name",
                     venue: "Event One Venue",
-                    date: "1st Oct ",
+                    date: "1st Oct",
                     time: "10:00am - 12:00am",
-                    img: "../../img/ibetologo.png"
+                    img: "../../img/ibetologo.png",
+                    day: 2,
+                    daytime: "evening"
+                    
                 }
             ],
+            filter: {
+                types: ["computer-science", "electronics", "all", "electrical","exhinitions", "robotics","workshops", "talks"],
+                time: ["morning", "afternoon", "evening"],
+            },
             showFilterPopup: false,
             days: [1,2,3],
-            day: 1,
+            currentDay: 1,
+            currentCategory: 'computer-science',
+            currentTime: ["morning", "afternoon", "evening"]
+
         }
 
         this.changeDay = this.changeDay.bind(this)
+    }
+
+    componentWillMount() {
+        // get data from cms and update the state
     }
 
     showFilterPopup = () => {
@@ -85,10 +104,38 @@ export default class Schedule extends React.Component {
         this.setState({showFilterPopup: false})
     }
 
-    changeDay(e, val) {
-        console.log(val)
+    resetFilter = () => {
+
+    }
+
+    modifyFilters = (e, filter) => {
+
+
+        if(filter === "type") {
+            console.log('method called')
+            this.setState({
+                currentCategory: e.target.value
+            })
+        }
+        else {
+            if(!e.target.checked) {
+                this.setState({
+                    currentTime: this.state.currentTime.filter(a => a !== e.target.value)
+                })
+            }
+            else {
+                this.setState({
+                    currentTime: [...this.state.currentTime, e.target.value]
+                })
+            }
+        }
+    }
+
+    changeDay = (e, val) => {
         if(val>=1 && val<=3)
-            this.setState({day: val})
+            this.setState({
+                currentDay: val,
+            })
     }
 
     render() {
@@ -103,11 +150,11 @@ export default class Schedule extends React.Component {
                         Schedule
                     </div>
                     <div className={styles["schedule-tabs--container"]}>
-                        <Tabs value={this.state.day} variant="fullWidth" onChange={this.changeDay} aria-label="schedule page tabs">
+                        <Tabs value={this.state.currentDay} variant="fullWidth" onChange={this.changeDay} aria-label="schedule page tabs">
                             {
                                 this.state.days.map((val) => {
                                     return (
-                                        <Tab value={val} label={`Day ${val}`} {...{id:`simple-tab-${val}`, 'aria-controls': `simple-tabpanel-${val}`}} />
+                                        <Tab style={{fontSize: 17, fontWeight: 600}} value={val} label={`Day ${val}`} {...{id:`simple-tab-${val}`, 'aria-controls': `simple-tabpanel-${val}`}} />
                                     )
                                 })
                             }
@@ -118,8 +165,9 @@ export default class Schedule extends React.Component {
                     {
                         this.state.events.length ? (
                             this.state.events.map((data, idx) => {
-                                console.log('data', data)
-                                return <ScheduleEventCard data={data} id={idx} />
+                                if(data.day === this.state.currentDay) {
+                                    return <ScheduleEventCard data={data} id={idx} />   
+                                }
                             })
                         ) : (
                             <div className={styles["schedule-noevent--container"]}>
@@ -130,7 +178,18 @@ export default class Schedule extends React.Component {
                     }
                 </div>
             </div>
+            <ScheduleFilter 
+                isOpen={this.state.showFilterPopup} 
+                data={this.state.filter} 
+                handleClose={this.closeFilterPopup}
+                handleReset={this.resetFilter}
+                updateFilter={this.modifyFilters}
+                currentCategory={this.state.currentCategory}
+                currentTime={this.state.currentTime}    
+            />
         </div>    
         )
     }
 }
+
+export default Schedule
