@@ -9,6 +9,7 @@ import Tab from '@material-ui/core/Tab'
 
 import styles from './style.module.css'
 import { read } from 'fs';
+import testImage from '../../img/ibetologo.png'
 
 const ScheduleFilterImport = () => import('components/schedule-filter-popup')
 const ScheduleFilter = asyncComponent(ScheduleFilterImport)
@@ -58,20 +59,20 @@ class Schedule extends React.Component {
         this.state = {
             events: [],
             filter: {
-                types: ["computer-science", "electronics", "all", "electrical","exhinitions", "robotics","workshops", "talks"],
+                types: [ "all", "computer-science", "electronics", "electrical","exhinitions", "robotics","workshops", "talks"],
                 time: ["morning", "afternoon", "evening"],
                 default : {
-                    type: "computer-science",
+                    type: "all",
                     time: ["morning", "afternoon", "evening"]
                 }
             },
             showFilterPopup: false,
             days: [1,2,3],
             currentDay: 1,
-            currentCategory: 'computer-science',
+            currentCategory: 'all',
             currentTime: ["morning", "afternoon", "evening"]
 
-        }
+        }   
 
         this.changeDay = this.changeDay.bind(this)
         this.totalEvents = [
@@ -80,7 +81,7 @@ class Schedule extends React.Component {
                 venue: "Event One Venue",
                 date: "1st Oct",
                 time: "10:00am - 12:00am",
-                img: "../../img/ibetologo.png",
+                img: testImage,
                 day: 1,
                 category: "computer-science",
                 daytime: "morning",
@@ -90,7 +91,97 @@ class Schedule extends React.Component {
                 venue: "Event One Venue",
                 date: "1st Oct",
                 time: "10:00am - 12:00am",
-                img: "../../img/ibetologo.png",
+                img: testImage,
+                day: 1,
+                category: "computer-science",
+                daytime: "morning",
+            },
+            {
+                name: "Event One Name",
+                venue: "Event One Venue",
+                date: "1st Oct",
+                time: "10:00am - 12:00am",
+                img: testImage,
+                day: 1,
+                category: "computer-science",
+                daytime: "morning",
+            },
+            {
+                name: "Event One Name",
+                venue: "Event One Venue",
+                date: "1st Oct",
+                time: "10:00am - 12:00am",
+                img: testImage,
+                day: 1,
+                category: "computer-science",
+                daytime: "morning",
+            },
+            {
+                name: "Event One Name",
+                venue: "Event One Venue",
+                date: "1st Oct",
+                time: "10:00am - 12:00am",
+                img: testImage,
+                day: 1,
+                category: "computer-science",
+                daytime: "morning",
+            },
+            {
+                name: "Event One Name",
+                venue: "Event One Venue",
+                date: "1st Oct",
+                time: "10:00am - 12:00am",
+                img: testImage,
+                day: 1,
+                category: "computer-science",
+                daytime: "morning",
+            },
+            {
+                name: "Event One Name",
+                venue: "Event One Venue",
+                date: "1st Oct",
+                time: "10:00am - 12:00am",
+                img: testImage,
+                day: 1,
+                category: "computer-science",
+                daytime: "morning",
+            },
+            {
+                name: "Event One Name",
+                venue: "Event One Venue",
+                date: "1st Oct",
+                time: "10:00am - 12:00am",
+                img: testImage,
+                day: 1,
+                category: "computer-science",
+                daytime: "morning",
+            },
+            {
+                name: "Event One Name",
+                venue: "Event One Venue",
+                date: "1st Oct",
+                time: "10:00am - 12:00am",
+                img: testImage,
+                day: 1,
+                category: "computer-science",
+                daytime: "morning",
+            },
+            {
+                name: "Event One Name",
+                venue: "Event One Venue",
+                date: "1st Oct",
+                time: "10:00am - 12:00am",
+                img: testImage,
+                day: 1,
+                category: "computer-science",
+                daytime: "morning",
+            },
+            {
+                name: "Event One Name",
+                venue: "Event One Venue",
+                date: "1st Oct",
+                time: "10:00am - 12:00am",
+                img: testImage,
                 category: "electrical",
                 day: 2,
                 daytime: "evening"
@@ -114,7 +205,7 @@ class Schedule extends React.Component {
         this.setState({showFilterPopup: false})
     }
 
-    resetFilter = () => {
+    resetFilter = (e) => {
         this.setState({
             currentCategory: this.state.filter.default.type,
             currentTime: this.state.filter.default.time
@@ -125,7 +216,6 @@ class Schedule extends React.Component {
 
 
         if(filter === "type") {
-            console.log('method called')
             this.setState({
                 currentCategory: e.target.value
             })
@@ -153,6 +243,9 @@ class Schedule extends React.Component {
     }
 
     render() {
+
+        let noEventFlag = 0
+
         return(
             <div className={styles["schedule"]}>
             <div className={styles["schedule-container"]}>
@@ -179,19 +272,20 @@ class Schedule extends React.Component {
                     {
                         this.state.events.length ? (
                             this.state.events.map((data, idx) => {
-                                console.log(data)
                                 if(this.state.currentCategory === "all") 
                                     return <ScheduleEventCard data={data} id={idx} />   
 
                                 if(data.category === this.state.currentCategory && this.state.currentTime.includes(data.daytime)) 
                                     return <ScheduleEventCard data={data} id={idx} />  
 
-                                return (
-                                    <div className={styles["schedule-noevent--container"]}>
-                                        {/* IF THERE ARE NO EVENTS TO DISPLAY */}
-                                        No Events To Display
-                                    </div>
-                                )
+                                noEventFlag++
+                                if(noEventFlag === 1)
+                                    return (
+                                        <div className={styles["schedule-noevent--container"]}>
+                                            {/* IF THERE ARE NO EVENTS TO DISPLAY */}
+                                            No Events To Display
+                                        </div>
+                                    )
                             })
                         ) : (
                             <div className={styles["schedule-noevent--container"]}>

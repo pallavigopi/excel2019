@@ -38,7 +38,7 @@ const ScheduleFilter = (props) => {
                 aria-labelledby="alert-dialog-slide-title"
                 aria-describedby="alert-dialog-slide-description"
                 maxWidth='100vw'
-                className={styles["filter-container"]}
+                // className={styles["filter-container"]}
             >
                 <DialogTitle style={{padding: 0}}>
                     <div className={styles["filter-title--container"]}>
@@ -94,7 +94,7 @@ const ScheduleFilter = (props) => {
                     </div>
                 </DialogContent>
                 <DialogActions>
-                    <Button onClick={props.resetFilter} style={{color: "#ff4500"}}>RESET</Button>
+                    <Button onClick={props.handleReset} style={{color: "#ff4500"}}>RESET</Button>
                 </DialogActions>
             </Dialog>
     )
