@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+.event-card {
+    position: relative;
+    height: 25vw;
+    width: 25vw;
+    color: black;
+    z-index: 0;
+    display: flex;    
+    box-shadow: 0 8px 20px -6px black;
+}
+.event-image {
+    position: relative;
+    height: 20vw;
+    width: 20vw;
+    color: black;
+    display: flex;
+    background-color: orange; 
+    padding: 2.5vw;
+}
+.event-in {
+    margin-top: 17vw;
+    position: relative;
+    height: 4vw;
+    width: 20vw;
+    color: white;
+    z-index: 0;
+    display: flex;    
+    padding: 3vw;
+}
+.event-card:hover {
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+    transform: translateY(-7px);
+    box-shadow: 0 14px 30px -6px black;
+}
+.event {
+    width: 35vw;
+    display: grid;
+    grid-template-rows: 30% 60%;
+
+}
+.event .contact-info{
+    font-size: 0.9em;
+    font-weight: bold;
+}
+a{
+    text-decoration: none;
+    color:white;
+}
+.event .contact-info img{
+    height: 14px;
+    width: auto;
+    border-radius: initial;
+}
+.event .descp{
+    font-size: 1.5em;
+    margin-top: 1.5vw;
+    font-weight: bolder;
+}
+.event-name {
+    font-size: 2.2vw;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    margin-top: -2vw;
+    text-align: center;
+    background: linear-gradient(orange,orangered);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.event-description {
+    font-size: 1.7vw;
+    margin-top: -1.5vw;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    
+
+}
+
+.event-email-img{
+    height: 14px;
+    width: auto;
+    border-radius: initial;
+    display: inline-block;
+    padding: 0.5vw;
+    margin-top: -10vw;
+    margin-left: -3vw;
+}
+.event-email-id{
+    font-size: 1.7vw;
+    font-weight: bold;
+    display: inline-block;
+    font-weight: 25;
+    margin-top: -10vw;    
+}
+.event-tele{
+    text-decoration: none;
+    color: inherit;
+    transition: 0.5s;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5vw;
+    margin-top: 0vw;
+    font-weight: 25;
+    
+}
+.blue-square-container {
+    text-align: center;
+}
+.blue-square {
+
+    display: inline-block;
+
+}
+/* logos */
+
+.logos {
+    max-width: 19vw;
+    height: 18vw;
+    -ms-transform: rotate(358.5deg);
+    -ms-transform-origin: 20% 40%;
+    -webkit-transform: rotate(358deg);
+    -webkit-transform-origin: 20% 40%;
+    transform: rotate(358.5deg);
+    transform-origin: 20% 40%;
+    margin-left: 1vw;
+    margin-top: 1vw;
+}
+
+/* mobiles devices */
+
+@media only screen and (max-width: 499px) {
+    .event-card {
+        height: 80vw;
+        width: 100vw;
+        margin-left: 18vw;
+        margin-top: 10vw;
+        display: flex;    
+    }
+    .event-image {
+        height: 55vw;
+        width: 55vw;
+        color: black; 
+        padding: 2.5vw;
+    }
+    .event-in {
+        margin-top: 40vw;
+        position: relative;
+        height: 5vw;
+        width: 100vw;
+        display: flex;    
+        padding: 3vw;
+        margin-left: 10vw;
+    }
+    .logos {
+        max-width: 48vw;
+        height: 48vw;
+        margin-top: 3.8vw;
+        margin-left: 4vw;
+    }
+    .event-name {
+        font-size: 5vw;
+        margin-left: -12vw;
+        margin-top: -5vw;
+    }
+    .event-description {
+        font-size: 5vw;
+        margin-top: -1vw;
+        margin-left: -12vw;
+        font-weight: 100;
+    }
+    .event-email-img{
+        height: 14px;
+        width: auto;
+        border-radius: initial;
+        display: inline-block;
+        padding: 0.5vw;
+        margin-left: -12vw;
+        margin-top: -5vw;
+    }
+    .event-email-id{
+        font-size: 5vw;
+        font-weight: bold;
+        display: inline-block;
+        margin-left: 1vw;
+        font-weight: 75;
+        margin-top: 3.5vw;
+    }
+    .event-tele{
+        margin-top: 0vw;
+        margin-left: -12vw;
+        font-size: 4.5vw;
+        font-weight: 100;
+    }
+
+    
+}
+@media only screen and (min-width: 500px) and (max-width:699px) {
+    .event-card {
+        height: 20vw;
+        width: 20vw;
+        margin-left: -20vw;
+        margin-top: 5vw;
+        display: flex;
+        padding-bottom: 20vw;    
+    }
+    .event-image {
+        position: relative;
+        height: 30vw;
+        width: 30vw;
+        display: flex;  
+        padding: 2.5vw;
+        margin-left: 2vw;
+    }
+    .event-in {
+        margin-top: 30vw;
+        height: 5vw;
+        width: 100vw;
+        display: flex;    
+        padding: 3vw;
+        margin-left: -3vw;
+    }
+    .logos {
+        max-width: 30vw;
+        height: 30vw;
+    }
+    .event-name {
+        font-size: 3.5vw;
+        margin-top: -2vw;
+        margin-left: 1vw;
+    }
+    .event-description {
+        font-size: 3.1vw;
+        margin-top: 1vw;
+        font-weight: 100;
+        margin-left: 1vw;
+        font-size: 3.1vw;
+    }
+    .event-email-img{
+        height: 14px;
+        width: auto;
+        border-radius: initial;
+        display: inline-block;
+        padding: 0.8vw;
+        margin-left: -4.4vw;
+        margin-top: 2.8vw;
+    }
+    .event-email-id{
+        font-size: 3.1vw;
+        font-weight: bold;
+        display: inline-block;
+        font-weight: 75;
+    }
+    .event-tele{
+        text-decoration: none;
+        color: inherit;
+        transition: 0.5s;
+        margin-left: -2vw;
+        font-size: 3.1vw;
+        font-weight: 100;
+    }
+
+}
+@media only screen and (min-width: 700px) and (max-width:1300px) {
+    .event-name{
+        font-size: 2.5vw;
+    }
+    .event-description{
+        font-size: 1.75vw;
+    }
+    .event-email-id{
+        font-size: 2vw;
+    }
+    .event-tele{
+        font-size: 1.75vw;
+    }
+    
+}
+
