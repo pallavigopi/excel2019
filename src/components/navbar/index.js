@@ -22,9 +22,9 @@ export default class Nav extends React.Component {
         let three = document.getElementById("navContent")
 
         if(this.state.toggle) {
-            one.style.transform = "translatey(10px) rotateZ(45deg)"
+            one.style.transform = "translatey(2.5px) rotateZ(45deg)"
             one.style.transition = "0.2s"
-            two.style.transform = "translatey(-10px) rotateZ(-45deg)"
+            two.style.transform = "translatey(-2.5px) rotateZ(-45deg)"
             two.style.transition = "0.2s"
             three.style.transform = "translatex(100%)"
             three.style.transitionTimingFunction = "ease"
@@ -65,6 +65,8 @@ export default class Nav extends React.Component {
                         <li className={styles["nav-link"]}><Link to="/home"><span className={styles["nav-link--text"]}>Home</span></Link></li>
                         <li className={styles["nav-link"]}><Link to="/schedule"><span className={styles["nav-link--text"]}>Schedule</span></Link></li>
                         <li className={styles["nav-link"]}><Link to="/home"><span className={styles["nav-link--text"]}>Home</span></Link></li>
+                        <li className={styles["nav-link"]}><Link to="/home"><span className={styles["nav-link--text"]}>Schedule</span></Link></li>
+                        <li className={styles["nav-link"]}><Link to="/home"><span className={styles["nav-link--text"]}>Schedule</span></Link></li>
                         <li className={styles["nav-link"]}><Link to="/home"><span className={styles["nav-link--text"]}>Schedule</span></Link></li>
                     </ul>
                 </div>
