@@ -9,6 +9,9 @@ const Schedule = asyncComponent(ScheduleImport)
 const HomeImport = () => import('pages/home')
 const Home = asyncComponent(HomeImport)
 
+const NavImport = () => import('./components/navbar')
+const Nav = asyncComponent(NavImport)
+
 
 const TestPageImport = () => import('pages/sample-component')
 const TestPage = asyncComponent(TestPageImport)
@@ -17,6 +20,7 @@ export default class App extends React.Component {
     render() {
         return(
             <div className="pageContainer">
+                <Nav />
                 <Switch>
                     <Route path="/home" component={Home} />
                     <Route path="/test" component={TestPage} />

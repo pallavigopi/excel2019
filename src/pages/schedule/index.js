@@ -203,6 +203,7 @@ class Schedule extends React.Component {
 
     closeFilterPopup = () => {
         this.setState({showFilterPopup: false})
+        document.getElementById("scheduleFilterContent").scrollTop = 0;
     }
 
     resetFilter = (e) => {
@@ -213,7 +214,6 @@ class Schedule extends React.Component {
     }
 
     modifyFilters = (e, filter) => {
-
 
         if(filter === "type") {
             this.setState({
