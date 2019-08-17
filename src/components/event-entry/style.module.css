@@ -9,7 +9,7 @@
     margin: 0.3rem auto;
     border-radius: 4px;
     z-index: 0;
-    display: flex;
+    display: flex, block;
     flex-direction: column;
     font-family: 'Montserrat', sans-serif;
 }
