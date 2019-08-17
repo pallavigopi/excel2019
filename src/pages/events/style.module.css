@@ -3,30 +3,34 @@ html,body{
     background-color: #1b1d1e;
 }
 
+body {
+    transition: 2s ease;
+}
+
 #event-grid {
     padding: 1rem 3rem;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr));
-    grid-gap: 1em;
+    grid-gap: 2rem;
 }
 
 .header {
-    margin-bottom: 3rem;
+    text-align: center;
+    padding: 4rem;
 }
 
 .title {
     color: aliceblue;
     font-family: 'Montserrat', sans-serif;
-    text-align: center;
-    margin-top: 2rem;
     font-size: 3rem;
+    font-weight: 700;
 }
 
 @media screen and (max-width: 600px) {
     #event-grid {
         grid-template-columns: auto;
         padding: 0rem;
-        grid-gap: 1px;
+        grid-gap: 3rem;
     }
 
     .title {

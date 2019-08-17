@@ -8,7 +8,7 @@ export default class EventEntry extends React.Component {
         return (
             <div className={styles["event-card"]}>
                 <div className={styles["event-logo"]}>
-                    <a target="_blank"><img className={styles["logos"]} src={this.props.details.imgsrc} /></a>
+                    <div target="_blank" className={styles["logo-container"]}><img className={styles["logos"]} src={this.props.details.imgsrc} /></div>
                 </div>
                 <div className={styles["event"]}>
                     <div className={styles["event-name"]}>
