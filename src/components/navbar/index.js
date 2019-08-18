@@ -2,6 +2,10 @@ import React from 'react'
 import styles from './style.module.css'
 import { Link } from 'react-router-dom'
 
+import facebookLogo from '../../img/facebook-logo.png'
+import youtubeLogo from '../../img/youtube-logo.png'
+import playstoreLogo from '../../img/playstore-logo.png'
+import instagramLogo from '../../img/instagram-logo.png'
 
 export default class Nav extends React.Component {
 
@@ -29,6 +33,7 @@ export default class Nav extends React.Component {
             three.style.transform = "translatex(100%)"
             three.style.transitionTimingFunction = "ease"
             three.style.transition = "0.5s"
+            document.body.style.overflow = 'hidden'
 
             this.setState({
                 toggle : false
@@ -43,6 +48,7 @@ export default class Nav extends React.Component {
             three.style.transform = "translatex(-100%)"
             three.style.transitionTimingFunction = "ease"
             three.style.transition = "0.5s"
+            document.body.style.overflow = 'auto'
 
             this.setState({
                 toggle: true
@@ -62,13 +68,19 @@ export default class Nav extends React.Component {
                 <div id="navContent" className={styles["nav-content--container"]}>
                     <ul>
                         <li className={styles["nav-link--gap"]}></li>
-                        <li className={styles["nav-link"]}><Link to="/home"><span className={styles["nav-link--text"]}>Home</span></Link></li>
-                        <li className={styles["nav-link"]}><Link to="/schedule"><span className={styles["nav-link--text"]}>Schedule</span></Link></li>
-                        <li className={styles["nav-link"]}><Link to="/home"><span className={styles["nav-link--text"]}>Home</span></Link></li>
-                        <li className={styles["nav-link"]}><Link to="/home"><span className={styles["nav-link--text"]}>Schedule</span></Link></li>
-                        <li className={styles["nav-link"]}><Link to="/home"><span className={styles["nav-link--text"]}>Schedule</span></Link></li>
-                        <li className={styles["nav-link"]}><Link to="/home"><span className={styles["nav-link--text"]}>Schedule</span></Link></li>
+                        <li className={styles["nav-link"]}><Link to="/home"><span className={styles["nav-link--text"]} onClick={this.handleChange}>Home</span></Link></li>
+                        <li className={styles["nav-link"]}><Link to="/schedule"><span className={styles["nav-link--text"]} onClick={this.handleChange}>Schedule</span></Link></li>
+                        <li className={styles["nav-link"]}><Link to="/home"><span className={styles["nav-link--text"]} onClick={this.handleChange}>Home</span></Link></li>
+                        <li className={styles["nav-link"]}><Link to="/home"><span className={styles["nav-link--text"]} onClick={this.handleChange}>Schedule</span></Link></li>
+                        <li className={styles["nav-link"]}><Link to="/home"><span className={styles["nav-link--text"]} onClick={this.handleChange}>Schedule</span></Link></li>
+                        <li className={styles["nav-link"]}><Link to="/home"><span className={styles["nav-link--text"]} onClick={this.handleChange}>Schedule</span></Link></li>
                     </ul>
+                    <div className className={styles["nav-icons--container"]}>
+                        <span className={styles["nav-icon"]}><img className={styles["nav-icon-img"]} src={facebookLogo} /></span>
+                        <span className={styles["nav-icon"]}><img className={styles["nav-icon-img"]} src={instagramLogo} /></span>
+                        <span className={styles["nav-icon"]}><img className={styles["nav-icon-img"]} src={youtubeLogo} /></span>
+                        <span className={styles["nav-icon"]}><img className={styles["nav-icon-img"]} src={playstoreLogo} /></span>
+                    </div>
                 </div>
             </div>
         )
