@@ -25,6 +25,7 @@
 .filter-content--container {
     padding: 10px;
     width:50vw;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
 }
 
 .filter-type--container {
