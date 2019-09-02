@@ -33,7 +33,7 @@ export default class Home extends React.Component {
                     description: "A 24 hour hackathon which aims at using quick thinking to solve real-world problem statements in a competitive pressure environment. Coming Soon!"
                 }
             ]
-        }  
+        }
     }
 
     render() {
