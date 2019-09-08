@@ -16,6 +16,9 @@ const Nav = asyncComponent(NavImport)
 const TestPageImport = () => import('pages/sample-component')
 const TestPage = asyncComponent(TestPageImport)
 
+const CompetitionsImport = () => import('pages/competitions')
+const Competitions = asyncComponent(CompetitionsImport)
+
 export default class App extends React.Component {
     render() {
         return(
@@ -26,6 +29,7 @@ export default class App extends React.Component {
                     <Route path="/test" component={TestPage} />
                     <Route path="/schedule" component={Schedule} />
                     <Route exact path="/" component={Home} />
+                    <Route path="/competitions" component={Competitions} />
                 </Switch>
             </div>
         )

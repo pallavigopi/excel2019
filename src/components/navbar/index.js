@@ -74,7 +74,7 @@ export default class Nav extends React.Component {
                         <li className={styles["nav-link"]}><Link to="/home" style={{textDecoration:'none'}}><span className={styles["nav-link--text"]} onClick={this.handleChange}>Home</span></Link></li>
                         <li className={styles["nav-link"]}><Link to="/home" style={{textDecoration:'none'}}><span className={styles["nav-link--text"]} onClick={this.handleChange}>Schedule</span></Link></li>
                         <li className={styles["nav-link"]}><Link to="/home" style={{textDecoration:'none'}}><span className={styles["nav-link--text"]} onClick={this.handleChange}>Schedule</span></Link></li>
-                        <li className={styles["nav-link"]}><Link to="/home" style={{textDecoration:'none'}}><span className={styles["nav-link--text"]} onClick={this.handleChange}>Schedule</span></Link></li>
+                        <li className={styles["nav-link"]}><Link to="/competitions" style={{textDecoration:'none'}}><span className={styles["nav-link--text"]} onClick={this.handleChange}>Competitions</span></Link></li>
                     </ul>
                     <div className className={styles["nav-icons--container"]}>
                         <a href="https://www.facebook.com/excelmec/" className={styles["nav-icon"]}><img className={styles["nav-icon-img"]} src={facebookLogo} /></a>
