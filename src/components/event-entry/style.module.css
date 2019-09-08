@@ -1,41 +1,84 @@
-.event-card {
+body {
+    animation: slideup;
+    animation-duration: 1s;
+}
+
+@keyframes slideup {
+    from {
+        transform: translateY(40px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
+
+.event-card-left {
     color: white;
     background-color: #1f1f1f00;
     position: relative;
     margin: 0.3rem auto;
     border-radius: 8px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     font-family: 'Montserrat', sans-serif;
     transition: 0.3s ease;
+    padding: 1rem;
 }
 
-.event-card:hover {
+.event-card-right {
+    color: white;
+    background-color: #1f1f1f00;
+    position: relative;
+    margin: 0.3rem auto;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row-reverse;
+    font-family: 'Montserrat', sans-serif;
+    transition: 0.3s ease;
+    padding: 1rem;
+}
+
+.event-card-left:hover {
     background: #ffffff22;
+    padding: 1.5rem;
+}
+
+.event-card-right:hover {
+    background: #ffffff22;
+    padding: 1.5rem;
 }
 
 .event {
     height: 6rem;
     padding: 1rem;
-    margin-bottom: 1rem;
+    margin: auto;
 }
 
 .event-logo {
     background-color: white;
-    width: 14rem;
-    height: 11rem;
-    margin: 1rem auto 0rem auto;
+    margin: auto auto;
     border-radius: 12px;
 }
 
-.event-name {
+.event-card-left>.event>.event-name {
     margin-bottom: 0.1rem;
-    text-align: center;
-    padding: 0.5rem;
+    text-align: left;
+    padding: 0.5rem 0rem;
 }
 
-.event-description {
-    text-align: center;
+.event-card-left>.event>.event-description {
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+.event-card-right>.event>.event-name {
+    margin-bottom: 0.1rem;
+    text-align: right;
+    padding: 0.5rem 0rem;
+}
+
+.event-card-right>.event>.event-description {
+    text-align: right;
     font-size: 0.9rem;
 }
 
@@ -46,25 +89,49 @@
 
 .logos {
     max-height: 9rem;
+    max-width: 9rem;
+    transition: 0.4s ease;
 }
 
 .learnmore-container {
     display: none;
 }
 
-@media screen and (max-width: 800px) {
-    .event-card {
-        width: 100%;
-    }
-}
-
 @media screen and (max-width: 600px) {
-    .event-card {
+    .event-card-left {
         width: 100vw;
         border-radius: 0px;
+        flex-direction: column;
+        padding: 0rem;
     }
-    .event-card:hover {
+    .event-card-right {
+        width: 100vw;
+        border-radius: 0px;
+        flex-direction: column;
+        padding: 0rem;
+    }
+    .event-card-left:hover {
         background: #ffffff00;
+        padding: 0rem;
+    }
+    .event-card-right:hover {
+        background: #ffffff00;
+        padding: 0rem;
+    }
+    .event {
+        margin-bottom: 1rem;
+    }
+    .event-card-left>.event>.event-name {
+        text-align: center;
+    }
+    .event-card-left>.event>.event-description {
+        text-align: center;
+    }
+    .event-card-right>.event>.event-name {
+        text-align: center;
+    }
+    .event-card-right>.event>.event-description {
+        text-align: center;
     }
     .learnmore-container {
         display: block;

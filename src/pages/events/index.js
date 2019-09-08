@@ -9,7 +9,7 @@ import hackfortomorrow from '../../img/hftlogo.png'
 const EventEntryImport = () => import('components/event-entry')
 const EventEntry = asyncComponent(EventEntryImport)
 
-var colors = ["#1b1d1e", "#3d84a8", "#6D589D", "#3B4257", "#e84a5f", "#07689f", "590d82"];
+var colors = ["#1b1d1e", "#0065F9", "#6D589D", "#3B4257", "#e84a5f", "#07689f", "590d82"];
 
 export default class Events extends React.Component {
     constructor(props) {
@@ -122,10 +122,12 @@ export default class Events extends React.Component {
     render() {
         var grid = []
         var events = this.state.events
+        var cardOdd = true;
         for (var i in events) {
             var gridItem = (
-                <a target="_blank" key={i} className={styles["events"]} href={events[i].link} ><EventEntry details={events[i]} /></a>
+                <a target="_blank" key={i} className={styles["events"]} href={events[i].link} ><EventEntry details={events[i]} direction={cardOdd} /></a>
             )
+            cardOdd = !cardOdd;
             grid.push(gridItem)
         }
 
