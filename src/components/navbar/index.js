@@ -18,6 +18,7 @@ export default class Nav extends React.Component {
         }
     }
 
+
     handleChange = (e) => {
         // document.getElementById("navLine1").classList.toggle("one")
         // document.getElementById("navLine2").classList.toggle("two")
