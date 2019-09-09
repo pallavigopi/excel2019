@@ -36,6 +36,7 @@ h1{
 	grid-row-gap: 5vw;
 	grid-column-gap: 15px;
 	z-index: 2;
+	margin-bottom: 10vh;
 }
 
 @media screen and (max-width:1300px){
