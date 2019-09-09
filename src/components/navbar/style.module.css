@@ -1,0 +1,148 @@
+.nav-cross {
+    position: fixed;
+    margin: 20px 30px;
+    width:50px;
+    height:50px;
+    z-index:3;
+}
+
+.navLine1 {
+    margin:35px 0px;
+    position:fixed;
+    width:34px;
+    height:3px;
+    background-color:white;
+    transition:0.2s;
+    border-radius:100px;
+}
+
+.navLine2 {
+    margin:40px 0px;
+    position:fixed;
+    width:34px;
+    height:3px;
+    background-color:white;
+    transition:0.2s;
+    border-radius:100px;
+}
+
+
+.nav-content--container {
+    position: fixed;
+    width:100%;
+    height:100%;
+    background-color:black;
+    transition:0.5s;
+    transition-timing-function: ease;
+    margin-left:-100%;
+    margin-top:5vh;
+    z-index: 2;
+}
+
+.nav-link {
+    list-style-type:none;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size:30px;
+    color:white;
+    padding:20px;
+    padding-left:100px;
+}
+
+.nav-link:hover{
+    
+    color:black;
+}
+
+.nav-link--text {
+    color: white;
+}
+
+.nav-link--gap {
+    margin-top:10vh;;
+}
+
+.nav-icons--container {
+    position: absolute;
+    top:25vh;
+    bottom: 70vh;
+    left:90vw;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    width: 100%;
+    
+}
+
+.nav-icon {
+    margin: 0 20px;
+    padding-bottom:30px;
+    cursor: pointer;
+}
+
+.nav-icon-img {
+    width: 34px;
+    height: 34px;
+}
+
+/* 
+.one {
+    transform:translatey(10px) rotateZ(45deg);
+    transition:0.2s;
+    background-color:white;
+}
+
+.two {
+    transform:translatey(-10px) rotateZ(-45deg);
+    transition:0.2s;
+    background-color:white;
+}
+
+.three {
+    transform:translatex(100%);
+    transition-timing-function: ease;
+    transition:0.5s;
+}
+ */
+
+ @media (max-width: 900px){
+    .nav-link {
+        font-size:27px;
+        padding:20px;
+        padding-left:50px;
+    }
+    .nav-icons--container {
+      
+        left:85vw;
+    }
+}
+@media (max-width: 600px){
+    .nav-link {
+        font-size:25px;
+    }
+    .nav-content--container {
+        margin-top:2vh;
+    }
+    .nav-icons--container {
+        position: absolute;
+        top:85vh;
+        bottom:20px;
+        left:65px;
+        display: flex;
+        flex-flow: row;
+        justify-content: flex-start;
+        width: 100%;
+        
+    }
+    .nav-link--gap {
+        margin-top:5vh;
+    }
+    .nav-icon-img {
+        width: 30px;
+        height: 30px;
+    }
+    .nav-icon {
+        margin: 0 15px;
+        padding-bottom:30px;
+    }
+}

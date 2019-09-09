@@ -5,16 +5,6 @@ import styles from './style.module.css'
 import ibetoLogo from '../../img/ibetologo.png'
 import hackfortomorrow from '../../img/hftlogo.png'
 
-const EventCardImport = () => import('components/event-card')
-const ComingSoonImport = () => import('components/coming-soon')
-const HeaderImport = () => import('components/header')
-const ExcelAboutImport = () => import('components/excel-about')
-
-const EventCard = asyncComponent(EventCardImport)
-const ComingSoon = asyncComponent(ComingSoonImport)
-const Header = asyncComponent(HeaderImport)
-const ExcelAbout = asyncComponent(ExcelAboutImport)
-
 export default class Home extends React.Component {
     constructor(props) {
         super(props)
@@ -37,52 +27,9 @@ export default class Home extends React.Component {
     }
 
     render() {
-        console.log(styles["home"])
-        var grid = []
-        var events = this.state.events
-        for (var i in events) {
-            var gridItem = (<a target="_blank" key={i} className={styles["events"]} href={events[i].link} ><EventCard details={events[i]} /></a>)
-            grid.push(gridItem)
-        }
+
         return (
-            <div className={styles["home"]}>
-                <div id="particles-js"></div>
-                <script src="particles.js"></script>
-                <Particles style={{
-                    position: 'absolute',
-                    left: 0,
-                    top: 0,
-                    width: 10
-                }}
-                    params={{
-                        particles: {
-                            size: {
-                                value: 4
-                            },
-                            number: {
-                                value: 100,
-                                density: {
-                                    enable: 'true',
-                                    value_area: 800
-                                }
-                            },
-                            line_linked: {
-                                width: 1,
-                                distance: 130
-                            },
-                            move: {
-                                speed: 10
-                            }
-                        },
-                    }
-                    }
-                />
-                <Header />
-                <ExcelAbout />
-                <ComingSoon />
-                <div id={styles["event-grid"]}>
-                    {grid}
-                </div>
+            <div>
             </div>
         );
     }
