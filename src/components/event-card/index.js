@@ -17,6 +17,7 @@ export default class EventCard extends React.Component {
                     <div className = {styles["event-description"]}>
                         {this.props.details.description}
                     </div>
+                    
                 </div>
             </div>
         );

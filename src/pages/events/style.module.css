@@ -1,0 +1,38 @@
+body {
+    width: 100%;
+    background-color: #1b1d1e;
+}
+
+body {
+    transition: 2s ease;
+}
+
+#event-grid {
+    padding: 2rem 12rem;
+    display: grid;
+    grid-template-columns: auto;
+    grid-row-gap: 4rem;
+}
+
+.header {
+    text-align: center;
+    padding: 4rem;
+}
+
+.title {
+    color: aliceblue;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+@media screen and (max-width: 600px) {
+    #event-grid {
+        grid-template-columns: auto;
+        padding: 0rem;
+        grid-gap: 2rem;
+    }
+    .title {
+        font-size: 2.5rem;
+    }
+}
