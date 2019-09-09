@@ -8,10 +8,10 @@ body {
 }
 
 #event-grid {
-    padding: 2rem;
+    padding: 2rem 12rem;
     display: grid;
     grid-template-columns: auto;
-    grid-gap: 2rem;
+    grid-row-gap: 4rem;
 }
 
 .header {

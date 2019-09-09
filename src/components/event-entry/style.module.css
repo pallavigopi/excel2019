@@ -49,9 +49,8 @@ body {
 }
 
 .event {
-    height: 6rem;
     padding: 1rem;
-    margin: auto;
+    margin: auto 0rem;
 }
 
 .event-logo {
@@ -69,6 +68,7 @@ body {
 .event-card-left>.event>.event-description {
     text-align: left;
     font-size: 0.9rem;
+    margin-right: 9rem;
 }
 
 .event-card-right>.event>.event-name {
@@ -80,6 +80,7 @@ body {
 .event-card-right>.event>.event-description {
     text-align: right;
     font-size: 0.9rem;
+    margin-left: 9rem;
 }
 
 .logo-container {
