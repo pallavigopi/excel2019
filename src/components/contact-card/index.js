@@ -13,8 +13,9 @@ export default class ContactCard extends Component{
                     <div className={styles["card-info"]}>
                     <div>Thinking longingly about tuna brine get scared by doggo also cucumerro fight own tail for bleghbleghvomit my furball really tie the room together.</div>
                     <div><img  alt='' src={require('../../img/message-closed-envelope.png')}/> <a href={"mailto:" + this.props.details.email}>{this.props.details.email}</a><br/>
-                    
-                    <img  alt='' src={require('../../img/phone-receiver.png')}/> {this.props.details.phno}  <br /></div>
+                    <img  alt='' src={require('../../img/phone-receiver.png')}/> {this.props.details.phno}  <br />
+                    <img  className={styles["contact-social"]} alt='' src={require('../../img/linkedin.png')}/> <a href={this.props.details.linkln}></a><br/>
+                    </div>
                     </div>
                 </div>
             </div>
