@@ -1,4 +1,4 @@
-.event-card {
+.comp-card {
   color: white;
   background-color: white;
   position: relative;
@@ -10,18 +10,18 @@
   transition: 0.3s ease;
 }
 
-.event-card:hover {
+.comp-card:hover {
   background: #ffffff22;
 }
 
-.event {
+.comp {
   height: 6rem;
   color: black;
   padding: 1rem;
   margin-bottom: 1rem;
 }
 
-.event-logo {
+.comp-logo {
   background-color: white;
   width: 14rem;
   height: 11rem;
@@ -29,7 +29,7 @@
   border-radius: 12px;
 }
 
-.event-name {
+.comp-name {
   color: black;
   margin-bottom: 0.1rem;
   text-align: center;
@@ -37,7 +37,7 @@
   font-size: 1.1rem;
 }
 
-.event-description {
+.comp-description {
   text-align: center;
   font-size: 1rem;
 }
@@ -56,18 +56,18 @@
 }
 
 @media screen and (max-width: 800px) {
-  .event-card {
+  .comp-card {
     width: auto;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .event-card {
+  .comp-card {
     width: auto;
     border-radius: 5px 5px 5px 5px;
     margin: 0.3rem 0.3rem;
   }
-  .event-card:hover {
+  .comp-card:hover {
     background: #ffffff00;
   }
   .learnmore-container {
@@ -101,7 +101,7 @@
   font-size: 1.5rem;
 }
 
-.modal-event-body {
+.modal-comp-body {
   text-align: center;
 }
 

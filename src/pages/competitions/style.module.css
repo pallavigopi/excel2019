@@ -11,7 +11,7 @@ body {
   transition: 2s ease;
 }
 
-#event-grid {
+#comp-grid {
   padding: 2rem 3rem;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr));
@@ -32,7 +32,7 @@ body {
 }
 
 @media screen and (max-width: 600px) {
-  #event-grid {
+  #comp-grid {
     grid-template-columns: auto;
     padding: 0rem;
     grid-gap: 3rem;

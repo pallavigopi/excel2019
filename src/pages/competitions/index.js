@@ -6,8 +6,8 @@ import styles from "./style.module.css";
 import ibetoLogo from "../../img/ibetologo.png";
 import hackfortomorrow from "../../img/hftlogo.png";
 
-const EventEntryImport = () => import("components/event-entry");
-const EventEntry = asyncComponent(EventEntryImport);
+const CompetitionEntryImport = () => import("components/competition-entry");
+const CompetitionEntry = asyncComponent(CompetitionEntryImport);
 
 var colors = [
   "#1b1d1e",
@@ -19,7 +19,7 @@ var colors = [
   "590d82"
 ];
 
-export default class Events extends React.Component {
+export default class Competitions extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -143,7 +143,7 @@ export default class Events extends React.Component {
           className={styles["events"]}
           href={events[i].link}
         >
-          <EventEntry details={events[i]} />
+          <CompetitionEntry details={events[i]} />
         </a>
       );
       grid.push(gridItem);
@@ -154,7 +154,7 @@ export default class Events extends React.Component {
         <div className={styles["header"]}>
           <a className={styles["title"]}>Excel 2019 Competitions!</a>
         </div>
-        <div id={styles["event-grid"]}>{grid}</div>
+        <div id={styles["comp-grid"]}>{grid}</div>
       </div>
     );
   }

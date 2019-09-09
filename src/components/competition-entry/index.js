@@ -31,8 +31,8 @@ export default class CompetitionEntry extends React.Component {
     return (
       <div>
         <div onClick={() => this.simpleDialog.show()}>
-          <div className={styles["event-card"]}>
-            <div className={styles["event-logo"]}>
+          <div className={styles["comp-card"]}>
+            <div className={styles["comp-logo"]}>
               <div target="_blank" className={styles["logo-container"]}>
                 <img
                   className={styles["logos"]}
@@ -40,11 +40,11 @@ export default class CompetitionEntry extends React.Component {
                 />
               </div>
             </div>
-            <div className={styles["event"]}>
-              <div className={styles["event-name"]}>
+            <div className={styles["comp"]}>
+              <div className={styles["comp-name"]}>
                 <b>{this.props.details.name}</b>
               </div>
-              <div className={styles["event-description"]}>
+              <div className={styles["comp-description"]}>
                 {this.props.details.description}
               </div>
             </div>

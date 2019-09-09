@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
 
-.event-card {
+.comp-card {
   position: relative;
-  height: 50vw;
+  height: 30vw;
   width: 35vw;
   border-radius: 5px;
   color: black;
@@ -13,26 +13,26 @@
   box-shadow: 0 8px 20px -6px black;
 }
 
-.event-card:hover {
+.comp-card:hover {
   transition-duration: 0.3s;
   transition-timing-function: ease-out;
   transform: translateY(-7px);
   box-shadow: 0 14px 30px -6px black;
 }
 
-.event {
+.comp {
   width: 35vw;
   display: grid;
   grid-template-rows: 30% 60%;
 }
 
-.event-name {
+.comp-name {
   font-size: 1.85vw;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
 }
 
-.event-description {
+.comp-description {
   font-size: 1.3vw;
   font-family: "Montserrat", sans-serif;
 }
@@ -47,20 +47,20 @@
 /* mobiles devices */
 
 @media only screen and (max-width: 480px) {
-  .event-card {
+  .comp-card {
     height: 30vw;
     width: 70vw;
     margin: 1vh 0vh;
     padding: 2vh;
   }
-  .event {
+  .comp {
     width: 100%;
     height: 10vh;
   }
-  .event-name {
+  .comp-name {
     font-size: 3.25vw;
   }
-  .event-description {
+  .comp-description {
     font-size: 3vw;
   }
   .logos {
