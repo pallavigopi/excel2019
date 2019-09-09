@@ -60,7 +60,7 @@
 }
 
 .nav-link--gap {
-    margin-top:10vh;;
+    margin-top:10vh;
 }
 
 .nav-icons--container {
@@ -71,7 +71,7 @@
     display: flex;
     flex-flow: column;
     justify-content: flex-start;
-    width: 100%;
+    width: auto;
     
 }
 
