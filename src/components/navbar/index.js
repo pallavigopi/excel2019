@@ -26,7 +26,7 @@ export default class Nav extends React.Component {
         let two = document.getElementById("navLine2")
         let three = document.getElementById("navContent")
 
-        if(this.state.toggle) {
+        if (this.state.toggle) {
             one.style.transform = "translatey(2.5px) rotateZ(45deg)"
             one.style.transition = "0.2s"
             two.style.transform = "translatey(-2.5px) rotateZ(-45deg)"
@@ -37,7 +37,7 @@ export default class Nav extends React.Component {
             document.body.style.overflow = 'hidden'
 
             this.setState({
-                toggle : false
+                toggle: false
             })
         }
 
@@ -69,12 +69,12 @@ export default class Nav extends React.Component {
                 <div id="navContent" className={styles["nav-content--container"]}>
                     <ul>
                         <li className={styles["nav-link--gap"]}></li>
-                        <li className={styles["nav-link"]}><Link to="/home" style={{textDecoration:'none'}}><span className={styles["nav-link--text"]} onClick={this.handleChange}>Home</span></Link></li>
-                        <li className={styles["nav-link"]}><Link to="/schedule" style={{textDecoration:'none'}}><span className={styles["nav-link--text"]} onClick={this.handleChange}>Schedule</span></Link></li>
-                        <li className={styles["nav-link"]}><Link to="/home" style={{textDecoration:'none'}}><span className={styles["nav-link--text"]} onClick={this.handleChange}>Home</span></Link></li>
-                        <li className={styles["nav-link"]}><Link to="/home" style={{textDecoration:'none'}}><span className={styles["nav-link--text"]} onClick={this.handleChange}>Schedule</span></Link></li>
-                        <li className={styles["nav-link"]}><Link to="/home" style={{textDecoration:'none'}}><span className={styles["nav-link--text"]} onClick={this.handleChange}>Schedule</span></Link></li>
-                        <li className={styles["nav-link"]}><Link to="/home" style={{textDecoration:'none'}}><span className={styles["nav-link--text"]} onClick={this.handleChange}>Schedule</span></Link></li>
+                        <li className={styles["nav-link"]}><Link to="/home" style={{ textDecoration: 'none' }}><span className={styles["nav-link--text"]} onClick={this.handleChange}>Home</span></Link></li>
+                        <li className={styles["nav-link"]}><Link to="/schedule" style={{ textDecoration: 'none' }}><span className={styles["nav-link--text"]} onClick={this.handleChange}>Schedule</span></Link></li>
+                        <li className={styles["nav-link"]}><Link to="/home" style={{ textDecoration: 'none' }}><span className={styles["nav-link--text"]} onClick={this.handleChange}>Home</span></Link></li>
+                        <li className={styles["nav-link"]}><Link to="/home" style={{ textDecoration: 'none' }}><span className={styles["nav-link--text"]} onClick={this.handleChange}>Schedule</span></Link></li>
+                        <li className={styles["nav-link"]}><Link to="/home" style={{ textDecoration: 'none' }}><span className={styles["nav-link--text"]} onClick={this.handleChange}>Schedule</span></Link></li>
+                        <li className={styles["nav-link"]}><Link to="/events" style={{ textDecoration: 'none' }}><span className={styles["nav-link--text"]} onClick={this.handleChange}>Events</span></Link></li>
                     </ul>
                     <div className className={styles["nav-icons--container"]}>
                         <a href="https://www.facebook.com/excelmec/" className={styles["nav-icon"]}><img className={styles["nav-icon-img"]} src={facebookLogo} /></a>

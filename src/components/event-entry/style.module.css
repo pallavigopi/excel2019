@@ -112,11 +112,11 @@ body {
         padding: 0rem;
     }
     .event-card-left:hover {
-        background: #ffffff00;
+        background: transparent;
         padding: 0rem;
     }
     .event-card-right:hover {
-        background: #ffffff00;
+        background: transparent;
         padding: 0rem;
     }
     .event {
@@ -127,12 +127,14 @@ body {
     }
     .event-card-left>.event>.event-description {
         text-align: center;
+        margin: auto auto;
     }
     .event-card-right>.event>.event-name {
         text-align: center;
     }
     .event-card-right>.event>.event-description {
         text-align: center;
+        margin: auto;
     }
     .learnmore-container {
         display: block;
@@ -144,7 +146,7 @@ body {
         margin: 0 auto 1rem auto;
         font-family: 'Montserrat', sans-serif;
         font-size: 1rem;
-        background-color: #00000000;
+        background-color: transparent;
         width: 90vw;
         padding: 1rem;
         border: 1px solid white;

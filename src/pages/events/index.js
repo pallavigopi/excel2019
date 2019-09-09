@@ -9,7 +9,7 @@ import hackfortomorrow from '../../img/hftlogo.png'
 const EventEntryImport = () => import('components/event-entry')
 const EventEntry = asyncComponent(EventEntryImport)
 
-var colors = ["#1b1d1e", "#0065F9", "#6D589D", "#3B4257", "#e84a5f", "#07689f", "590d82"];
+var colors = ["#000000", "#0065F9", "#6D589D", "#3B4257", "#e84a5f", "#07689f", "590d82"];
 
 export default class Events extends React.Component {
     constructor(props) {
