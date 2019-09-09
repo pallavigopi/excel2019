@@ -71,7 +71,7 @@ export default class Nav extends React.Component {
                         <li className={styles["nav-link--gap"]}></li>
                         <li className={styles["nav-link"]}><Link to="/home" style={{textDecoration:'none'}}><span className={styles["nav-link--text"]} onClick={this.handleChange}>Home</span></Link></li>
                         <li className={styles["nav-link"]}><Link to="/schedule" style={{textDecoration:'none'}}><span className={styles["nav-link--text"]} onClick={this.handleChange}>Schedule</span></Link></li>
-                        <li className={styles["nav-link"]}><Link to="/home" style={{textDecoration:'none'}}><span className={styles["nav-link--text"]} onClick={this.handleChange}>Home</span></Link></li>
+                        <li className={styles["nav-link"]}><Link to="/contacts" style={{textDecoration:'none'}}><span className={styles["nav-link--text"]} onClick={this.handleChange}>Contacts</span></Link></li>
                         <li className={styles["nav-link"]}><Link to="/home" style={{textDecoration:'none'}}><span className={styles["nav-link--text"]} onClick={this.handleChange}>Schedule</span></Link></li>
                         <li className={styles["nav-link"]}><Link to="/home" style={{textDecoration:'none'}}><span className={styles["nav-link--text"]} onClick={this.handleChange}>Schedule</span></Link></li>
                         <li className={styles["nav-link"]}><Link to="/home" style={{textDecoration:'none'}}><span className={styles["nav-link--text"]} onClick={this.handleChange}>Schedule</span></Link></li>
