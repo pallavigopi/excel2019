@@ -2,15 +2,16 @@
   color: white;
   background-color: white;
   position: relative;
-  margin: 0.3rem 0.3rem;
-  border-radius: 8px;
+  margin: 0.2rem 0.2rem;
+  border-radius: 10px;
   display: flex;
+  transform: scale(0.9);
   flex-direction: column;
   font-family: "Montserrat", sans-serif;
   transition: 0.3s ease;
 }
 .comp-card:hover {
-  transform: scale(1.1);
+  transform: scale(1);
 }
 .comp {
   height: 6rem;
@@ -56,6 +57,10 @@
 @media screen and (max-width: 800px) {
   .comp-card {
     width: auto;
+    transform: scale(0.8);
+  }
+  .comp-card:hover {
+    transform: scale(1);
   }
 }
 
