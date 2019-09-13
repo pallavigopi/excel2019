@@ -9,11 +9,9 @@
   font-family: "Montserrat", sans-serif;
   transition: 0.3s ease;
 }
-
 .comp-card:hover {
-  background: #ffffff22;
+  transform: scale(1.1);
 }
-
 .comp {
   height: 6rem;
   color: black;
