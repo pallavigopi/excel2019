@@ -5,6 +5,38 @@ import styles from "./style.module.css";
 export default class CompetitionEntry extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      currentSubSection: "About",
+      content: this.props.details.description
+    }
+  }
+
+  handleAbout = () => {
+    this.setState({
+      currentSubSection: "About",
+      content: this.props.details.description
+    });
+  }
+
+  handleFormat = () => {
+    this.setState({
+      currentSubSection: "Format",
+      content: this.props.details.format
+    });
+  }
+
+  handleRules = () => {
+    this.setState({
+      currentSubSection: "Rules",
+      content: this.props.details.rules
+    });
+  }
+
+  handleContact = () => {
+    this.setState({
+      currentSubSection: "Contact",
+      content: this.props.details.contact
+    });
   }
 
   render() {
@@ -71,7 +103,15 @@ export default class CompetitionEntry extends React.Component {
               />
             </div>
             <div className={styles["modal-event-body"]}>
-              {this.props.details.description}
+              <ul className={styles["popup-navbar"]}>
+                <li><a className={styles[this.state.currentSubSection == "About" ? "li-active" : ""]} onClick={this.handleAbout} id="About">About</a></li>
+                <li><a className={styles[this.state.currentSubSection == "Format" ? "li-active" : ""]} onClick={this.handleFormat} id="Format">Format</a></li>
+                <li><a className={styles[this.state.currentSubSection == "Rules" ? "li-active" : ""]} onClick={this.handleRules} id="Rules">Rules</a></li>
+                <li><a className={styles[this.state.currentSubSection == "Contact" ? "li-active" : ""]} onClick={this.handleContact} id="Contacts">Contact</a></li>
+              </ul>
+              <div className={styles["modal-subsection-container"]}>
+                {this.state.content}
+              </div>
             </div>
           </div>
         </SkyLight>
