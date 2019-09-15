@@ -1,16 +1,16 @@
 body {
-    animation: slideup;
-    animation-duration: 1s;
+   /* animation: slideup;
+    animation-duration: 1s;*/
 }
 
-@keyframes slideup {
+/*@keyframes slideup {
     from {
         transform: translateY(40px);
     }
     to {
         transform: translateY(0px);
     }
-}
+}*/
 
 .event-card-left {
     color: white;

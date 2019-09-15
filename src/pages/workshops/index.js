@@ -9,7 +9,7 @@ import hackfortomorrow from '../../img/hftlogo.png'
 const EventEntryImport = () => import('components/event-entry')
 const EventEntry = asyncComponent(EventEntryImport)
 
-var colors = ["#000000", "#0065F9", "#6D589D", "#3B4257", "#e84a5f", "#07689f", "590d82"];
+// var colors = ["#000000", "#0065F9", "#6D589D", "#3B4257", "#e84a5f", "#07689f", "590d82"];
 
 export default class Workshops extends React.Component {
     constructor(props) {
@@ -73,7 +73,7 @@ export default class Workshops extends React.Component {
         }
     }
 
-    componentDidMount() {
+   /* componentDidMount() {
         window.addEventListener("scroll", this.handleScroll);
     }
 
@@ -107,7 +107,7 @@ export default class Workshops extends React.Component {
         else if (currentPos > 4000 && currentPos < 5000) {
             document.body.style.backgroundColor = colors[6];
         }
-    };
+    };*/
 
     render() {
         var grid = []
