@@ -1,6 +1,6 @@
 .comp-card {
   color: white;
-  background-color: white;
+  /* background-color: white; */
   position: relative;
   margin: 0.2rem 0.2rem;
   border-radius: 10px;
@@ -17,13 +17,13 @@
 
 .comp {
   height: 6rem;
-  color: black;
+  color: white;
   padding: 1rem;
   margin-bottom: 1rem;
 }
 
 .comp-logo {
-  background-color: white;
+  /* background-color: white; */
   width: 14rem;
   height: 11rem;
   margin: 1rem auto 0rem auto;
@@ -31,7 +31,7 @@
 }
 
 .comp-name {
-  color: black;
+  color: white;
   margin-bottom: 0.1rem;
   text-align: center;
   padding: 0.5rem;
@@ -99,8 +99,8 @@
 }
 
 .li-active {
-  background-color: white;
-  color: black;
+  /* background-color: white; */
+  color: white;
 }
 
 .modal-subsection-container {

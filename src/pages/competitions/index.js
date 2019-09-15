@@ -3,21 +3,15 @@ import asyncComponent from "../../utils/asyncComponent";
 
 import styles from "./style.module.css";
 //testing
-import ibetoLogo from "../../img/ibetologo.png";
-import hackfortomorrow from "../../img/hftlogo.png";
+import event1 from "../../img/algorithm.png";
+import event2 from "../../img/cloud.png";
+import event3 from "../../img/someevent.png"
+import event4 from "../../img/someevent2.png"
+
 
 const CompetitionEntryImport = () => import("components/competition-entry");
 const CompetitionEntry = asyncComponent(CompetitionEntryImport);
 
-var colors = [
-  "#1b1d1e",
-  "#3d84a8",
-  "#6D589D",
-  "#3B4257",
-  "#e84a5f",
-  "#07689f",
-  "590d82"
-];
 
 export default class Competitions extends React.Component {
   constructor(props) {
@@ -26,147 +20,103 @@ export default class Competitions extends React.Component {
       events: [
         {
           name: "IBeTo 2019",
-          imgsrc: ibetoLogo,
+          imgsrc: event1,
           format: "Format of Ibeto",
           rules: "Rules for Ibeto",
           contact: "Contact for Ibeto",
-          description:
-            "Every social problem has a bright solution that needs to be found. IBeTo provides a platform to connect the brightest minds with these problems to create innovative solutions."
-        },
+          description:"Robitics"        },
         {
           name: "HackForTomorrow 2019",
-          imgsrc: hackfortomorrow,
+          imgsrc: event2,
           format: "Format of HackForTomorrow",
           rules: "Rules for HackForTomorrow",
           contact: "Contact for HackForTomorrow",
-          description:
-            "A 24 hour hackathon which aims at using quick thinking to solve real-world problem statements in a competitive pressure environment. Coming Soon!"
-        },
+          description:"Computer Science"        },
         {
           name: "IBeTo 2019",
-          imgsrc: ibetoLogo,
+          imgsrc: event3,
           format: "Format of Ibeto",
           rules: "Rules for Ibeto",
           contact: "Contact for Ibeto",
-          description:
-            "Every social problem has a bright solution that needs to be found. IBeTo provides a platform to connect the brightest minds with these problems to create innovative solutions."
-        },
+          description: "Non-Tech"        },
         {
-          name: "HackForTomorrow 2019",
-          imgsrc: hackfortomorrow,
-          format: "Format of HackForTomorrow",
-          rules: "Rules for HackForTomorrow",
-          contact: "Contact for HackForTomorrow",
-          description:
-            "A 24 hour hackathon which aims at using quick thinking to solve real-world problem statements in a competitive pressure environment. Coming Soon!"
-        },
+            name: "IBeTo 2019",
+            imgsrc: event4,
+            format: "Format of Ibeto",
+            rules: "Rules for Ibeto",
+            contact: "Contact for Ibeto",
+            description:"Robitics"        },
         {
-          name: "IBeTo 2019",
-          imgsrc: ibetoLogo,
-          format: "Format of Ibeto",
-          rules: "Rules for Ibeto",
-          contact: "Contact for Ibeto",
-          description:
-            "Every social problem has a bright solution that needs to be found. IBeTo provides a platform to connect the brightest minds with these problems to create innovative solutions."
-        },
+            name: "HackForTomorrow 2019",
+            imgsrc: event2,
+            format: "Format of HackForTomorrow",
+            rules: "Rules for HackForTomorrow",
+            contact: "Contact for HackForTomorrow",
+            description:"Computer Science"        },
+            {
+              name: "IBeTo 2019",
+              imgsrc: event3,
+              format: "Format of Ibeto",
+              rules: "Rules for Ibeto",
+              contact: "Contact for Ibeto",
+              description: "Non-Tech"        },
+            {
+                name: "IBeTo 2019",
+                imgsrc: event4,
+                format: "Format of Ibeto",
+                rules: "Rules for Ibeto",
+                contact: "Contact for Ibeto",
+                description:"Robitics"        },
+            {
+                name: "HackForTomorrow 2019",
+                imgsrc: event2,
+                format: "Format of HackForTomorrow",
+                rules: "Rules for HackForTomorrow",
+                contact: "Contact for HackForTomorrow",
+                description:"Computer Science"        },
         {
-          name: "HackForTomorrow 2019",
-          imgsrc: hackfortomorrow,
-          format: "Format of HackForTomorrow",
-          rules: "Rules for HackForTomorrow",
-          contact: "Contact for HackForTomorrow",
-          description:
-            "A 24 hour hackathon which aims at using quick thinking to solve real-world problem statements in a competitive pressure environment. Coming Soon!"
-        },
-        {
-          name: "IBeTo 2019",
-          imgsrc: ibetoLogo,
-          format: "Format of Ibeto",
-          rules: "Rules for Ibeto",
-          contact: "Contact for Ibeto",
-          description:
-            "Every social problem has a bright solution that needs to be found. IBeTo provides a platform to connect the brightest minds with these problems to create innovative solutions."
-        },
-        {
-          name: "HackForTomorrow 2019",
-          imgsrc: hackfortomorrow,
-          format: "Format of HackForTomorrow",
-          rules: "Rules for HackForTomorrow",
-          contact: "Contact for HackForTomorrow",
-          description:
-            "A 24 hour hackathon which aims at using quick thinking to solve real-world problem statements in a competitive pressure environment. Coming Soon!"
-        },
-        {
-          name: "IBeTo 2019",
-          imgsrc: ibetoLogo,
-          format: "Format of Ibeto",
-          rules: "Rules for Ibeto",
-          contact: "Contact for Ibeto",
-          description:
-            "Every social problem has a bright solution that needs to be found. IBeTo provides a platform to connect the brightest minds with these problems to create innovative solutions."
-        },
-        {
-          name: "HackForTomorrow 2019",
-          imgsrc: hackfortomorrow,
-          format: "Format of HackForTomorrow",
-          rules: "Rules for HackForTomorrow",
-          contact: "Contact for HackForTomorrow",
-          description:
-            "A 24 hour hackathon which aims at using quick thinking to solve real-world problem statements in a competitive pressure environment. Coming Soon!"
-        },
-        {
-          name: "IBeTo 2019",
-          imgsrc: ibetoLogo,
-          format: "Format of Ibeto",
-          rules: "Rules for Ibeto",
-          contact: "Contact for Ibeto",
-          description:
-            "Every social problem has a bright solution that needs to be found. IBeTo provides a platform to connect the brightest minds with these problems to create innovative solutions."
-        },
-        {
-          name: "HackForTomorrow 2019",
-          imgsrc: hackfortomorrow,
-          format: "Format of HackForTomorrow",
-          rules: "Rules for HackForTomorrow",
-          contact: "Contact for HackForTomorrow",
-          description:
-            "A 24 hour hackathon which aims at using quick thinking to solve real-world problem statements in a competitive pressure environment. Coming Soon!"
-        }
+            name: "IBeTo 2019",
+            imgsrc: event1,
+            format: "Format of Ibeto",
+            rules: "Rules for Ibeto",
+            contact: "Contact for Ibeto",
+            description: "Non-Tech"        }
+
       ],
 
       scrollPos: window.scrollY
     };
   }
 
-  componentDidMount() {
-    window.addEventListener("scroll", this.handleScroll);
-  }
+  // componentDidMount() {
+  //   window.addEventListener("scroll", this.handleScroll);
+  // }
 
-  componentWillUnmount() {
-    window.removeEventListener("scroll", this.handleScroll);
-  }
+  // componentWillUnmount() {
+  //   window.removeEventListener("scroll", this.handleScroll);
+  // }
 
-  handleScroll = () => {
-    this.setState({
-      scrollPos: window.scrollY
-    });
-    var currentPos = this.state.scrollPos;
-    if (currentPos < 200) {
-      document.body.style.backgroundColor = colors[0];
-    } else if (currentPos > 200 && currentPos < 800) {
-      document.body.style.backgroundColor = colors[1];
-    } else if (currentPos > 800 && currentPos < 1200) {
-      document.body.style.backgroundColor = colors[2];
-    } else if (currentPos > 1200 && currentPos < 2000) {
-      document.body.style.backgroundColor = colors[3];
-    } else if (currentPos > 2000 && currentPos < 3000) {
-      document.body.style.backgroundColor = colors[4];
-    } else if (currentPos > 3000 && currentPos < 4000) {
-      document.body.style.backgroundColor = colors[5];
-    } else if (currentPos > 4000 && currentPos < 5000) {
-      document.body.style.backgroundColor = colors[6];
-    }
-  };
+  // handleScroll = () => {
+  //   this.setState({
+  //     scrollPos: window.scrollY
+  //   });
+  //   var currentPos = this.state.scrollPos;
+  //   if (currentPos < 200) {
+  //     document.body.style.backgroundColor = colors[0];
+  //   } else if (currentPos > 200 && currentPos < 800) {
+  //     document.body.style.backgroundColor = colors[1];
+  //   } else if (currentPos > 800 && currentPos < 1200) {
+  //     document.body.style.backgroundColor = colors[2];
+  //   } else if (currentPos > 1200 && currentPos < 2000) {
+  //     document.body.style.backgroundColor = colors[3];
+  //   } else if (currentPos > 2000 && currentPos < 3000) {
+  //     document.body.style.backgroundColor = colors[4];
+  //   } else if (currentPos > 3000 && currentPos < 4000) {
+  //     document.body.style.backgroundColor = colors[5];
+  //   } else if (currentPos > 4000 && currentPos < 5000) {
+  //     document.body.style.backgroundColor = colors[6];
+  //   }
+  // };
 
   render() {
     var grid = [];
