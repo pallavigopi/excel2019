@@ -7,6 +7,7 @@ import DialogContent from '@material-ui/core/DialogContent'
 import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
 
+
 import styles from './style.module.css'
 import { read } from 'fs';
 import testImage from '../../img/ibetologo.png'
@@ -16,6 +17,9 @@ const ScheduleFilter = asyncComponent(ScheduleFilterImport)
 
 const ScheduleEventCardImport = () => import('components/schedule-event-card')
 const ScheduleEventCard = asyncComponent(ScheduleEventCardImport)
+
+
+
 
 /*
 all the events are stored and filtered from the events state 
@@ -247,7 +251,7 @@ class Schedule extends React.Component {
         let noEventFlag = 0
 
         return(
-            <div className={styles["schedule"]}>
+            <div className={styles["schedule"]}>       
             <div className={styles["schedule-container"]}>
                 <div className={styles["schedule-filter--btn"]} onClick={this.showFilterPopup}>
                     Filter
