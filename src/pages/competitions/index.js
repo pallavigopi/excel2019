@@ -123,7 +123,7 @@ export default class Competitions extends React.Component {
     var events = this.state.events;
     for (var i in events) {
       var gridItem = (
-        <a
+        <a 
           target="_blank"
           key={i}
           className={styles["events"]}
@@ -138,7 +138,7 @@ export default class Competitions extends React.Component {
     return (
       <div>
         <div className={styles["header"]}>
-          <a className={styles["title"]}>Excel 2019 Competitions!</a>
+          <a style={{zIndex:3}} className={styles["title"]}>Excel 2019 Competitions!</a>
         </div>
         <div id={styles["comp-grid"]}>{grid}</div>
       </div>

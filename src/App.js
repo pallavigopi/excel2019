@@ -30,10 +30,14 @@ const Workshops = asyncComponent(WorkshopsImport)
 const TalksImport = () => import('pages/talks')
 const Talks = asyncComponent(TalksImport)
 
+const BackgroundImport = () => import('components/background')
+const Background = asyncComponent(BackgroundImport)
+
 export default class App extends React.Component {
     render() {
         return(
             <div className="pageContainer">
+                <Background />
                 <Nav />
                 <Switch>
                     <Route path="/contacts" component={ContactsPage} />

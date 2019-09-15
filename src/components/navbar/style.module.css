@@ -3,7 +3,7 @@
     margin: 15px 30px;
     width:50px;
     height:50px;
-    z-index:11;
+    z-index:106;
     cursor: pointer;
 }
 
@@ -37,7 +37,7 @@
     transition-timing-function: ease;
     margin-left:-100%;
     margin-top:-1vh;
-    z-index: 10;
+    z-index: 105;
 }
 
 .nav-link {

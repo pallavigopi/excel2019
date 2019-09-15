@@ -50,6 +50,7 @@ export default class CompetitionEntry extends React.Component {
       margin: "0px",
       width: "calc(100vw - 4rem)",
       height: "calc(100vh - 4rem)"
+  
     };
 
     var closeButtonStyle = {
@@ -63,7 +64,7 @@ export default class CompetitionEntry extends React.Component {
     return (
       <div>
         <div onClick={() => this.simpleDialog.show()}>
-          <div className={styles["comp-card"]}>
+          <div style={{zIndex:3}} className={styles["comp-card"]}>
             <div className={styles["comp-logo"]}>
               <div target="_blank" className={styles["logo-container"]}>
                 <img
@@ -85,14 +86,14 @@ export default class CompetitionEntry extends React.Component {
             </div>
           </div>
         </div>
-        <SkyLight
+        <SkyLight 
           hideOnOverlayClicked
           ref={ref => (this.simpleDialog = ref)}
           dialogStyles={dialogStyles}
           closeButtonStyle={closeButtonStyle}
           transitionDuration={450}
         >
-          <div className={styles["modal-container"]}>
+          <div  className={styles["modal-container"]}>
             <div className={styles["modal-title"]}>
               {this.props.details.name}
             </div>

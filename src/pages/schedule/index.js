@@ -249,11 +249,11 @@ class Schedule extends React.Component {
         return(
             <div className={styles["schedule"]}>
             <div className={styles["schedule-container"]}>
-                <div className={styles["schedule-filter--btn"]} onClick={this.showFilterPopup}>
+                <div style={{zIndex:3}} className={styles["schedule-filter--btn"]} onClick={this.showFilterPopup}>
                     Filter
                 </div>
                 <div className={styles["schedule-header--container"]}>
-                    <div className={styles["schedule-title"]}>
+                    <div style={{zIndex:3}} className={styles["schedule-title"]}>
                         Schedule
                     </div>
                     <div className={styles["schedule-tabs--container"]}>
@@ -261,7 +261,7 @@ class Schedule extends React.Component {
                             {
                                 this.state.days.map((val) => {
                                     return (
-                                        <Tab style={{fontSize: 16, fontWeight: 600}} value={val} label={`Day ${val}`} {...{id:`simple-tab-${val}`, 'aria-controls': `simple-tabpanel-${val}`}} />
+                                        <Tab style={{fontSize: 16, fontWeight: 600, zIndex:3}} value={val} label={`Day ${val}`} {...{id:`simple-tab-${val}`, 'aria-controls': `simple-tabpanel-${val}`}} />
                                     )
                                 })
                             }
