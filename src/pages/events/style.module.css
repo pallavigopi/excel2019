@@ -4,19 +4,21 @@ body {
 }
 
 body {
-    transition: 2s ease;
+    transition: 1.5s ease;
 }
 
 #event-grid {
-    padding: 2rem 12rem;
+    padding: 2rem 15rem;
     display: grid;
     grid-template-columns: auto;
     grid-row-gap: 4rem;
 }
 
 .header {
-    text-align: center;
     padding: 4rem;
+    width: 50rem;
+    margin: auto auto;
+    border-bottom: #ffffff55 2px solid;
 }
 
 .title {
@@ -26,13 +28,28 @@ body {
     font-weight: 700;
 }
 
+.subtitle {
+    color: #ffffffaa;
+    font-size: 1.7rem;
+    padding: 0rem 1rem;
+    font-weight: 100;
+}
+
 @media screen and (max-width: 800px) {
     #event-grid {
         grid-template-columns: auto;
         padding: 0rem;
         grid-gap: 2rem;
     }
+    .header {
+        width: auto;
+        margin: auto auto;
+        border: none;
+    }
     .title {
         font-size: 2.5rem;
+    }
+    .subtitle {
+        display: none;
     }
 }

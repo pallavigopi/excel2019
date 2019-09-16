@@ -32,14 +32,16 @@ export default class EventEntry extends React.Component {
         return (
             <div>
                 <div onClick={() => this.simpleDialog.show()}>
-                    <div className={styles["event-card-" + (this.props.direction == true ? "left" : "right")]} >
-                        <div className={styles["event-logo"]}>
-                            <div target="_blank" className={styles["logo-container"]}><img className={styles["logos"]} src={this.props.details.imgsrc} /></div>
-                        </div>
-                        <div className={styles["event"]}>
+                    <div className={styles["event-card-" + (this.props.direction == true ? "left" : "left")]} >
+                        <div className={styles["event-logo-name-container-" + (this.props.direction == true ? "left" : "left")]}>
+                            <div className={styles["event-logo"]}>
+                                <div target="_blank" className={styles["logo-container"]}><img className={styles["logos"]} src={this.props.details.imgsrc} /></div>
+                            </div>
                             <div className={styles["event-name"]}>
                                 <b>{this.props.details.name}</b>
                             </div>
+                        </div>
+                        <div className={styles["event"]}>
                             <div className={styles["event-description"]}>
                                 {this.props.details.description}
                             </div>

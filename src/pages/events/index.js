@@ -134,7 +134,7 @@ export default class Events extends React.Component {
         return (
             <div>
                 <div className={styles["header"]}>
-                    <a className={styles["title"]}>Excel 2019 Events!</a>
+                    <a className={styles["title"]}>Events<a className={styles["subtitle"]}>Excel 2019</a></a>
                 </div>
                 <div id={styles["event-grid"]}>
                     {grid}
