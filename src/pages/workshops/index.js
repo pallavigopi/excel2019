@@ -11,21 +11,11 @@ const EventEntry = asyncComponent(EventEntryImport)
 
 var colors = ["#000000", "#0065F9", "#6D589D", "#3B4257", "#e84a5f", "#07689f", "590d82"];
 
-export default class Events extends React.Component {
+export default class Workshops extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
             events: [
-                {
-                    name: "IBeTo 2019",
-                    imgsrc: ibetoLogo,
-                    description: "Every social problem has a bright solution that needs to be found. IBeTo provides a platform to connect the brightest minds with these problems to create innovative solutions."
-                },
-                {
-                    name: "HackForTomorrow 2019",
-                    imgsrc: hackfortomorrow,
-                    description: "A 24 hour hackathon which aims at using quick thinking to solve real-world problem statements in a competitive pressure environment. Coming Soon!"
-                },
                 {
                     name: "IBeTo 2019",
                     imgsrc: ibetoLogo,
@@ -134,9 +124,8 @@ export default class Events extends React.Component {
         return (
             <div>
                 <div className={styles["header"]}>
-                    <a className={styles["title"]}>Events</a><a className={styles["subtitle"]}>Excel 2019</a>
+                    <a className={styles["title"]}>Excel 2019 Workshops!</a>
                 </div>
-                <div className={styles["underline"]}></div>
                 <div id={styles["event-grid"]}>
                     {grid}
                 </div>

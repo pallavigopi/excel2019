@@ -18,6 +18,7 @@ export default class Nav extends React.Component {
         }
     }
 
+
     handleChange = (e) => {
         // document.getElementById("navLine1").classList.toggle("one")
         // document.getElementById("navLine2").classList.toggle("two")
@@ -70,11 +71,12 @@ export default class Nav extends React.Component {
                     <ul>
                         <li className={styles["nav-link--gap"]}></li>
                         <li className={styles["nav-link"]}><Link to="/home" style={{ textDecoration: 'none' }}><span className={styles["nav-link--text"]} onClick={this.handleChange}>Home</span></Link></li>
-                        <li className={styles["nav-link"]}><Link to="/schedule" style={{ textDecoration: 'none' }}><span className={styles["nav-link--text"]} onClick={this.handleChange}>Schedule</span></Link></li>
-                        <li className={styles["nav-link"]}><Link to="/home" style={{ textDecoration: 'none' }}><span className={styles["nav-link--text"]} onClick={this.handleChange}>Home</span></Link></li>
-                        <li className={styles["nav-link"]}><Link to="/home" style={{ textDecoration: 'none' }}><span className={styles["nav-link--text"]} onClick={this.handleChange}>Schedule</span></Link></li>
-                        <li className={styles["nav-link"]}><Link to="/home" style={{ textDecoration: 'none' }}><span className={styles["nav-link--text"]} onClick={this.handleChange}>Schedule</span></Link></li>
+                        <li className={styles["nav-link"]}><Link to="/competiton" style={{ textDecoration: 'none' }}><span className={styles["nav-link--text"]} onClick={this.handleChange}>Competiton</span></Link></li>
                         <li className={styles["nav-link"]}><Link to="/events" style={{ textDecoration: 'none' }}><span className={styles["nav-link--text"]} onClick={this.handleChange}>Events</span></Link></li>
+                        <li className={styles["nav-link"]}><Link to="/workshops" style={{ textDecoration: 'none' }}><span className={styles["nav-link--text"]} onClick={this.handleChange}>Workshops</span></Link></li>
+                        <li className={styles["nav-link"]}><Link to="/talks" style={{ textDecoration: 'none' }}><span className={styles["nav-link--text"]} onClick={this.handleChange}>Talks</span></Link></li>
+                        <li className={styles["nav-link"]}><Link to="/schedule" style={{ textDecoration: 'none' }}><span className={styles["nav-link--text"]} onClick={this.handleChange}>Schedule</span></Link></li>
+                        <li className={styles["nav-link"]}><Link to="/contacts" style={{ textDecoration: 'none' }}><span className={styles["nav-link--text"]} onClick={this.handleChange}>Contacts</span></Link></li>
                     </ul>
                     <div className className={styles["nav-icons--container"]}>
                         <a href="https://www.facebook.com/excelmec/" className={styles["nav-icon"]}><img className={styles["nav-icon-img"]} src={facebookLogo} /></a>
