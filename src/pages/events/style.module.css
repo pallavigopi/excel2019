@@ -17,8 +17,7 @@ body {
 .header {
     padding: 4rem;
     width: 50rem;
-    margin: auto auto;
-    border-bottom: #ffffff55 2px solid;
+    margin: auto 11rem;
 }
 
 .title {
@@ -29,10 +28,17 @@ body {
 }
 
 .subtitle {
+    font-family: 'Montserrat', sans-serif;
     color: #ffffffaa;
     font-size: 1.7rem;
     padding: 0rem 1rem;
     font-weight: 100;
+}
+
+.underline {
+    width: calc(100vw - 30rem);
+    margin: auto auto;
+    border-bottom: #ffffff55 2px solid;
 }
 
 @media screen and (max-width: 800px) {
@@ -42,14 +48,21 @@ body {
         grid-gap: 2rem;
     }
     .header {
+        text-align: center;
         width: auto;
         margin: auto auto;
         border: none;
+        display: flex;
+        flex-direction: column;
     }
     .title {
         font-size: 2.5rem;
     }
     .subtitle {
+        text-align: center;
+        font-size: 1rem;
+    }
+    .underline {
         display: none;
     }
 }
