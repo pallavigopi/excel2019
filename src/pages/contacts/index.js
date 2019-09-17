@@ -28,7 +28,7 @@ export default class Contacts extends Component{
             <div>
                <div>
                <div className={styles["header"]}>
-                    <a className={styles["title"]}>Excel 2019 Talks!</a>
+                    <a className={styles["title"]}>Get in Touch With Us</a>
                 </div>
                     <div className={styles["container"]}>
                         {grid}

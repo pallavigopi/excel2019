@@ -67,7 +67,15 @@
 
 .modal-title {
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: 28px;
+  text-align: center;
+}
+
+.modal-prize-pool{
+  text-align: center;
+  color: orangered;
+  font-weight: 700;
+  font-size: 22px;
 }
 
 .modal-image {
@@ -82,9 +90,10 @@
 
 .popup-navbar {
   text-align: center;
-  padding: 2rem 0rem;
+  padding: 3rem 0rem;
   margin: 0rem;
   list-style: none;
+  font-size: 18px;
 }
 
 .popup-navbar>li {
@@ -99,12 +108,13 @@
 }
 
 .li-active {
-  /* background-color: white; */
-  color: white;
+  background-color: white;
+  color: black;
 }
 
 .modal-subsection-container {
-  padding: 0rem 2rem;
+  padding: 0px 150px;
+  font-size: 18px;
 }
 
 @media screen and (min-width: 800px) {
@@ -135,6 +145,10 @@
   .learnmore-container {
     display: block;
     padding: 0vw 5vw;
+  }
+  .modal-subsection-container {
+    padding: 0px 15px;
+    font-size: 18px;
   }
   .learn-more {
     color: white;

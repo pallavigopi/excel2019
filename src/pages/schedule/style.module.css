@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+body{
+    background-color: #000000;
+}
+
 .schedule{
     background-color:black;;
     width:100%;
@@ -6,6 +11,7 @@
     padding-top:1em;
     font-family: 'Montserrat', sans-serif;
 }
+
 .schedule-container {
     margin: 30px auto;
     padding-bottom:5px;

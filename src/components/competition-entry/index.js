@@ -1,14 +1,16 @@
 import React from "react";
 import SkyLight from "react-skylight";
 import styles from "./style.module.css";
+import AboutMiniGrid from "../about-mini-grid";
 
 export default class CompetitionEntry extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       currentSubSection: "About",
-      content: this.props.details.description
+      content: this.props.details.description,
     }
+    //this.handleExtraSectionContent= this.handleExtraSectionContent.bind(this);
   }
 
   handleAbout = () => {
@@ -39,6 +41,17 @@ export default class CompetitionEntry extends React.Component {
     });
   }
 
+  handleExtraSectionContent = (name) =>{
+    if(name=="About")
+    return (
+      <AboutMiniGrid details={this.props.details} />
+    );
+    if(name=="Contact")
+    return(
+      <h1> Contact </h1>
+    );
+  }
+
   render() {
     var dialogStyles = {
       padding: "2rem",
@@ -49,7 +62,8 @@ export default class CompetitionEntry extends React.Component {
       left: "0px",
       margin: "0px",
       width: "calc(100vw - 4rem)",
-      height: "calc(100vh - 4rem)"
+      height: "calc(100vh - 4rem)",
+      overflowY: "scroll"
   
     };
 
@@ -78,7 +92,7 @@ export default class CompetitionEntry extends React.Component {
                 <b>{this.props.details.name}</b>
               </div>
               <div className={styles["comp-description"]}>
-                {this.props.details.description}
+                {this.props.details.category}
               </div>
             </div>
             <div className={styles["learnmore-container"]}>
@@ -94,14 +108,17 @@ export default class CompetitionEntry extends React.Component {
           transitionDuration={450}
         >
           <div  className={styles["modal-container"]}>
-            <div className={styles["modal-title"]}>
-              {this.props.details.name}
-            </div>
             <div className={styles["modal-image"]}>
               <img
                 className={styles["modal-image-logo"]}
                 src={this.props.details.imgsrc}
               />
+            </div>
+            <div className={styles["modal-title"]}>
+              {this.props.details.name}
+            </div>
+            <div className={styles["modal-prize-pool"]}>
+            Prize Pool - 25k
             </div>
             <div className={styles["modal-event-body"]}>
               <ul className={styles["popup-navbar"]}>
@@ -112,6 +129,7 @@ export default class CompetitionEntry extends React.Component {
               </ul>
               <div className={styles["modal-subsection-container"]}>
                 {this.state.content}
+                {this.handleExtraSectionContent(this.state.currentSubSection)}
               </div>
             </div>
           </div>
