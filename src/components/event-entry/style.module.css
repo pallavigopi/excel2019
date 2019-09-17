@@ -97,10 +97,30 @@
     max-width: 7rem;
     transition: 0.4s ease;
 }
-
+.modal-event-body{
+    padding: 20px 100px;
+}
 .learnmore-container {
     display: none;
 }
+
+.button-container{
+    display: block;
+    padding: 0vw 3.5vw;
+    color: white;
+    border-radius: 4px;
+    margin: 0 auto 1rem auto;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    background-color: transparent;
+    width: 9vw;
+    padding: 1rem;
+    border: 1px solid white;
+    text-align: center;
+    text-decoration: none;
+}
+ 
+
 
 @media screen and (max-width: 800px) {
     .event-card-left {
