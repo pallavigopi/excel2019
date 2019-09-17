@@ -1,5 +1,6 @@
 import React from 'react'
 import SkyLight from 'react-skylight';
+import { Route, Link } from 'react-router-dom'
 import styles from './style.module.css';
 
 export default class EventEntry extends React.Component {
@@ -8,6 +9,15 @@ export default class EventEntry extends React.Component {
     }
 
     render() {
+
+        var buttons = []
+        for( var i in this.props.details.buttons){
+            var con = this.props.details.buttons[i]
+            var button = (
+                <a href={con.link} target="_blank" className={styles["button-container"]}>{con.name}</a>
+            )
+            buttons.push(button)
+        }
 
         var dialogStyles = {
             padding: '2rem',
@@ -18,21 +28,22 @@ export default class EventEntry extends React.Component {
             left: '0px',
             margin: '0px',
             width: 'calc(100vw - 4rem)',
-            height: 'calc(100vh - 4rem)'
+            height: 'calc(100vh - 4rem)',
+            overflowY: 'scroll'
         };
 
         var closeButtonStyle = {
             cursor: 'pointer',
             position: 'absolute',
-            fontSize: '1.8em',
-            marginRight: '1rem',
-            marginTop: '0.4rem'
+            fontSize: '3em',
+            marginRight: '2rem',
+            marginTop: '1.25rem'
         }
 
         return (
             <div>
                 <div onClick={() => this.simpleDialog.show()}>
-                    <div className={styles["event-card-left"]} >
+                    <div style={{zIndex:3}} className={styles["event-card-left"]} >
                         {/* <div className={styles["event-card-" + (this.props.direction == true ? "left" : "right")]} > */}
                         <div className={styles["event-logo-name-container-left"]}>
                             <div className={styles["event-logo"]}>
@@ -52,6 +63,7 @@ export default class EventEntry extends React.Component {
                         </div>
                     </div>
                 </div>
+                
                 <SkyLight
                     hideOnOverlayClicked
                     ref={ref => this.simpleDialog = ref}
@@ -60,11 +72,15 @@ export default class EventEntry extends React.Component {
                     transitionDuration={450}
                 >
                     <div className={styles["modal-container"]}>
-                        <div className={styles["modal-title"]}>{this.props.details.name}</div>
+                        {/*<div className={styles["modal-title"]}>{this.props.details.name}</div>*/}
                         <div className={styles["modal-image"]}>
                             <img className={styles["modal-image-logo"]} src={this.props.details.imgsrc} />
                         </div>
-                        <div className={styles["modal-event-body"]}>{this.props.details.description}</div>
+                        {buttons}
+                        <div className={styles["modal-event-body"]} dangerouslySetInnerHTML={{__html: this.props.details.info}}>
+            
+                        </div>
+                        
                     </div>
                 </SkyLight>
             </div>
