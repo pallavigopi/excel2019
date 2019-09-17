@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
    /* animation: slideup;
     animation-duration: 1s;*/
@@ -12,6 +13,8 @@ body {
     }
 }*/
 
+=======
+>>>>>>> d22578eb993d3ad6e0af77ad7779c50922114106
 .event-card-left {
     color: white;
     background-color: #1f1f1f00;
@@ -19,7 +22,7 @@ body {
     margin: 0.3rem auto;
     border-radius: 8px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     font-family: 'Montserrat', sans-serif;
     transition: 0.3s ease;
     padding: 1rem;
@@ -32,7 +35,7 @@ body {
     margin: 0.3rem auto;
     border-radius: 8px;
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: column;
     font-family: 'Montserrat', sans-serif;
     transition: 0.3s ease;
     padding: 1rem;
@@ -49,14 +52,30 @@ body {
 }
 
 .event {
-    padding: 1rem;
+    padding: 1.5rem 0rem;
     margin: auto 0rem;
 }
 
+.event-name {
+    margin: auto 1rem;
+    font-size: 2rem;
+}
+
 .event-logo {
+    max-height: 11rem;
+    max-width: 11rem;
     background-color: white;
-    margin: auto auto;
     border-radius: 12px;
+}
+
+.event-logo-name-container-left {
+    display: flex;
+    flex-direction: row;
+}
+
+.event-logo-name-container-right {
+    display: flex;
+    flex-direction: row-reverse;
 }
 
 .event-card-left>.event>.event-name {
@@ -69,6 +88,7 @@ body {
     text-align: left;
     font-size: 0.9rem;
     margin-right: 9rem;
+    line-height: 1.5rem;
 }
 
 .event-card-right>.event>.event-name {
@@ -81,6 +101,7 @@ body {
     text-align: right;
     font-size: 0.9rem;
     margin-left: 9rem;
+    line-height: 1.5rem;
 }
 
 .logo-container {
@@ -89,8 +110,8 @@ body {
 }
 
 .logos {
-    max-height: 9rem;
-    max-width: 9rem;
+    max-height: 7rem;
+    max-width: 7rem;
     transition: 0.4s ease;
 }
 
@@ -98,7 +119,7 @@ body {
     display: none;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
     .event-card-left {
         width: 100vw;
         border-radius: 0px;
@@ -119,8 +140,18 @@ body {
         background: transparent;
         padding: 0rem;
     }
-    .event {
-        margin-bottom: 1rem;
+    .event-logo {
+        margin: auto auto;
+    }
+    .event-logo-name-container-left {
+        flex-direction: column;
+    }
+    .event-logo-name-container-right {
+        flex-direction: column;
+    }
+    .event-name {
+        padding-top: 1rem;
+        text-align: center;
     }
     .event-card-left>.event>.event-name {
         text-align: center;
@@ -128,6 +159,7 @@ body {
     .event-card-left>.event>.event-description {
         text-align: center;
         margin: auto auto;
+        padding: 0rem 1rem;
     }
     .event-card-right>.event>.event-name {
         text-align: center;
