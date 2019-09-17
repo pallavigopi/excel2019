@@ -97,9 +97,7 @@
     max-width: 7rem;
     transition: 0.4s ease;
 }
-.modal-event-body{
-    padding: 20px 100px;
-}
+
 .learnmore-container {
     display: none;
 }
@@ -186,6 +184,9 @@
         padding: 1rem;
         border: 1px solid white;
     }
+    .button-container{
+        width:30vw;
+    }
 }
 
 /* popup styling */
@@ -202,8 +203,22 @@
     font-size: 1.5rem;
 }
 
-.modal-event-body {
-    text-align: center;
+.modal-event-body{
+    padding: 20px 20vw;
+    text-align: left;
+}
+
+/* almost large*/
+@media only screen and (max-width:1300px){
+    .modal-event-body{
+        padding: 20px 15vw;
+    }  
+}
+
+@media only screen and (max-width:800px){
+    .modal-event-body{
+        padding: 20px 5vw;
+    }  
 }
 
 .modal-image {

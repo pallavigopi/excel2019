@@ -68,12 +68,12 @@ export default class CompetitionEntry extends React.Component {
     };
 
     var closeButtonStyle = {
-      cursor: "pointer",
-      position: "absolute",
-      fontSize: "1.8em",
-      marginRight: "1rem",
-      marginTop: "0.4rem"
-    };
+      cursor: 'pointer',
+      position: 'absolute',
+      fontSize: '3em',
+      marginRight: '2rem',
+      marginTop: '1.25rem'
+  };
 
     return (
       <div>
@@ -95,9 +95,9 @@ export default class CompetitionEntry extends React.Component {
                 {this.props.details.category}
               </div>
             </div>
-            <div className={styles["learnmore-container"]}>
+            {/* <div className={styles["learnmore-container"]}>
               <button className={styles["learn-more"]}>Learn More!</button>
-            </div>
+            </div> */}
           </div>
         </div>
         <SkyLight 

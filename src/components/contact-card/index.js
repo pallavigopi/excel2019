@@ -7,7 +7,7 @@ export default class ContactCard extends Component{
     render(){
         return(
             <div>
-            <div className={styles["card"]}>
+            <div style={{zIndex:3}} className={styles["card"]}>
                 <img src={this.props.details.img}/>
                 <div className={styles["contact-overlay"]}>
                     <div className={styles["card-info"]}>

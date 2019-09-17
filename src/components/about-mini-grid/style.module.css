@@ -23,5 +23,7 @@
 @media only screen and (max-width: 800px){
     .about-mini-grid-item{
         padding: 0px 10px;
+        align-items:unset;
+        justify-content: flex-start;
     }
 } 
