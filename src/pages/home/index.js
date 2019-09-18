@@ -31,61 +31,51 @@ export default class Home extends React.Component {
 
         return (
           <div>
-            <div id="h1">Excel 2019<br /><span style={{color:"grey",fontSize:"2vw"}}>Inspire Innovate Engineer</span></div>
-            <div id="h2">20th edition<br /><span style={{color:"grey",fontSize:"2vw"}}>Govt Model Engineering College</span></div>
+            <div id="h1">Excel 2019<br /><span style={{color:"grey",fontSize:"3vh"}}>Inspire Innovate Engineer</span></div> 
 
 
-          <div class="card">
+<div className="card">
 
-<svg id ="c1ff" class="circle"  height="1000" width="1000">
-  <circle cx="500" cy="500" r="50" stroke="rgba(250,250,250,0.4)" fill="none" strokeWidth="3" strokeWidth="7" />
+<svg id="c1" className="circle" version="1.1" viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
+  <circle cx="250" cy="250" r="50" stroke="rgba(250,250,250,1)" fill="none" strokeWidth="3" strokeWidth="7" />
 </svg>
-<svg id ="c1fb" class="circle" height="1000" width="1000">
-  <circle cx="500" cy="500" r="100" stroke="rgba(250,250,250,0.5)" fill="none" strokeWidth="5" />
-</svg>
-
-<svg id ="c1ffl" class="circle" height="1000" width="1000">
-  <circle cx="500" cy="500" r="250" stroke="rgba(250,250,250,0.1)" fill="none" strokeWidth="20" strokeDasharray="3" />
-</svg>
-<svg id ="c1fbl" class="circle" height="1000" width="1000">
-  <circle cx="500" cy="500" r="300" stroke="rgba(250,250,250,0.1)" fill="none" strokeWidth="20" strokeDasharray="3" />
+<svg id ="c2" className="circle" version="1.1" viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
+  <circle cx="250" cy="250" r="100" stroke="rgba(250,250,250,0.5)" fill="none" strokeWidth="5" />
 </svg>
 
-<svg id ="c1" class="circle" height="1000" width="1000">
-  <circle cx="500" cy="500" r="250" stroke="rgba(250,250,250,0.4)" fill="none"  strokeWidth="3"/>
+<svg id ="c3" className="circle" version="1.1" viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
+  <circle cx="250" cy="250" r="140" stroke="rgba(250,250,250,0.3)" fill="none" strokeWidth="15" strokeDasharray="5" />
+</svg>
+<svg id ="c4" className="circle" version="1.1" viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
+  <circle cx="250" cy="250" r="170" stroke="rgba(250,250,250,0.7)" fill="none" strokeWidth="10" strokeDasharray="5" />
+</svg>
+<svg id ="c5" className="circle" version="1.1" viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
+  <circle cx="250" cy="250" r="200" stroke="rgba(250,250,250,1)" fill="none" strokeWidth="5" />
+</svg>
+<svg id ="c6" className="circle" version="1.1" viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
+  <circle cx="250" cy="250" r="220" stroke="rgba(250,250,250,1)" fill="none" strokeWidth="3" strokeDasharray="2,30" />
 </svg>
 
-<svg id ="c2o" class="circle" height="1000" width="1000">
-  <circle cx="500" cy="500" r="500" stroke="rgba(250,250,250,1)" fill="none" strokeWidth="3" strokeDasharray="2,40" stroke-linecap="round" />
-</svg>
-<svg id ="c2" class="circle" height="1000" width="1000">
-  <circle cx="500" cy="500" r="450" stroke="rgba(250,250,250,1)" fill="none" strokeWidth="30" strokeDasharray="1,20"  />
-</svg>
-
-<svg id ="c3" class="circle" height="1000" width="1000">
-  <circle cx="500" cy="500" r="200" stroke="rgba(250,250,250,0.1)" fill="none" strokeWidth="20" strokeDasharray="400,30" />
-</svg>
-
-<img id = "logo" src={require("../../img/e.svg")}/>
+<img id="logo" src={require('../../img/e.svg')} />
 
 </div>
 
-<div id="h1">Our Sponsors<br /><span style={{color:"grey",fontSize:"2vw"}}>MEC Excel 2019 Sponsors</span></div>
+<div id="h1">Our Sponsors<br /><span style={{color:"grey",fontSize:"3vh"}}>MEC Excel 2019 Sponsors</span></div>
+
 
 <div id="grid">
-<div id="sp1" className="sponsor">
-  <div class="t1">spnsor1</div>
-</div>
-<div id="sp2" className="sponsor">
-    <div class="t1">spnsor1</div>
-</div>
-<div id="sp3" className="sponsor">
-    <div class="t1">spnsor1</div>
-</div>
-<div id="sp4" className="sponsor">
-    <div class="t1">spnsor1</div>
-</div>
-
+  <div id="sp1" className="sponsor">
+    <div className="t1">spnsor1</div>
+  </div>
+  <div id="sp2" className="sponsor">
+      <div className="t1">spnsor1</div>
+  </div>
+  <div id="sp3" className="sponsor">
+      <div className="t1">spnsor1</div>
+  </div>
+  <div id="sp4" className="sponsor">
+      <div className="t1">spnsor1</div>
+  </div>
 </div>
 
 </div>

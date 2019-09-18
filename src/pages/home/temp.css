@@ -5,110 +5,77 @@ body{
 }
 
 .card{
-  left:0;
-  right:0;
-  margin:auto;
-  transform-style: preserve-3d;
-  transition-duration: 0.4s;
-  transition-timing-function: ease-out;
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+  vertical-align: middle;
 }
 
 @keyframes rotate{
-  0%{stroke-dashoffset:2000; stroke-dasharray:1000;}
-  100%{stroke-dashoffset:0; stroke-dasharray:600;}
+  0%{stroke-dashoffset:5000; stroke-dasharray:1000;}
+  100%{stroke-dashoffset:1000; stroke-dasharray:600;}
 }
 
 .circle{
-  left:0;
-  right:0;
-  margin:auto;
-  position:absolute;
-  animation:rotate 20s ease-out infinite;
-}
-
-
-
-#c1{
-  transform: translateZ(0px);
-}
-#c1fb{
-  transform: translateZ(500px);
-}
-#c1ff{
-  transform: translateZ(500px);
-}
-#c1fbl{
-  transform: translateZ(300px);
-}
-#c1ffl{
-  transform: translateZ(300px);
-}
-#c1bf{
-  transform: translateZ(-300px);
-}
-#c1bb{
-  transform: translateZ(-300px);
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation:rotate 40s ease-out infinite;
 }
 #c2{
-  transform: translateZ(-600px);
+  transform: translateZ(500px);
+
 }
-#c2b{
-  transform: translateZ(-600px);
-}
-#c2o{
-  transform: translateZ(-600px);
+#c1{
+  transform: translateZ(500px);
+  animation-direction: reverse;
 }
 #c3{
-  transform: translateZ(-1600px);
-}    
-
-@media only screen and (max-width: 600px) {
-  .card{
-    left:0;
-    right:0;
-    margin:auto;
-    transform-style: preserve-3d;
-    transition-duration: 0.4s;
-    transition-timing-function: ease-out;
-    transform:scale(0.5);
-  }
+  transform: translateZ(500px);
 }
-
-#logo{
-  z-index:100;
+#c4{
+  transform: translateZ(500px);
+  animation-direction: reverse;
+}
+#c5{
+  transform: translateZ(500px);
+}
+#c6{
+  transform: translateZ(500px);
+  animation-direction: reverse;
 }
 
 #h1{
   padding-left:2vw;
-  padding-top:10vh;
+  padding-top:20vh;
   font-family:Montserrat;
-  font-size:3vw;
+  font-size:4vh;
   color:white;
-}
-#h2{
-  width:100%;
-  padding-top:80vh;
-  text-align: right;
-  position:absolute;
-  font-family:Montserrat;
-  font-size:2vw;
-  color:white; 
 }
 .sponsor{
   width:150px;
   height:150px;
   color:white;
   margin:10vh;
+  margin-bottom:10vh;
   border-radius: 100%;
   background-color:white;
+
+}
+
+#logo{
+  z-index:100 ;
 }
 
 #grid{
   left:0;
   right:0;
-  margin-left:12.5%;
   display: flex;
   flex-wrap:wrap;
+  justify-content: center;
+  padding-bottom:10vh;
 }
 
 .t1{
