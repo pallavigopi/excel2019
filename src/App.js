@@ -21,6 +21,7 @@ const TestPage = asyncComponent(TestPageImport)
 
 const CompetitionsImport = () => import('pages/competitions')
 const Competitions = asyncComponent(CompetitionsImport)
+
 const EventsImport = () => import('pages/events')
 const Events = asyncComponent(EventsImport)
 

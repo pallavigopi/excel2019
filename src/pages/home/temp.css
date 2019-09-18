@@ -1,0 +1,79 @@
+body{
+  overflow: hidden;
+  perspective: 2000px;
+}
+
+.card{
+  left:0;
+  right:0;
+  margin:auto;
+  transform-style: preserve-3d;
+  transition-duration: 0.4s;
+  transition-timing-function: ease-out;
+}
+
+@keyframes rotate{
+  0%{stroke-dashoffset:2000; stroke-dasharray:1000;}
+  100%{stroke-dashoffset:0; stroke-dasharray:600;}
+}
+
+.circle{
+  left:0;
+  right:0;
+  margin:auto;
+  position:absolute;
+  animation:rotate 20s ease-out infinite;
+}
+
+
+
+#c1{
+  transform: translateZ(0px);
+}
+#c1fb{
+  transform: translateZ(500px);
+}
+#c1ff{
+  transform: translateZ(500px);
+}
+#c1fbl{
+  transform: translateZ(300px);
+}
+#c1ffl{
+  transform: translateZ(300px);
+}
+#c1bf{
+  transform: translateZ(-300px);
+}
+#c1bb{
+  transform: translateZ(-300px);
+}
+#c2{
+  transform: translateZ(-600px);
+}
+#c2b{
+  transform: translateZ(-600px);
+}
+#c2o{
+  transform: translateZ(-600px);
+}
+#c3{
+  transform: translateZ(-1600px);
+}    
+
+@media only screen and (max-width: 600px) {
+  .card{
+    left:0;
+    right:0;
+    margin:auto;
+    transform-style: preserve-3d;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-out;
+    transform:scale(0.7);
+  }
+}
+
+#logo{
+  margin-top:-200px;
+  transform: scale(0.3) translateZ(-600px);
+}
