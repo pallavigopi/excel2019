@@ -40,13 +40,11 @@ const ScheduleFilter = (props) => {
                 maxWidth='100vw'
                 // className={styles["filter-container"]}
             >
-                <DialogTitle style={{padding: 0}}>
+                <DialogContent style={{padding: 0}} id="scheduleFilterContent">
                     <div className={styles["filter-title--container"]}>
                         <div className={styles["filter-close-btn"]} onClick={props.handleClose}>X</div>
                         <div className={styles["filter-title"]}>Filters</div>
                     </div>
-                </DialogTitle>
-                <DialogContent style={{padding: 0}} id="scheduleFilterContent">
                     <div className={styles["filter-content--container"]}>
                         <h4 className={styles["filter-content--title"]}>Categories</h4>
                         <div className={styles["filter-type--container"]}>
