@@ -1,6 +1,7 @@
 body{
-  overflow: hidden;
-  perspective: 2000px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  perspective: 0px;
 }
 
 .card{
@@ -69,11 +70,51 @@ body{
     transform-style: preserve-3d;
     transition-duration: 0.4s;
     transition-timing-function: ease-out;
-    transform:scale(0.7);
+    transform:scale(0.5);
   }
 }
 
 #logo{
-  margin-top:-200px;
-  transform: scale(0.3) translateZ(-600px);
+  z-index:100;
 }
+
+#h1{
+  padding-left:2vw;
+  padding-top:10vh;
+  font-family:Montserrat;
+  font-size:3vw;
+  color:white;
+}
+#h2{
+  width:100%;
+  padding-top:80vh;
+  text-align: right;
+  position:absolute;
+  font-family:Montserrat;
+  font-size:2vw;
+  color:white; 
+}
+.sponsor{
+  width:150px;
+  height:150px;
+  color:white;
+  margin:10vh;
+  border-radius: 100%;
+  background-color:white;
+}
+
+#grid{
+  left:0;
+  right:0;
+  margin-left:12.5%;
+  display: flex;
+  flex-wrap:wrap;
+}
+
+.t1{
+  font-family:Montserrat;
+  font-size:3vh;
+  margin-top:200px;
+  text-align:center;
+}
+

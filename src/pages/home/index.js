@@ -27,18 +27,13 @@ export default class Home extends React.Component {
         }
     }
 
-    componentDidMount() {
-        document.addEventListener('mousemove', (e) => {
-            var x = (window.innerWidth/2 - e.pageX)/30
-            var y = (window.innerHeight/2 - e.pageY)/30
-
-            document.getElementsByClassName('card')[0].style.transform = "rotateY("+(-x)+"deg) rotateX("+y+"deg)"
-        })
-    }
-
     render() {
 
         return (
+          <div>
+            <div id="h1">Excel 2019<br /><span style={{color:"grey",fontSize:"2vw"}}>Inspire Innovate Engineer</span></div>
+            <div id="h2">20th edition<br /><span style={{color:"grey",fontSize:"2vw"}}>Govt Model Engineering College</span></div>
+
 
           <div class="card">
 
@@ -72,6 +67,26 @@ export default class Home extends React.Component {
 </svg>
 
 <img id = "logo" src={require("../../img/e.svg")}/>
+
+</div>
+
+<div id="h1">Our Sponsors<br /><span style={{color:"grey",fontSize:"2vw"}}>MEC Excel 2019 Sponsors</span></div>
+
+<div id="grid">
+<div id="sp1" className="sponsor">
+  <div class="t1">spnsor1</div>
+</div>
+<div id="sp2" className="sponsor">
+    <div class="t1">spnsor1</div>
+</div>
+<div id="sp3" className="sponsor">
+    <div class="t1">spnsor1</div>
+</div>
+<div id="sp4" className="sponsor">
+    <div class="t1">spnsor1</div>
+</div>
+
+</div>
 
 </div>
 
