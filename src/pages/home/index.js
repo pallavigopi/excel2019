@@ -56,13 +56,10 @@ export default class Home extends React.Component {
 <div className="card">
   <div id="t1" className="text">290,00,0000 participants</div>
   <img id="logo" src={require('../../img/newlogo.png')} />
-  <div id="c1" className="circle"></div>
   <div id="t2" className="text">290 states</div>
 
   <div id="c2" className="circle"></div>
   <div id="c2a" className="circle"></div>
-  <div id="c3" className="circle"></div>
-  <div id="c4" className="circle"></div>
 
   <div id="t3" className="text">290,000 partpants</div>
 
