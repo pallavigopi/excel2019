@@ -178,12 +178,14 @@ export default class Competitions extends React.Component {
   }
 
   handleChange = (e, filterType) => {
+    console.log(e.target.value)
     if(filterType === "department") {
       this.setState({
         currentDept: e.target.value
       })
     }
     else {
+      console.log(e.target.value)
       this.setState({
         currentType: e.target.value
       })
@@ -207,6 +209,36 @@ export default class Competitions extends React.Component {
           </a>
         );
         grid.push(gridItem);
+      }
+      else if(this.state.currentDept === "All Departments" && this.state.currentType !== "Online/Offline") {
+        if(events[i].type === this.state.currentType) {
+          var gridItem = (
+            <a 
+              target="_blank"
+              key={i}
+              className={styles["events"]}
+              href={events[i].link}
+            >
+              <CompetitionEntry details={events[i]} />
+            </a>
+          );
+          grid.push(gridItem);
+        }
+      }
+      else if(this.state.currentDept !== "All Departments" && this.state.currentType === "Online/Offline") {
+        if(events[i].category === this.state.currentDept) {
+          var gridItem = (
+            <a 
+              target="_blank"
+              key={i}
+              className={styles["events"]}
+              href={events[i].link}
+            >
+              <CompetitionEntry details={events[i]} />
+            </a>
+          );
+          grid.push(gridItem);
+        }
       }
       else {
         if(events[i].category === this.state.currentDept && events[i].type === this.state.currentType) {
