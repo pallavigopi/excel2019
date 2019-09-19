@@ -62,7 +62,7 @@ body{
   height:5vh; 
 }
 #c2{
-  opacity:0.6;
+  opacity:0.4;
   animation-delay:2s;
   transform:translateX(-50%) translateY(-50%) translateZ(300px);
   width:10vh;
