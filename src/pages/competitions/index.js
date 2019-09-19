@@ -2,6 +2,8 @@ import React from "react";
 import asyncComponent from "../../utils/asyncComponent";
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
+import MenuItem from '@material-ui/core/MenuItem';
+import { withStyles } from '@material-ui/core/styles';
 import NativeSelect from '@material-ui/core/NativeSelect';
 import styles from "./style.module.css";
 //testing
@@ -13,6 +15,18 @@ import event4 from "../../img/cloud-computing.png"
 
 const CompetitionEntryImport = () => import("components/competition-entry");
 const CompetitionEntry = asyncComponent(CompetitionEntryImport);
+
+const StyledSelect = withStyles({
+  root: {
+    color: 'white',
+    borderBottom: 'solid 2px white',
+    fontFamily: '"Montserrat", sans-serif',
+    fontSize: '0.8rem',
+  },
+  icon: {
+    color: 'white',
+  },
+})(Select);
 
 
 export default class Competitions extends React.Component {
@@ -264,34 +278,30 @@ export default class Competitions extends React.Component {
         </div>
         <div className={styles["comp-filter-dept"]}>
           <FormControl>
-            <Select
-              native
+            <StyledSelect
               value={this.state.currentDept}
               onChange={e => this.handleChange(e, 'department')}
-              style={{color: 'white'}}
             >
               {
                 this.state.filterDepts.map(val => {
-                  return <option value={val}>{val}</option>
+                  return <MenuItem value={val}>{val}</MenuItem>
                 })
               }
-              </Select>
+              </StyledSelect>
           </FormControl>
         </div>
         <div className={styles["comp-filter-type"]}>
           <FormControl>
-              <Select
-                native
+              <StyledSelect
                 value={this.state.currentType}
                 onChange={e => this.handleChange(e, 'type')}
-                style={{color: 'white'}}
               >
                 {
                   this.state.filterTypes.map(val => {
-                    return <option value={val}>{val}</option>
+                    return <MenuItem value={val}>{val}</MenuItem>
                   })
                 }
-                </Select>
+                </StyledSelect>
             </FormControl>
         </div>
         <div id={styles["comp-grid"]}>{grid}</div>

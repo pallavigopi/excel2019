@@ -33,12 +33,14 @@ body {
 .comp-filter-dept {
   z-index: 3;
   position: absolute;
+  color:white;
   left: 100px;
 }
 
 .comp-filter-type {
   z-index: 3;
   position: absolute;
+  color:white;
   right: 100px;
 }
 
@@ -49,8 +51,18 @@ body {
     grid-template-columns: auto;
     padding: 0rem;
     grid-gap: 0rem;
+    margin-top: 5rem;
   }
   .title {
     font-size: 2.5rem;
   }
+
+  .comp-filter-dept {
+    left: 7.5vw;
+  }
+  
+  .comp-filter-type {
+    right: 7.5vw;
+  }
+  
 }

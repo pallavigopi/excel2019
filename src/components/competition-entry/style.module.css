@@ -134,32 +134,24 @@
 }
 
 @media screen and (max-width: 600px) {
+  .comp{
+    height: auto;
+  }
   .comp-card {
     width: auto;
     border-radius: 5px 5px 5px 5px;
-    margin: 0.3rem 0.3rem;
+    margin: 0rem 0rem;
   }
   .comp-card:hover {
     background: #ffffff00;
   }
-  .learnmore-container {
-    display: block;
-    padding: 0vw 5vw;
+  .comp-logo{
+    margin-top:0px; 
   }
+
   .modal-subsection-container {
     padding: 0px 15px;
     font-size: 18px;
-  }
-  .learn-more {
-    color: white;
-    border-radius: 4px;
-    margin: 0 auto 1rem auto;
-    font-family: "Montserrat", sans-serif;
-    font-size: 1rem;
-    background-color: #00000000;
-    width: 90vw;
-    padding: 1rem;
-    border: 1px solid white;
   }
   /* popup */
   .popup-navbar>li>a {
