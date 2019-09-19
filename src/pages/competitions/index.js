@@ -1,6 +1,8 @@
 import React from "react";
 import asyncComponent from "../../utils/asyncComponent";
-
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
+import NativeSelect from '@material-ui/core/NativeSelect';
 import styles from "./style.module.css";
 //testing
 import event1 from "../../img/space-robot.png";
@@ -119,7 +121,10 @@ export default class Competitions extends React.Component {
             description:"Gingerbread jelly tart chocolate bar soufflé jujubes. Donut liquorice sweet roll. Pie bear claw chocolate powder lemon drops ice cream soufflé jujubes gingerbread. Tart sweet roll brownie pie gummi bears caramels soufflé. Cupcake cheesecake croissant biscuit oat cake topping ice cream cookie. Tart topping tootsie roll macaroon sesame snaps jelly jelly-o. Chocolate jelly sesame snaps lemon drops cotton candy croissant jelly. Cupcake ice cream sweet lollipop. Lemon drops pie bonbon apple pie toffee chocolate croissant. Tootsie roll cheesecake carrot cake jelly. Lemon drops chocolate sesame snaps dessert brownie icing marzipan pudding. Topping macaroon cupcake gummies jelly ice cream tart danish cotton candy. Sugar plum sweet cake. Croissant jelly beans tart marzipan chupa chups biscuit dessert ice cream ice cream."        }
 
       ],
-
+      filterDepts : ['all-departments', 'computer-science', 'robotics', 'electronics', 'non-tech'],
+      filterTypes : ['Online/Offline', 'Online', 'Offline'],
+      currentDept: 'All Departments',
+      currentType: 'Online/Offline',
       scrollPos: window.scrollY
     };
   }
@@ -154,21 +159,60 @@ export default class Competitions extends React.Component {
   //   }
   // };
 
+  formatWord = (input) => {
+    let words = input.split('-')
+
+    words.forEach((val, i) => {
+        words[i] = val.charAt(0).toUpperCase() + val.slice(1).toLowerCase()
+    })
+    return words.join(' ')
+  }
+
+  handleChange = (e, filterType) => {
+    if(filterType === "department") {
+      this.setState({
+        currentDept: e.target.value
+      })
+    }
+    else {
+      this.setState({
+        currentType: e.target.value
+      })
+    } 
+  }
+
   render() {
     var grid = [];
     var events = this.state.events;
     for (var i in events) {
-      var gridItem = (
-        <a 
-          target="_blank"
-          key={i}
-          className={styles["events"]}
-          href={events[i].link}
-        >
-          <CompetitionEntry details={events[i]} />
-        </a>
-      );
-      grid.push(gridItem);
+      if(this.state.currentDept === "all-department" && this.state.currentType === "Online/Offline") {
+        var gridItem = (
+          <a 
+            target="_blank"
+            key={i}
+            className={styles["events"]}
+            href={events[i].link}
+          >
+            <CompetitionEntry details={events[i]} />
+          </a>
+        );
+        grid.push(gridItem);
+      }
+      else {
+        if(events[i].department === this.state.currentDept && events[i].type === this.state.currentType) {
+          var gridItem = (
+            <a 
+              target="_blank"
+              key={i}
+              className={styles["events"]}
+              href={events[i].link}
+            >
+              <CompetitionEntry details={events[i]} />
+            </a>
+          );
+          grid.push(gridItem);
+        }
+      }
     }
 
     return (
@@ -176,8 +220,40 @@ export default class Competitions extends React.Component {
         <div className={styles["header"]}>
           <a style={{zIndex:3}} className={styles["title"]}>Excel 2019 Competitions!</a>
         </div>
+        <div className={styles["comp-filter-dept"]}>
+          <FormControl>
+            <Select
+              native
+              value={this.state.currentDept}
+              onChange={e => this.handleChange(e, 'department')}
+              style={{color: 'white'}}
+            >
+              {
+                this.state.filterDepts.map(val => {
+                  return <option value={val}>{this.formatWord(val)}</option>
+                })
+              }
+              </Select>
+          </FormControl>
+        </div>
+        <div className={styles["comp-filter-type"]}>
+          <FormControl>
+              <Select
+                native
+                value={this.state.currentType}
+                onChange={e => this.handleChange(e, 'type')}
+                style={{color: 'white'}}
+              >
+                {
+                  this.state.filterTypes.map(val => {
+                    return <option value={val}>{this.formatWord(val)}</option>
+                  })
+                }
+                </Select>
+            </FormControl>
+        </div>
         <div id={styles["comp-grid"]}>{grid}</div>
-      </div>
+        </div>
     );
   }
 }
