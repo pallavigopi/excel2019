@@ -5,6 +5,7 @@ import asyncComponent from '../../utils/asyncComponent';
 import styles from './style.module.css'
 import './temp.css'
 import ibetoLogo from '../../img/ibetologo.png'
+import excellogo from '../../img/e.svg'
 import hackfortomorrow from '../../img/hftlogo.png'
 
 export default class Home extends React.Component {
@@ -49,21 +50,34 @@ export default class Home extends React.Component {
           <div id="parent">
             <div id="h1">Excel 2019<br /><span style={{color:"grey",fontSize:"3vh"}}>Inspire Innovate Engineer</span></div> 
 
+
+
 <div id="god">
 <div className="card">
+  <div id="t1" className="text">290,00,0000 participants</div>
+  <img id="logo" src={require('../../img/newlogo.png')} />
   <div id="c1" className="circle"></div>
+  <div id="t2" className="text">290 states</div>
+
   <div id="c2" className="circle"></div>
   <div id="c2a" className="circle"></div>
   <div id="c3" className="circle"></div>
   <div id="c4" className="circle"></div>
+
+  <div id="t3" className="text">290,000 partpants</div>
+
   <div id="c5" className="circle"></div>
   <div id="c6" className="circle"></div>
   <div id="c7" className="circle"></div>
   <div id="c8" className="circle"></div>
-</div>
-</div>
 
-<div id="h2">Our Sponsors<br /><span style={{color:"grey",fontSize:"3vh"}}>MEC Excel 2019 Sponsors</span></div>
+  <div id="t4" className="text">180,0000 particats</div>
+
+</div>
+</div>
+<div id="h2">20th Edition<br /><span style={{color:"grey",fontSize:"3vh"}}>Govt. Model Engineering College</span></div>
+
+<div id="h3">Our Sponsors<br /><span style={{color:"grey",fontSize:"3vh"}}>MEC Excel 2019 Sponsors</span></div>
 
 
 <div id="grid">
