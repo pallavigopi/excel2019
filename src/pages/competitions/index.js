@@ -30,6 +30,7 @@ export default class Competitions extends React.Component {
           rules: "Gingerbread jelly tart chocolate bar soufflé jujubes. Donut liquorice sweet roll. Pie bear claw chocolate powder lemon drops ice cream soufflé jujubes gingerbread. Tart sweet roll brownie pie gummi bears caramels soufflé. Cupcake cheesecake croissant biscuit oat cake topping ice cream cookie. Tart topping tootsie roll macaroon sesame snaps jelly jelly-o. Chocolate jelly sesame snaps lemon drops cotton candy croissant jelly. Cupcake ice cream sweet lollipop. Lemon drops pie bonbon apple pie toffee chocolate croissant. Tootsie roll cheesecake carrot cake jelly. Lemon drops chocolate sesame snaps dessert brownie icing marzipan pudding. Topping macaroon cupcake gummies jelly ice cream tart danish cotton candy. Sugar plum sweet cake. Croissant jelly beans tart marzipan chupa chups biscuit dessert ice cream ice cream.",
           contact: "Croissant jelly jelly ice cream apple pie croissant tootsie roll. Toffee pie icing toffee chocolate bar bonbon oat cake. Chocolate bar chocolate cake gummies toffee icing fruitcake. Bear claw cotton candy chocolate cake oat cake macaroon marzipan apple pie croissant chocolate. Bonbon gummi bears sugar plum toffee wafer gummies tootsie roll tart wafer. Powder sesame snaps gummies fruitcake sweet roll. Jelly tart oat cake icing pie lemon drops sweet jelly beans. Sweet cupcake jujubes bear claw danish jelly beans powder jelly danish. Lollipop dessert bonbon pudding chupa chups jujubes wafer. Croissant icing tootsie roll caramels pastry. Pudding cupcake cookie. Tiramisu sugar plum cake sweet.",
           category:"Robitics",
+          type: "Online",
           description:"Gingerbread jelly tart chocolate bar soufflé jujubes. Donut liquorice sweet roll. Pie bear claw chocolate powder lemon drops ice cream soufflé jujubes gingerbread. Tart sweet roll brownie pie gummi bears caramels soufflé. Cupcake cheesecake croissant biscuit oat cake topping ice cream cookie. Tart topping tootsie roll macaroon sesame snaps jelly jelly-o. Chocolate jelly sesame snaps lemon drops cotton candy croissant jelly. Cupcake ice cream sweet lollipop. Lemon drops pie bonbon apple pie toffee chocolate croissant. Tootsie roll cheesecake carrot cake jelly. Lemon drops chocolate sesame snaps dessert brownie icing marzipan pudding. Topping macaroon cupcake gummies jelly ice cream tart danish cotton candy. Sugar plum sweet cake. Croissant jelly beans tart marzipan chupa chups biscuit dessert ice cream ice cream."       },
         {
           name: "HackForTomorrow 2019",
@@ -40,6 +41,7 @@ export default class Competitions extends React.Component {
           format: "Format of HackForTomorrow",
           rules: "Rules for HackForTomorrow",
           contact: "Contact for HackForTomorrow",
+          type: "Offline",
           category:"Computer Science",
           description:"Gingerbread jelly tart chocolate bar soufflé jujubes. Donut liquorice sweet roll. Pie bear claw chocolate powder lemon drops ice cream soufflé jujubes gingerbread. Tart sweet roll brownie pie gummi bears caramels soufflé. Cupcake cheesecake croissant biscuit oat cake topping ice cream cookie. Tart topping tootsie roll macaroon sesame snaps jelly jelly-o. Chocolate jelly sesame snaps lemon drops cotton candy croissant jelly. Cupcake ice cream sweet lollipop. Lemon drops pie bonbon apple pie toffee chocolate croissant. Tootsie roll cheesecake carrot cake jelly. Lemon drops chocolate sesame snaps dessert brownie icing marzipan pudding. Topping macaroon cupcake gummies jelly ice cream tart danish cotton candy. Sugar plum sweet cake. Croissant jelly beans tart marzipan chupa chups biscuit dessert ice cream ice cream."        },
         {
@@ -52,6 +54,7 @@ export default class Competitions extends React.Component {
           rules: "Rules for Ibeto",
           contact: "Contact for Ibeto",
           category: "Non-Tech",
+          type: "Offline",
           description:"Gingerbread jelly tart chocolate bar soufflé jujubes. Donut liquorice sweet roll. Pie bear claw chocolate powder lemon drops ice cream soufflé jujubes gingerbread. Tart sweet roll brownie pie gummi bears caramels soufflé. Cupcake cheesecake croissant biscuit oat cake topping ice cream cookie. Tart topping tootsie roll macaroon sesame snaps jelly jelly-o. Chocolate jelly sesame snaps lemon drops cotton candy croissant jelly. Cupcake ice cream sweet lollipop. Lemon drops pie bonbon apple pie toffee chocolate croissant. Tootsie roll cheesecake carrot cake jelly. Lemon drops chocolate sesame snaps dessert brownie icing marzipan pudding. Topping macaroon cupcake gummies jelly ice cream tart danish cotton candy. Sugar plum sweet cake. Croissant jelly beans tart marzipan chupa chups biscuit dessert ice cream ice cream."        },
         {
             name: "IBeTo 2019",
@@ -63,6 +66,7 @@ export default class Competitions extends React.Component {
             rules: "Rules for Ibeto",
             contact: "Contact for Ibeto",
             category:"Robitics",
+            type: "Online",
             description:"Gingerbread jelly tart chocolate bar soufflé jujubes. Donut liquorice sweet roll. Pie bear claw chocolate powder lemon drops ice cream soufflé jujubes gingerbread. Tart sweet roll brownie pie gummi bears caramels soufflé. Cupcake cheesecake croissant biscuit oat cake topping ice cream cookie. Tart topping tootsie roll macaroon sesame snaps jelly jelly-o. Chocolate jelly sesame snaps lemon drops cotton candy croissant jelly. Cupcake ice cream sweet lollipop. Lemon drops pie bonbon apple pie toffee chocolate croissant. Tootsie roll cheesecake carrot cake jelly. Lemon drops chocolate sesame snaps dessert brownie icing marzipan pudding. Topping macaroon cupcake gummies jelly ice cream tart danish cotton candy. Sugar plum sweet cake. Croissant jelly beans tart marzipan chupa chups biscuit dessert ice cream ice cream."        },
         {
             name: "HackForTomorrow 2019",
@@ -74,6 +78,7 @@ export default class Competitions extends React.Component {
             rules: "Rules for HackForTomorrow",
             contact: "Contact for HackForTomorrow",
             category:"Computer Science",
+            type: "Online",
             description:"Gingerbread jelly tart chocolate bar soufflé jujubes. Donut liquorice sweet roll. Pie bear claw chocolate powder lemon drops ice cream soufflé jujubes gingerbread. Tart sweet roll brownie pie gummi bears caramels soufflé. Cupcake cheesecake croissant biscuit oat cake topping ice cream cookie. Tart topping tootsie roll macaroon sesame snaps jelly jelly-o. Chocolate jelly sesame snaps lemon drops cotton candy croissant jelly. Cupcake ice cream sweet lollipop. Lemon drops pie bonbon apple pie toffee chocolate croissant. Tootsie roll cheesecake carrot cake jelly. Lemon drops chocolate sesame snaps dessert brownie icing marzipan pudding. Topping macaroon cupcake gummies jelly ice cream tart danish cotton candy. Sugar plum sweet cake. Croissant jelly beans tart marzipan chupa chups biscuit dessert ice cream ice cream."         },
             {
               name: "IBeTo 2019",
@@ -85,6 +90,7 @@ export default class Competitions extends React.Component {
               rules: "Rules for Ibeto",
               contact: "Contact for Ibeto",
               category: "Non-Tech",
+              type: "Offline",
               description:"Gingerbread jelly tart chocolate bar soufflé jujubes. Donut liquorice sweet roll. Pie bear claw chocolate powder lemon drops ice cream soufflé jujubes gingerbread. Tart sweet roll brownie pie gummi bears caramels soufflé. Cupcake cheesecake croissant biscuit oat cake topping ice cream cookie. Tart topping tootsie roll macaroon sesame snaps jelly jelly-o. Chocolate jelly sesame snaps lemon drops cotton candy croissant jelly. Cupcake ice cream sweet lollipop. Lemon drops pie bonbon apple pie toffee chocolate croissant. Tootsie roll cheesecake carrot cake jelly. Lemon drops chocolate sesame snaps dessert brownie icing marzipan pudding. Topping macaroon cupcake gummies jelly ice cream tart danish cotton candy. Sugar plum sweet cake. Croissant jelly beans tart marzipan chupa chups biscuit dessert ice cream ice cream."        },
             {
                 name: "IBeTo 2019",
@@ -96,6 +102,7 @@ export default class Competitions extends React.Component {
                 rules: "Rules for Ibeto",
                 contact: "Contact for Ibeto",
                 category:"Robitics",
+                type: "Online",
                 description:"Gingerbread jelly tart chocolate bar soufflé jujubes. Donut liquorice sweet roll. Pie bear claw chocolate powder lemon drops ice cream soufflé jujubes gingerbread. Tart sweet roll brownie pie gummi bears caramels soufflé. Cupcake cheesecake croissant biscuit oat cake topping ice cream cookie. Tart topping tootsie roll macaroon sesame snaps jelly jelly-o. Chocolate jelly sesame snaps lemon drops cotton candy croissant jelly. Cupcake ice cream sweet lollipop. Lemon drops pie bonbon apple pie toffee chocolate croissant. Tootsie roll cheesecake carrot cake jelly. Lemon drops chocolate sesame snaps dessert brownie icing marzipan pudding. Topping macaroon cupcake gummies jelly ice cream tart danish cotton candy. Sugar plum sweet cake. Croissant jelly beans tart marzipan chupa chups biscuit dessert ice cream ice cream."         },
             {
                 name: "HackForTomorrow 2019",
@@ -107,6 +114,7 @@ export default class Competitions extends React.Component {
                 rules: "Rules for HackForTomorrow",
                 contact: "Contact for HackForTomorrow",
                 category:"Computer Science",
+                type: "Offline",
                 description:"Gingerbread jelly tart chocolate bar soufflé jujubes. Donut liquorice sweet roll. Pie bear claw chocolate powder lemon drops ice cream soufflé jujubes gingerbread. Tart sweet roll brownie pie gummi bears caramels soufflé. Cupcake cheesecake croissant biscuit oat cake topping ice cream cookie. Tart topping tootsie roll macaroon sesame snaps jelly jelly-o. Chocolate jelly sesame snaps lemon drops cotton candy croissant jelly. Cupcake ice cream sweet lollipop. Lemon drops pie bonbon apple pie toffee chocolate croissant. Tootsie roll cheesecake carrot cake jelly. Lemon drops chocolate sesame snaps dessert brownie icing marzipan pudding. Topping macaroon cupcake gummies jelly ice cream tart danish cotton candy. Sugar plum sweet cake. Croissant jelly beans tart marzipan chupa chups biscuit dessert ice cream ice cream."         },
         {
             name: "IBeTo 2019",
@@ -118,14 +126,15 @@ export default class Competitions extends React.Component {
             rules: "Rules for Ibeto",
             contact: "Contact for Ibeto",
             category: "Non-Tech",
+            type: "Offline",
             description:"Gingerbread jelly tart chocolate bar soufflé jujubes. Donut liquorice sweet roll. Pie bear claw chocolate powder lemon drops ice cream soufflé jujubes gingerbread. Tart sweet roll brownie pie gummi bears caramels soufflé. Cupcake cheesecake croissant biscuit oat cake topping ice cream cookie. Tart topping tootsie roll macaroon sesame snaps jelly jelly-o. Chocolate jelly sesame snaps lemon drops cotton candy croissant jelly. Cupcake ice cream sweet lollipop. Lemon drops pie bonbon apple pie toffee chocolate croissant. Tootsie roll cheesecake carrot cake jelly. Lemon drops chocolate sesame snaps dessert brownie icing marzipan pudding. Topping macaroon cupcake gummies jelly ice cream tart danish cotton candy. Sugar plum sweet cake. Croissant jelly beans tart marzipan chupa chups biscuit dessert ice cream ice cream."        }
 
       ],
-      filterDepts : ['all-departments', 'computer-science', 'robotics', 'electronics', 'non-tech'],
+      filterDepts : ['All Departments', 'Computer Science', 'Robotics', 'Electronics', 'Non-Tech'],
       filterTypes : ['Online/Offline', 'Online', 'Offline'],
       currentDept: 'All Departments',
       currentType: 'Online/Offline',
-      scrollPos: window.scrollY
+      scrollPos: window.scrollY,
     };
   }
 
@@ -185,7 +194,8 @@ export default class Competitions extends React.Component {
     var grid = [];
     var events = this.state.events;
     for (var i in events) {
-      if(this.state.currentDept === "all-department" && this.state.currentType === "Online/Offline") {
+      console.log(this.state.currentDept, this.state.currentType)
+      if(this.state.currentDept === "All Departments" && this.state.currentType === "Online/Offline") {
         var gridItem = (
           <a 
             target="_blank"
@@ -199,7 +209,7 @@ export default class Competitions extends React.Component {
         grid.push(gridItem);
       }
       else {
-        if(events[i].department === this.state.currentDept && events[i].type === this.state.currentType) {
+        if(events[i].category === this.state.currentDept && events[i].type === this.state.currentType) {
           var gridItem = (
             <a 
               target="_blank"
@@ -230,7 +240,7 @@ export default class Competitions extends React.Component {
             >
               {
                 this.state.filterDepts.map(val => {
-                  return <option value={val}>{this.formatWord(val)}</option>
+                  return <option value={val}>{val}</option>
                 })
               }
               </Select>
@@ -246,7 +256,7 @@ export default class Competitions extends React.Component {
               >
                 {
                   this.state.filterTypes.map(val => {
-                    return <option value={val}>{this.formatWord(val)}</option>
+                    return <option value={val}>{val}</option>
                   })
                 }
                 </Select>
