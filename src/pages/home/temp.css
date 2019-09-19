@@ -30,6 +30,7 @@ body{
   border: 5px solid white;
   animation: color 5s linear infinite ;
   color:white;
+  opacity:0.5;
 }
 
 .text{
@@ -57,20 +58,22 @@ body{
 #c1{
   animation-delay:1s;
   transform:translateX(-50%) translateY(-50%) translateZ(-200px);
-  width:10vh;
-  height:10vh; 
+  width:5vh;
+  height:5vh; 
 }
 #c2{
+  opacity:0.6;
   animation-delay:2s;
-  transform:translateX(-50%) translateY(-50%) translateZ(100px);
-  width:20vh;
-  height:20vh; 
+  transform:translateX(-50%) translateY(-50%) translateZ(300px);
+  width:10vh;
+  height:10vh; 
 }
 #c2a{
   opacity:0.5;
   transform:translateX(-50%) translateY(-50%) translateZ(-100px);
   width:40vh;
   height:40vh; 
+
 }
 #c3{
   transform:translateX(-50%) translateY(-50%) translateZ(-200px);
@@ -79,9 +82,11 @@ body{
   opacity:0.4;
   border-width: 20px;
   border-style:dashed;
+  animation:none;
+  border-color:grey;
 }
 #c4{
-  transform:translateX(-50%) translateY(-50%) translateZ(-220px);
+  transform:translateX(-50%) translateY(-50%) translateZ(-520px);
   width:80vh;
   height:80vh; 
   opacity:0.4;
@@ -89,28 +94,28 @@ body{
   animation-delay:8s;
 }
 #c5{
-  transform:translateX(-50%) translateY(-50%) translateZ(-500px);
+  transform:translateX(-50%) translateY(-50%) translateZ(-1000px);
   width:135vh;
   height:135vh; 
   box-shadow: 0px 0px 40px 10px white;
 }
 #c6{
-  transform:translateX(-50%) translateY(-50%) translateZ(-500px);
-  width:150vh;
-  height:150vh; 
+  transform:translateX(-50%) translateY(-50%) translateZ(-1000px);
+  width:170vh;
+  height:170vh; 
   border-width:10px;
   border-style:dotted;
 }
 #c7{
-  transform:translateX(-50%) translateY(-50%) translateZ(-2000px);
-  opacity:0.2;
+  transform:translateX(-50%) translateY(-50%) translateZ(-6000px);
+  opacity:0.1;
   width:150vh;
   height:150vh; 
   border-width:50px;
 }
 #c8{
-  transform:translateX(-50%) translateY(-50%) translateZ(-2500px);
-  opacity:0.2;
+  transform:translateX(-50%) translateY(-50%) translateZ(-6500px);
+  opacity:0.1;
   width:100vh;
   height:100vh; 
   border-width:50px;
