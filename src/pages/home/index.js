@@ -1,4 +1,5 @@
 import React from 'react'
+import $ from 'jquery'
 import Particles from 'react-particles-js'
 import asyncComponent from '../../utils/asyncComponent';
 import styles from './style.module.css'
@@ -27,40 +28,42 @@ export default class Home extends React.Component {
         }
     }
 
+    componentDidMount(){
+        $(document).on("mousemove",function(e) {  
+
+  var x = -($(window).innerWidth()/2- e.pageX)/30;
+  var y = ($(window).innerHeight()/2- e.pageY)/30;
+  $(".card").css({"transform": "rotateY("+x+"deg) rotateX("+y+"deg)"}) 
+
+ setTimeout(cityzoom, 1000);
+ function cityzoom() { $(".layer").css({"transform":"translate(0px)"}); } 
+
+
+});
+
+    }
+  
     render() {
 
         return (
-          <div>
+          <div id="parent">
             <div id="h1">Excel 2019<br /><span style={{color:"grey",fontSize:"3vh"}}>Inspire Innovate Engineer</span></div> 
 
-
+<div id="god">
 <div className="card">
-
-<svg id="c1" className="circle" version="1.1" viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
-  <circle cx="250" cy="250" r="50" stroke="rgba(250,250,250,1)" fill="none" strokeWidth="3" strokeWidth="7" />
-</svg>
-<svg id ="c2" className="circle" version="1.1" viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
-  <circle cx="250" cy="250" r="100" stroke="rgba(250,250,250,0.5)" fill="none" strokeWidth="5" />
-</svg>
-
-<svg id ="c3" className="circle" version="1.1" viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
-  <circle cx="250" cy="250" r="140" stroke="rgba(250,250,250,0.3)" fill="none" strokeWidth="15" strokeDasharray="5" />
-</svg>
-<svg id ="c4" className="circle" version="1.1" viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
-  <circle cx="250" cy="250" r="170" stroke="rgba(250,250,250,0.7)" fill="none" strokeWidth="10" strokeDasharray="5" />
-</svg>
-<svg id ="c5" className="circle" version="1.1" viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
-  <circle cx="250" cy="250" r="200" stroke="rgba(250,250,250,1)" fill="none" strokeWidth="5" />
-</svg>
-<svg id ="c6" className="circle" version="1.1" viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
-  <circle cx="250" cy="250" r="220" stroke="rgba(250,250,250,1)" fill="none" strokeWidth="3" strokeDasharray="2,30" />
-</svg>
-
-<img id="logo" src={require('../../img/e.svg')} />
-
+  <div id="c1" className="circle"></div>
+  <div id="c2" className="circle"></div>
+  <div id="c2a" className="circle"></div>
+  <div id="c3" className="circle"></div>
+  <div id="c4" className="circle"></div>
+  <div id="c5" className="circle"></div>
+  <div id="c6" className="circle"></div>
+  <div id="c7" className="circle"></div>
+  <div id="c8" className="circle"></div>
+</div>
 </div>
 
-<div id="h1">Our Sponsors<br /><span style={{color:"grey",fontSize:"3vh"}}>MEC Excel 2019 Sponsors</span></div>
+<div id="h2">Our Sponsors<br /><span style={{color:"grey",fontSize:"3vh"}}>MEC Excel 2019 Sponsors</span></div>
 
 
 <div id="grid">
