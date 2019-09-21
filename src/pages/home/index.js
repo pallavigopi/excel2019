@@ -28,21 +28,6 @@ export default class Home extends React.Component {
             ]
         }
     }
-
-    componentDidMount(){
-        $(document).on("mousemove",function(e) {  
-
-  var x = -($(window).innerWidth()/2- e.pageX)/30;
-  var y = ($(window).innerHeight()/2- e.pageY)/30;
-  $(".card").css({"transform": "rotateY("+x+"deg) rotateX("+y+"deg)"}) 
-
- setTimeout(cityzoom, 1000);
- function cityzoom() { $(".layer").css({"transform":"translate(0px)"}); } 
-
-
-});
-
-    }
   
     render() {
 
