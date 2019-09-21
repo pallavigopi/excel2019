@@ -23,12 +23,6 @@ body{
   transform-style: ease-out;
 }
 
-@keyframes color{
-  0%,100%{border-color:white;}
-  20%,80%{border-color:gold;}
-  50%{border-color:orange;}
-}
-
 .circle{
   position: absolute;
   top: 50%;
@@ -166,4 +160,10 @@ body{
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%) translateZ(-200px) scale(0.2);
+}
+
+@media only screen and (max-width: 600px) {
+  #parent{
+  overflow-x:hidden;
+}
 }
