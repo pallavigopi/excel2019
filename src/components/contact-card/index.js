@@ -11,7 +11,7 @@ export default class ContactCard extends Component{
                 <img src={this.props.details.img}/>
                 <div className={styles["contact-overlay"]}>
                     <div className={styles["card-info"]}>
-                    <div>Thinking longingly about tuna brine get scared by doggo also cucumerro fight own tail for bleghbleghvomit my furball really tie the room together.</div>
+                    <div>{this.props.details.descp}</div>
                     <div><img  alt='' src={require('../../img/message-closed-envelope.png')}/> <a href={"mailto:" + this.props.details.email}>{this.props.details.email}</a><br/>
                     <img  alt='' src={require('../../img/phone-receiver.png')}/> {this.props.details.phno}  <br />
                     <img  className={styles["contact-social"]} alt='' src={require('../../img/linkedin.png')}/> <a href={this.props.details.linkln}></a><br/>
@@ -20,8 +20,8 @@ export default class ContactCard extends Component{
                 </div>
             </div>
             <div className={styles["below-card"]}>
-            <div>NAME</div>
-            <div>Designation</div>
+            <div>{this.props.details.name}</div>
+            <div>{this.props.details.desig}</div>
             </div>
 
             </div>
