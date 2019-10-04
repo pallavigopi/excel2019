@@ -128,7 +128,10 @@ export default class CompetitionEntry extends React.Component {
                 <li><a className={styles[this.state.currentSubSection == "Contact" ? "li-active" : ""]} onClick={this.handleContact} id="Contacts">Contact</a></li>
               </ul>
               <div className={styles["modal-subsection-container"]}>
-                {this.state.content}
+                {/* {this.state.content} */}
+                <span dangerouslySetInnerHTML={{__html: this.props.details.info}}>
+                  
+                </span>
                 {this.handleExtraSectionContent(this.state.currentSubSection)}
               </div>
             </div>

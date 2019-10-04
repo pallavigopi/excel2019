@@ -11,6 +11,7 @@ import event1 from "../../img/space-robot.png";
 import event2 from "../../img/spaceship.png";
 import event3 from "../../img/moon-rover.png"
 import event4 from "../../img/cloud-computing.png"
+import axios from "axios";
 
 
 const CompetitionEntryImport = () => import("components/competition-entry");
@@ -152,9 +153,8 @@ export default class Competitions extends React.Component {
     };
   }
 
-  // componentDidMount() {
-  //   window.addEventListener("scroll", this.handleScroll);
-  // }
+  async componentWillMount() {
+  }
 
   // componentWillUnmount() {
   //   window.removeEventListener("scroll", this.handleScroll);

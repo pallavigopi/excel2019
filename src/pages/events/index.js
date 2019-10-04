@@ -6,6 +6,8 @@ import styles from './style.module.css'
 import ibetoLogo from '../../img/ibetologo.png'
 import hackfortomorrow from '../../img/hftlogo.png'
 
+import axios from 'axios'
+
 const EventEntryImport = () => import('components/event-entry')
 const EventEntry = asyncComponent(EventEntryImport)
 
@@ -177,6 +179,23 @@ export default class Events extends React.Component {
 
             scrollPos: window.scrollY
         }
+    }
+
+    async componentWillMount() {
+      console.log('working')
+      let response = await axios.get('http://34.93.246.77/api/events', 
+      {
+        headers:{
+          "Origin" : "http://34.93.246.77/"
+        }
+      }
+      )
+      this.setState({events: response.data})
+      // axios.get("http://34.93.246.77/api/events?format=json")
+			// .then(function (response) {
+      //   console.log(response)
+      // })
+      
     }
 
     /*componentDidMount() {
