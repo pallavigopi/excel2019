@@ -96,6 +96,7 @@ const ScheduleFilter = (props) => {
                 </DialogContent>
                 <DialogActions>
                     <Button onClick={props.handleReset} style={{color: "#ff4500"}}>RESET</Button>
+                    <Button onClick={props.handleApply} style={{color: "#ff4500"}}>APPLY</Button>
                 </DialogActions>
             </Dialog>
     )

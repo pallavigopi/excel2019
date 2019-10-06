@@ -59,7 +59,7 @@ class Schedule extends React.Component {
         this.state = {
             events: [],
             filter: {
-                types: [ "all", "computer-science", "electronics", "electrical","exhinitions", "robotics","workshops", "talks"],
+                types: [ "all", "computer-science", "electronics", "electrical","exhibitions", "robotics","workshops", "talks"],
                 time: ["morning", "afternoon", "evening"],
                 default : {
                     type: "all",
@@ -70,7 +70,9 @@ class Schedule extends React.Component {
             days: [1,2,3],
             currentDay: 1,
             currentCategory: 'all',
-            currentTime: ["morning", "afternoon", "evening"]
+            currentTime: ["morning", "afternoon", "evening"],
+            nextCategory: 'all',
+            nextTime: ["morning", "afternoon", "evening"]
 
         }   
 
@@ -217,18 +219,18 @@ class Schedule extends React.Component {
 
         if(filter === "type") {
             this.setState({
-                currentCategory: e.target.value
+                nextCategory: e.target.value
             })
         }
         else {
             if(!e.target.checked) {
                 this.setState({
-                    currentTime: this.state.currentTime.filter(a => a !== e.target.value)
+                    nextTime: this.state.currentTime.filter(a => a !== e.target.value)
                 })
             }
             else {
                 this.setState({
-                    currentTime: [...this.state.currentTime, e.target.value]
+                    nextTime: [...this.state.currentTime, e.target.value]
                 })
             }
         }
@@ -241,6 +243,18 @@ class Schedule extends React.Component {
                 events: this.totalEvents.filter(event => event.day === val)
             })
     }
+
+    applyFilter = () => {
+        this.setState({
+            // events: this.state.nextEvents,
+            currentCategory: this.state.nextCategory,
+            currentTime: this.state.nextTime,
+        }, () => {
+            this.closeFilterPopup()
+        })
+    }
+
+
 
     render() {
 
@@ -301,9 +315,10 @@ class Schedule extends React.Component {
                 data={this.state.filter} 
                 handleClose={this.closeFilterPopup}
                 handleReset={this.resetFilter}
+                handleApply={this.applyFilter}
                 updateFilter={this.modifyFilters}
-                currentCategory={this.state.currentCategory}
-                currentTime={this.state.currentTime}    
+                currentCategory={this.state.nextCategory}
+                currentTime={this.state.nextTime}    
             />
         </div>    
         )
