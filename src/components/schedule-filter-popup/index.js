@@ -12,6 +12,7 @@ import {
     Button
 } 
 from '@material-ui/core'
+import { createRequireFromPath } from 'module';
 
 // modify the transition for the popup here
 const Transition = (props) => {
@@ -42,7 +43,7 @@ const ScheduleFilter = (props) => {
             >
                 <DialogTitle style={{padding: 0}}>
                     <div className={styles["filter-title--container"]}>
-                        <div className={styles["filter-close-btn"]} onClick={props.handleClose}>X</div>
+                        <div className={styles["filter-close-btn"]} onClick={props.handleClose}><img src={require('../../img/close.png')}/></div>
                         <div className={styles["filter-title"]}>Filters</div>
                     </div>
                 </DialogTitle>
@@ -95,6 +96,7 @@ const ScheduleFilter = (props) => {
                 </DialogContent>
                 <DialogActions>
                     <Button onClick={props.handleReset} style={{color: "#ff4500"}}>RESET</Button>
+                    <Button onClick={props.handleApply} style={{color: "#ff4500"}}>APPLY</Button>
                 </DialogActions>
             </Dialog>
     )

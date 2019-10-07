@@ -1,0 +1,29 @@
+.about-mini-grid{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 2.5rem 0rem;
+}
+
+.about-mini-grid-item {
+    padding: 0rem 2rem;
+}
+
+.mini-grid-heading{
+    color: orangered;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.mini-grid-description{
+    /* text-align: center; */
+}
+
+@media only screen and (max-width: 800px){
+    .about-mini-grid-item{
+        padding: 0px 10px;
+        align-items:unset;
+        justify-content: flex-start;
+    }
+} 
