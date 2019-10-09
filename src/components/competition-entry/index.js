@@ -8,7 +8,7 @@ export default class CompetitionEntry extends React.Component {
     super(props);
     this.state = {
       currentSubSection: "About",
-      content: this.props.details.description,
+      content: this.props.details.about,
     }
     //this.handleExtraSectionContent= this.handleExtraSectionContent.bind(this);
   }
@@ -16,7 +16,7 @@ export default class CompetitionEntry extends React.Component {
   handleAbout = () => {
     this.setState({
       currentSubSection: "About",
-      content: this.props.details.description
+      content: this.props.details.about
     });
   }
 
@@ -118,7 +118,7 @@ export default class CompetitionEntry extends React.Component {
               {this.props.details.name}
             </div>
             <div className={styles["modal-prize-pool"]}>
-            Prize Pool - 25k
+            Prize Pool - {this.props.details.prize}
             </div>
             <div className={styles["modal-event-body"]}>
               <ul className={styles["popup-navbar"]}>
@@ -128,7 +128,10 @@ export default class CompetitionEntry extends React.Component {
                 <li><a className={styles[this.state.currentSubSection == "Contact" ? "li-active" : ""]} onClick={this.handleContact} id="Contacts">Contact</a></li>
               </ul>
               <div className={styles["modal-subsection-container"]}>
-                {this.state.content}
+                {/* {this.state.content} */}
+                <span dangerouslySetInnerHTML={{__html: this.state.content}}>
+                  
+                </span>
                 {this.handleExtraSectionContent(this.state.currentSubSection)}
               </div>
             </div>

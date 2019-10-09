@@ -11,7 +11,7 @@ export default class EventEntry extends React.Component {
     render() {
 
         var buttons = []
-        for( var i in this.props.details.buttons){
+        for (var i in this.props.details.buttons) {
             var con = this.props.details.buttons[i]
             var button = (
                 <a href={con.link} target="_blank" className={styles["button-container"]}>{con.name}</a>
@@ -43,17 +43,18 @@ export default class EventEntry extends React.Component {
         return (
             <div>
                 <div onClick={() => this.simpleDialog.show()}>
-                    <div style={{zIndex:3}} className={styles["event-card-left"]} >
+                    <div style={{ zIndex: 3 }} className={styles["event-card-left"]} >
                         {/* <div className={styles["event-card-" + (this.props.direction == true ? "left" : "right")]} > */}
                         <div className={styles["event-logo-name-container-left"]}>
                             <div className={styles["event-logo"]}>
                                 <div target="_blank" className={styles["logo-container"]}><img className={styles["logos"]} src={this.props.details.imgsrc} /></div>
                             </div>
+
+                        </div>
+                        <div className={styles["event"]}>
                             <div className={styles["event-name"]}>
                                 <b>{this.props.details.name}</b>
                             </div>
-                        </div>
-                        <div className={styles["event"]}>
                             <div className={styles["event-description"]}>
                                 {this.props.details.description}
                             </div>
@@ -63,7 +64,7 @@ export default class EventEntry extends React.Component {
                         </div>
                     </div>
                 </div>
-                
+
                 <SkyLight
                     hideOnOverlayClicked
                     ref={ref => this.simpleDialog = ref}
@@ -77,10 +78,10 @@ export default class EventEntry extends React.Component {
                             <img className={styles["modal-image-logo"]} src={this.props.details.imgsrc} />
                         </div>
                         {buttons}
-                        <div className={styles["modal-event-body"]} dangerouslySetInnerHTML={{__html: this.props.details.info}}>
-            
+                        <div className={styles["modal-event-body"]} dangerouslySetInnerHTML={{ __html: this.props.details.info }}>
+
                         </div>
-                        
+
                     </div>
                 </SkyLight>
             </div>

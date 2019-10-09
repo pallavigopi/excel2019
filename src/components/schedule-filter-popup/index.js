@@ -41,11 +41,13 @@ const ScheduleFilter = (props) => {
                 maxWidth='100vw'
                 // className={styles["filter-container"]}
             >
-                <DialogContent style={{padding: 0}} id="scheduleFilterContent">
+                <DialogTitle style={{padding: 0}}>
                     <div className={styles["filter-title--container"]}>
                         <div className={styles["filter-close-btn"]} onClick={props.handleClose}><img src={require('../../img/close.png')}/></div>
                         <div className={styles["filter-title"]}>Filters</div>
                     </div>
+                </DialogTitle>
+                <DialogContent style={{padding: 0}} id="scheduleFilterContent">
                     <div className={styles["filter-content--container"]}>
                         <h4 className={styles["filter-content--title"]}>Categories</h4>
                         <div className={styles["filter-type--container"]}>
@@ -94,6 +96,7 @@ const ScheduleFilter = (props) => {
                 </DialogContent>
                 <DialogActions>
                     <Button onClick={props.handleReset} style={{color: "#ff4500"}}>RESET</Button>
+                    <Button onClick={props.handleApply} style={{color: "#ff4500"}}>APPLY</Button>
                 </DialogActions>
             </Dialog>
     )
