@@ -532,4 +532,7 @@ body{
   #all {  
   transform: translate(-50%, -50%) scale(0.4);
   }
+  #space{
+    height:500px;
+  }
 }
