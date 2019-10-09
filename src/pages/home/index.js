@@ -41,12 +41,12 @@ export default class Home extends React.Component {
 
   <div id="all">
 
-    <div id="t1" className="caption">Engineers learn . . .</div>
-    <div id="t2" className="caption">. . . challenge . . .</div>
+    <div id="t1" className="caption">An engineer opens a door to a new world . . .</div>
+    <div id="t2" className="caption">. . . scale new heights to beyond . . .</div>
     <div id="t3" className="caption">. . . and unravel the strange</div>
-    <div id="t4" className="caption">Their ureka moment inspires us. . .</div>
-    <div id="t5" className="caption">. . . to innovate new solutions . . .</div>
-    <div id="t6" className="caption">. . . and engineer them into reality</div>   
+    <div id="t4" className="caption">A single breakthrough can inspire us. . .</div>
+    <div id="t5" className="caption">. . . to innovate solutions . . .</div>
+    <div id="t6" className="caption">. . . to engineer a better today</div>   
 
     <svg id="c1" height="1000" width="1000">     
       <circle id="array" cx="500" cy="500" r="400" stroke="rgba(255,255,255,0.3)" stroke-width="40" fill="none" stroke-dasharray="4 40" />
