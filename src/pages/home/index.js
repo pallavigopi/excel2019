@@ -49,7 +49,7 @@ export default class Home extends React.Component {
     <div id="t6" className="caption">. . . to engineer a better today</div>   
 
     <svg id="c1" height="1000" width="1000">     
-      <circle id="array" cx="500" cy="500" r="400" stroke="rgba(255,255,255,0.3)" stroke-width="40" fill="none" stroke-dasharray="4 40" />
+      <circle id="array" cx="500" cy="500" r="400" stroke="rgba(255,255,255,0.4)" stroke-width="40" fill="none" stroke-dasharray="4 40" />
       <circle id="scroll_svg" cx="500" cy="500" r="490" stroke="gold" stroke-width="10" fill="none" stroke-dasharray="3100"/>
     </svg>
     

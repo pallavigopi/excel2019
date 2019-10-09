@@ -5,6 +5,7 @@ import styles from './style.module.css'
 //testing
 import ibetoLogo from '../../img/ibetologo.png'
 import hackfortomorrow from '../../img/hftlogo.png'
+import axios from 'axios'
 
 const EventEntryImport = () => import('components/event-entry')
 const EventEntry = asyncComponent(EventEntryImport)
@@ -165,6 +166,11 @@ export default class Talks extends React.Component {
 
             scrollPos: window.scrollY
         }
+    }
+
+    async componentWillMount() {
+      let response = await axios.get('http://34.93.246.77/api/events')
+      this.setState({events: response.data.filter(a => a.type === "Talk")})
     }
 
    /* componentDidMount() {

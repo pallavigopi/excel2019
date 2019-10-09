@@ -5,13 +5,13 @@
     margin: 0.3rem auto;
     border-radius: 8px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     font-family: 'Montserrat', sans-serif;
     transition: 0.3s ease;
     padding: 1rem;
 }
 
-.event-card-right {
+/* .event-card-right {
     color: white;
     background-color: #1f1f1f00;
     position: relative;
@@ -22,17 +22,17 @@
     font-family: 'Montserrat', sans-serif;
     transition: 0.3s ease;
     padding: 1rem;
-}
+} */
 
 .event-card-left:hover {
     background: #ffffff22;
     padding: 1.5rem;
 }
 
-.event-card-right:hover {
+/* .event-card-right:hover {
     background: #ffffff22;
     padding: 1.5rem;
-}
+} */
 
 .event {
     padding: 1.5rem 0rem;
@@ -45,7 +45,8 @@
 }
 
 .event-logo {
-    max-height: 11rem;
+    max-height: 9rem;
+    margin: auto;
     max-width: 11rem;
     background-color: white;
     border-radius: 12px;
@@ -56,10 +57,10 @@
     flex-direction: row;
 }
 
-.event-logo-name-container-right {
+/* .event-logo-name-container-right {
     display: flex;
     flex-direction: row-reverse;
-}
+} */
 
 .event-card-left>.event>.event-name {
     margin-bottom: 0.1rem;
@@ -70,11 +71,11 @@
 .event-card-left>.event>.event-description {
     text-align: left;
     font-size: 0.9rem;
-    margin-right: 9rem;
+    margin: auto 1rem;
     line-height: 1.5rem;
 }
 
-.event-card-right>.event>.event-name {
+/* .event-card-right>.event>.event-name {
     margin-bottom: 0.1rem;
     text-align: right;
     padding: 0.5rem 0rem;
@@ -85,7 +86,7 @@
     font-size: 0.9rem;
     margin-left: 9rem;
     line-height: 1.5rem;
-}
+} */
 
 .logo-container {
     text-align: center;
@@ -102,7 +103,7 @@
     display: none;
 }
 
-.button-container{
+.button-container {
     display: block;
     padding: 0vw 3.5vw;
     color: white;
@@ -117,8 +118,6 @@
     text-align: center;
     text-decoration: none;
 }
- 
-
 
 @media screen and (max-width: 800px) {
     .event-card-left {
@@ -184,8 +183,8 @@
         padding: 1rem;
         border: 1px solid white;
     }
-    .button-container{
-        width:30vw;
+    .button-container {
+        width: 30vw;
     }
 }
 
@@ -203,22 +202,23 @@
     font-size: 1.5rem;
 }
 
-.modal-event-body{
+.modal-event-body {
     padding: 20px 20vw;
     text-align: left;
 }
 
 /* almost large*/
-@media only screen and (max-width:1300px){
-    .modal-event-body{
+
+@media only screen and (max-width:1300px) {
+    .modal-event-body {
         padding: 20px 15vw;
-    }  
+    }
 }
 
-@media only screen and (max-width:800px){
-    .modal-event-body{
+@media only screen and (max-width:800px) {
+    .modal-event-body {
         padding: 20px 5vw;
-    }  
+    }
 }
 
 .modal-image {
