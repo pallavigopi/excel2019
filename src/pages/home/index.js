@@ -36,6 +36,8 @@ export default class Home extends React.Component {
             <div id="h1">Excel 2019<br /><span style={{color:"grey",fontSize:"3vh"}}>Inspire Innovate Engineer</span></div> 
 
 
+  <div id="space_before"></div>           
+
 
   <div id="all">
 
@@ -111,7 +113,9 @@ export default class Home extends React.Component {
 
   </div>
 
-<div id="space"></div>
+<div id="space_after"></div>
+
+
 <div id="h3">Our Sponsors<br /><span style={{color:"grey",fontSize:"3vh"}}>MEC Excel 2019 Sponsors</span></div>
 
 

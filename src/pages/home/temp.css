@@ -15,7 +15,7 @@ body{
 #h1{
   position:relative;
   padding-left:2vw;
-  padding-top:20vh;
+  padding-top:15vh;
   font-family:Montserrat;
   font-size:4vh;
   color:white;
@@ -103,7 +103,7 @@ body{
 
 
 
-#space{
+#space_after{
   width:1000px;
   height:800px;
 }
@@ -136,6 +136,7 @@ body{
 
 
 #all{
+  margin-top:0vh;
   position: absolute;
   width:1000px;
   height:1200px;
@@ -481,9 +482,11 @@ body{
   90%,100%{transform:translateY(-500px) rotateY(-60deg);}
 }
 #p1{
-  margin:300px 300px;
   animation:p1 5s ease infinite;
   animation-delay:3s;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid white;
 }
 @keyframes p2p3{
   0%{transform:translateY(-1500px);}
@@ -530,9 +533,13 @@ body{
 
 @media only screen and (max-width: 600px) {
   #all {  
-  transform: translate(-50%, -50%) scale(0.4);
+  transform: translate(-50%, -50%) scale(0.3);
+  margin-top:70px;
   }
-  #space{
-    height:500px;
+  #space_after{
+  height:500px;
   }
+  #h1{
+  padding-top:15vh;
+}
 }
