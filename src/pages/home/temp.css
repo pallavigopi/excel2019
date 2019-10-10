@@ -204,9 +204,9 @@ body{
   margin-top:345px;
   width:70px;
   height:70px;
-  background-image:radial-gradient(orange 20%, black 10%);
+  background-color:black;
   border-radius:100%;
-  border:orange 5px solid;
+  border:orange 10px solid;
 }
 @keyframes rotate{
   0%{transform:rotateZ(0deg);}
@@ -328,21 +328,6 @@ body{
   background-color:black;
   animation:code 25s linear infinite;
 }
-@keyframes helloworld{
-  0%{width:0px;}
-  8%{width:70px;}
-  16%{width:140px;}
-  24%{width:210px;}
-  32%{width:280px;}
-  48%{width:420px;}
-  56%{width:490px;}
-  64%{width:560px;}
-  72%{width:630px;}
-  80%{width:700px;}
-  90%{width: 770px;}
-  100%{width:840px;}
-}
-
 .code_text{
   height:70px;
   position:absolute;
@@ -491,6 +476,12 @@ body{
 
 @media only screen and (max-height: 1000px) {
   #all {  
+  position: absolute;
+  width:1000px;
+  height:1200px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0.3);
   transform: translate(-50%, -50%) scale(0.6);
   margin-top:70px;
   }
@@ -505,6 +496,11 @@ body{
 
 @media only screen and (max-width: 600px) {
   #all {  
+  position: absolute;
+  width:1000px;
+  height:1200px;
+  left: 50%;
+  top: 50%;
   transform: translate(-50%, -50%) scale(0.3);
   margin-top:70px;
   }

@@ -1,8 +1,9 @@
 .nav-cross {
+    margin:0;
     position: fixed;
-    margin: 15px 30px;
-    width:50px;
-    height:50px;
+    padding: 15px 30px;
+    width:60px;
+    height:60px;
     z-index:10006;
     cursor: pointer;
 }
@@ -120,9 +121,8 @@
 }
 @media (max-width: 600px){
     .nav-cross {
-        margin: 20px 20px;
-        width:30px;
-        height:30px;
+        margin:0px;
+        padding:20px 20px;
     }
     .navLine1 {
         margin:15px 0px;
