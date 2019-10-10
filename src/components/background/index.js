@@ -15,16 +15,18 @@ export default class Background extends React.Component {
     params={{
 	    "particles": {
 	        "number": {
-	            "value": 160,
+	            "value": 200,
+	            "speed":7,
 	            "density": {
 	                "enable": false
 	            }
+
 	        },
 	        "size": {
-	            "value": 3,
+	            "value": 5,
 	            "random": true,
 	            "anim": {
-	                "speed": 4,
+	                "speed": 2	,
 	                "size_min": 0.3
 	            }
 	        },
@@ -33,7 +35,7 @@ export default class Background extends React.Component {
 	        },
 	        "move": {
 	            "random": true,
-	            "speed": 1,
+	            "speed": 2,
 	            "direction": "top",
 	            "out_mode": "out"
 	        }
@@ -51,14 +53,14 @@ export default class Background extends React.Component {
 	        },
 	        "modes": {
 	            "bubble": {
-	                "distance": 250,
-	                "duration": 2,
+	                "distance": 0,
+	                "duration": 1,
 	                "size": 0,
 	                "opacity": 0
 	            },
 	            "repulse": {
-	                "distance": 400,
-	                "duration": 4
+	                "distance": 200,
+	                "duration": 1
 	            }
 	        }
 	    }
