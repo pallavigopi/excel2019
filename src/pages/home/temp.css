@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Monoton&display=swap');
+
 ::-webkit-scrollbar {
     width: 4px;
     height: 0px;
@@ -11,43 +13,28 @@ body{
   overflow-x: hidden;
   transform-style: preserve-3d;
 } 
+.title{
+
+}
+.title{
+  z-index:3;
+  position:relative; 
+  font-family: montserrat;
+  letter-spacing: 3px;
+  font-size:4vh;
+  color:white;
+  margin-left:2vw;
+}
 
 #h1{
-  z-index:200000000;
-  position:relative;
-  padding-left:2vw;
   padding-top:15vh;
-  font-family:Montserrat;
-  font-size:4vh;
-  color:white;
-  text-shadow: 0px 0px 5px black;
-}
-#h2{
-  z-index:200000000;
-  position:relative;
-  font-family:Montserrat;
-  font-size:4vh;
-  color:white;
-  text-align: right;
-  padding:2vh;
-  padding-bottom:20vh;
-  text-shadow: 0px 0px 5px black;
-}
-#h3{
-  z-index:200000000;
-  position:relative;
-  padding-left:2vw;
-  font-family:Montserrat;
-  font-size:4vh;
-  color:white;
-  text-shadow: 0px 0px 5px black;
 }
 
 .sponsor{
   width:150px;
   height:150px;
   color:white;
-  margin:10vh;
+  margin:7vh;
   border-radius: 100%;
   background-color:white;
 }
@@ -59,21 +46,16 @@ body{
   display: flex;
   flex-wrap:wrap;
   justify-content: center;
-  padding-bottom:10vh;
+  padding-bottom:1vh;
 }
 
 .t1{
   font-family:Montserrat;
   font-size:3vh;
-  margin-top:200px;
+  margin-top:160px;
   text-align:center;
 }
 
-@media only screen and (max-width: 600px) {
-  #parent{
-  overflow-x:hidden;
-}
-}
 
 
 
@@ -162,8 +144,7 @@ body{
   text-align:center;
   margin:1100px 0px;
   font-family:montserrat;
-  font-size:40px;
-  font-style:italic;
+  font-size:40px; 
   color:rgba(255,255,255,1);
   letter-spacing: 4px;
 }
@@ -223,9 +204,9 @@ body{
   margin-top:345px;
   width:70px;
   height:70px;
-  background-image:radial-gradient(gold 20%, black 10%);
+  background-image:radial-gradient(orange 20%, black 10%);
   border-radius:100%;
-  border:gold 5px solid;
+  border:orange 5px solid;
 }
 @keyframes rotate{
   0%{transform:rotateZ(0deg);}
@@ -299,7 +280,7 @@ body{
   height:600px;
   margin:200px 200px;
   background-image:url('c.png');
-  transform: scale(0.8);
+  transform: scale(1.1);
   transform-style: preserve-3d;
   animation:jump 25s linear infinite;
 }
@@ -308,27 +289,13 @@ body{
   80%, 99%{opacity:1;}
 }
 #color{
-  z-index:100;
+  z-index:2;
   width:600px;
   height:600px;
   margin:200px 200px;
   background-image:url('logo.png');
   transform: scale(1);
   animation:color 25s linear infinite;
-}
-@keyframes jump_glow{
-  0%,43%,63%,100%{opacity:0;}
-  44%{transform:scale(1);opacity:1;} 
-  62%{transform:scale(6);}
-}
-#jump_glow{
-  width:100px;
-  height:100px;
-  margin:450px 450px;
-  border:white 5px solid;
-  border-radius:100%;
-  box-shadow:0px 0px 50px 5px white;
-  animation: jump_glow 25s ease-out infinite;
 }
 
 
@@ -367,41 +334,28 @@ body{
   16%{width:140px;}
   24%{width:210px;}
   32%{width:280px;}
-  40%,85%,100%{width:350px;}
   48%{width:420px;}
   56%{width:490px;}
   64%{width:560px;}
   72%{width:630px;}
   80%{width:700px;}
+  90%{width: 770px;}
+  100%{width:840px;}
 }
-@keyframes helloai{
-  0%{width:0px;}
-  8%{width:70px;}
-  16%{width:140px;}
-  24%{width:210px;}
-  32%{width:280px;}
-  40%{width:350px;}
-  80%{width:350px;}
-  90%{width:420px;}
-  100%{width:490px;}
-}
+
 .code_text{
-  height:60px;
+  height:70px;
   position:absolute;
   overflow-y: hidden;
   color:white;
   overflow-x:hidden;
-  font-size:60px;
+  font-size:70px;
   font-family:Courier;
+  letter-spacing: 10px;
 }
 #helloworld{
   margin:340px 40px; 
   animation:helloworld 2.5s linear infinite ;
-  color:#43afff;
-}
-#helloai{
-  margin:340px 40px;
-  animation:helloai 2.5s linear infinite;
   color:#43afff;
 }
 #rest1{
@@ -440,7 +394,7 @@ body{
   opacity:0;
   perspective:1000px;
   overflow: hidden;
-  z-index:100;
+  z-index:2;
   margin:175px 175px;
   width:650px;
   height:650px;
@@ -535,6 +489,18 @@ body{
   animation:race 25s linear infinite;
 }
 
+@media only screen and (max-height: 1000px) and (max-width: 1200px) {
+  #all {  
+  transform: translate(-50%, -50%) scale(0.6);
+  margin-top:70px;
+  }
+  #space_after{
+  height:700px;
+  }
+  #h1{
+  padding-top:15vh;
+}
+}
 
 
 @media only screen and (max-width: 600px) {
@@ -548,4 +514,9 @@ body{
   #h1{
   padding-top:15vh;
 }
+.title{
+  margin-left:5vw;
 }
+}
+
+

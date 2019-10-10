@@ -33,7 +33,7 @@ export default class Home extends React.Component {
 
         return (
           <div id="parent">
-            <div id="h1">Excel 2019<br /><span style={{color:"grey",fontSize:"3vh"}}>Inspire Innovate Engineer</span></div> 
+            <div id="h1" class="title">EXCEL 2019<br /><span style={{color:"grey",fontSize:"3vh"}}>Inspire Innovate Engineer</span></div> 
 
 
   <div id="space_before"></div>           
@@ -41,16 +41,16 @@ export default class Home extends React.Component {
 
   <div id="all">
 
-    <div id="t1" className="caption">An engineer opens a door to a new world . . .</div>
-    <div id="t2" className="caption">. . . scale new heights to beyond . . .</div>
-    <div id="t3" className="caption">. . . and unravel the strange</div>
-    <div id="t4" className="caption">A single breakthrough can inspire us. . .</div>
-    <div id="t5" className="caption">. . . to innovate solutions . . .</div>
-    <div id="t6" className="caption">. . . to engineer a better today</div>   
+    <div id="t1" className="caption">"An engineer opens a door to a new world . . ."</div>
+    <div id="t2" className="caption">". . . scale new heights to beyond . . ."</div>
+    <div id="t3" className="caption">". . . and unravel the strange"</div>
+    <div id="t4" className="caption">"A single breakthrough can inspire us. . ."</div>
+    <div id="t5" className="caption">". . . to innovate solutions . . ."</div>
+    <div id="t6" className="caption">". . . to engineer a better today"</div>   
 
     <svg id="c1" height="1000" width="1000">     
       <circle id="array" cx="500" cy="500" r="400" stroke="rgba(255,255,255,0.4)" stroke-width="40" fill="none" stroke-dasharray="4 40" />
-      <circle id="scroll_svg" cx="500" cy="500" r="490" stroke="gold" stroke-width="10" fill="none" stroke-dasharray="3100"/>
+      <circle id="scroll_svg" cx="500" cy="500" r="490" stroke="orange" stroke-width="10" fill="none" stroke-dasharray="3100"/>
     </svg>
     
     <div id="scroll_circle">
@@ -58,10 +58,9 @@ export default class Home extends React.Component {
     </div>
 
       <div id="code">
-        <div id="rest1" className="code_text">p r i n t f ("</div> 
-        <div id="rest2" className="code_text">");</div> 
-        <div id="helloworld" className="code_text">H e l l o  W o r l d</div>
-        <div id="helloai" className="code_text">H e l l o  A i</div>
+        <div id="rest1" className="code_text"> from MEC </div> 
+        <div id="helloworld" className="code_text">import Excel </div>
+    
       </div>
 
       <div id="timer">
@@ -99,10 +98,10 @@ export default class Home extends React.Component {
     <div id="jump_glow"></div>
     <div id="color"></div>  
 
-    <svg id="golden_ratio" height="1000" width="1000">     
-      <circle cx="740" className="golden" cy="460" r="40" stroke-width="10" fill="none"  />
-      <circle cx="480" className="golden" cy="490" r="80" stroke-width="10" fill="none" />
-    </svg>
+      <svg id="golden_ratio" height="1000" width="1000">     
+        <circle cx="740" className="golden" cy="460" r="40" stroke-width="3" fill="none"  />
+        <circle cx="480" className="golden" cy="490" r="80" stroke-width="3" fill="none" />
+      </svg>
 
     <svg id="logo" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="600" height="600" viewBox="0 0 600 600" stroke-dasharray="2300">
 
@@ -116,22 +115,22 @@ export default class Home extends React.Component {
 <div id="space_after"></div>
 
 
-<div id="h3">Our Sponsors<br /><span style={{color:"grey",fontSize:"3vh"}}>MEC Excel 2019 Sponsors</span></div>
+<div id="h3" class="title">Our Sponsors <br /><span style={{color:"grey",fontSize:"3vh"}}>MEC Excel 2019 Sponsors</span></div>
 
 
 
 <div id="grid">
   <div id="sp1" className="sponsor">
-    <div className="t1">spnsor1</div>
+    <div className="t1">sponsor</div>
   </div>
   <div id="sp2" className="sponsor">
-      <div className="t1">spnsor1</div>
+      <div className="t1">sponsor</div>
   </div>
   <div id="sp3" className="sponsor">
-      <div className="t1">spnsor1</div>
+      <div className="t1">sponsor</div>
   </div>
   <div id="sp4" className="sponsor">
-      <div className="t1">spnsor1</div>
+      <div className="t1">sponsor</div>
   </div>
 </div>
 
