@@ -497,7 +497,7 @@ body{
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%) scale(0.6);
-  margin-top:70px;
+  margin-top:50px;
   }
   #space_after{
   height:700px;
@@ -516,7 +516,7 @@ body{
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%) scale(0.5);
-  margin-top:70px;
+  margin-top:50px;
   }
   #space_after{
   height:700px;
