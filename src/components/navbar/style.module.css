@@ -30,7 +30,6 @@
     border-radius:100px;
 }
 
-
 .nav-content--container {
     position: fixed;
     width:100%;
@@ -144,7 +143,7 @@
         font-size:20px;
     }
     .nav-content--container {
-        margin-top:2vh;
+        margin-top:-1vh;
     }
     .nav-icons--container {
         position: absolute;

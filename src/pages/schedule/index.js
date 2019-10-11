@@ -225,12 +225,12 @@ class Schedule extends React.Component {
         else {
             if(!e.target.checked) {
                 this.setState({
-                    nextTime: this.state.currentTime.filter(a => a !== e.target.value)
+                    nextTime: this.state.nextTime.filter(a => a !== e.target.value)
                 })
             }
             else {
                 this.setState({
-                    nextTime: [...this.state.currentTime, e.target.value]
+                    nextTime: [...this.state.nextTime, e.target.value]
                 })
             }
         }
