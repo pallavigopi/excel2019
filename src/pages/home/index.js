@@ -7,6 +7,7 @@ import './temp.css'
 import ibetoLogo from '../../img/ibetologo.png'
 import excellogo from './excel_logo.png'
 import meclogo from './mec_logo.png'
+import mecvector from './mec.png'
 import hackfortomorrow from '../../img/hftlogo.png'
 
 export default class Home extends React.Component {
@@ -119,14 +120,17 @@ export default class Home extends React.Component {
 </div>
 
 <div id="h4" class="title">Legacy</div>
-
-<div className="grid">
-  <div id="mec"></div>  
-  <div id="legacy">Reference site about Lorem Ipsum, giving information on its origins, Lorem Ipsum: usage Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content. It's also called placeholder (or filler) text. It's a convenient tool for mock-ups.
+<div className="legacy-grid">
+  <div> 
+    <img src={mecvector}/>
+  </div>
+  <div>
+  Reference site about Lorem Ipsum, giving information on its origins, Lorem Ipsum: usage Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content. It's also called placeholder (or filler) text. It's a convenient tool for mock-ups.
    Lorem Ipsum: usage Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content. It's also called placeholder (or filler) text. It's a convenient tool for mock-ups.
    Lorem Ipsum: usage Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content. It's also called placeholder (or filler) text. It's a convenient tool for mock-ups.
-   as well as a random Lipsum generator. </div>
+   as well as a random Lipsum generator.</div>
 </div>
+
 
 <div className="logo-grid">
   <div> 

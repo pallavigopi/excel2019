@@ -348,15 +348,39 @@ body{
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding-bottom: 5vh;
+  padding-bottom: 7.5vh;
 }
 
 .logo-grid img{
   width:15vw;
 }
 
+.legacy-grid{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  text-align: center;
+}
+
+.logo-grid img{
+  width:15vw;
+}
+.legacy-grid img{
+  width:30vw;
+}
+
 @media only screen and (max-width:680px){
   .logo-grid img{
     width:40vw;
+  }
+  .legacy-grid{
+    flex-direction: column;
+    text-align: left;
+    justify-content: left;
+  }
+  .legacy-grid img{
+    width:80vw;
   }
 }
