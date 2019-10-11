@@ -2,7 +2,7 @@
 
 body{
 	overflow-x: hidden;
-	background-color: #000000;
+	background-color: rgba(30,30,30,1);
 }
 
 .header {

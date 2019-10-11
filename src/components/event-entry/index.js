@@ -75,7 +75,7 @@ export default class EventEntry extends React.Component {
                     <div className={styles["modal-container"]}>
                         {/*<div className={styles["modal-title"]}>{this.props.details.name}</div>*/}
                         <div className={styles["modal-image"]}>
-                            <img className={styles["modal-image-logo"]} src={this.props.details.imgsrc} />
+                            <img className={styles["modal-image-logo"]} src={this.props.details.img} />
                         </div>
                         {buttons}
                         <div className={styles["modal-event-body"]} dangerouslySetInnerHTML={{ __html: this.props.details.info }}>
