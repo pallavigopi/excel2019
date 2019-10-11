@@ -40,7 +40,7 @@ export default class Competitions extends React.Component {
     super(props);
     this.state = {
       events: [],
-      filterDepts : ['All Departments', 'Computer Science', 'Robotics', 'Electronics', 'Non-Tech'],
+      filterDepts : ['All Departments', 'Computer Science', 'Robotics', 'Gen-Tech', 'Non-Tech'],
       filterTypes : ['Online/Offline', 'Online', 'Offline'],
       currentDept: 'All Departments',
       currentType: 'Online/Offline',
