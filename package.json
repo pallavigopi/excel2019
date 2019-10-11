@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/pallavigopi/lecxe2019/issues"
   },
-  "homepage": "https://github.com/pallavigopi/lecxe2019#readme",
+  "homepage": "http://excelmec.org/excel2k19_demo",
   "devDependencies": {
     "react-app-rewire-css-modules": "github:codebandits/react-app-rewire-css-modules",
     "react-scripts": "^3.0.1"
