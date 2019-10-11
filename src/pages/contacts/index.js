@@ -47,14 +47,15 @@ export default class Contacts extends Component{
                {desig:"Publicity Manager",name:"Sebastian T Sebastian",descp:"",email:"sebastiant.mec@gmail.com",phno:"+91 8547969187",img:Sebastian,linkln:"https://www.linkedin.com/in/sebastian-t-sebastian-438031195"},
                {desig:"Media Relations Manager",name:"Kenneth Godwin Isidore",descp:"",email:"kennethgodwin.mec@gmail.com",phno:"+91 9446975891",img:Kenneth,linkln:"https://www.linkedin.com/in/kenneth-godwin-isidore/"},
                {desig:"Conferences Manager",name:"Alfia Rehman",descp:"",email:"alfiarehman.mec@gmail.com ",phno:"+91 8301861220",img:Alfia,linkln:" https://www.linkedin.com/in/alfia-rehman-b526ab162"},
-               {desig:"Conferences Manager",name:"Ashwin B Nair",descp:"",email:"ashwinbnair.mec@gmail.com",phno:"+91 9048362398",img:Ashwin,linkln:""},
+
+
+               {desig:"Conferences Manager",name:"Ashwin B Nair",descp:"",email:"ashwinbnair.mec@gmail.com",phno:"+91 9048362398",img:Ashwin,linkln:"https://www.linkedin.com/in/ashwin-b-nair-5ba0b2152/"},
                {desig:"Social Initiatives Manager",name:"Bhairavi Sameer Shah",descp:"",email:"bhairavi.mec@gmail.com",phno:"+91 9061344877",img:Bhairavi,linkln:"https://www.linkedin.com/in/bhairavi-shah/"},
                {desig:"Talks Manager",name:"Diya Liza Varghese ",descp:"",email:"diyaliza.mec@gmail.com",phno:"+91 9048819638",img:Diya,linkln:"linkedin.com/in/diya-liza-varghese-b92a70128"},
                {desig:"Online Media Relations",name:"Shazia Salim",descp:"",email:"shaziasalim.mec@gmail.com",phno:"+91 7034511782",img:Shazia,linkln:"https://www.linkedin.com/in/shazia-salim"},
                {desig:"Design Manager",name:"Amal K Ajay",descp:"",email:"amalkajay.mec@gmail.com",phno:"+91 8921976941",img:Amal,linkln:"https://www.linkedin.com/in/amal-k-ajay/"},
                {desig:"Content Manager",name:"Akshay Balakrishnan",descp:"",email:"akshaybalakrishnan.mec@gmail.com",phno:"+91 9895389963",img:Akshay,linkln:"https://in.linkedin.com/in/akshay-balakrishnan-62371713b"}
-            
-               
+
             ]
         }
     }
