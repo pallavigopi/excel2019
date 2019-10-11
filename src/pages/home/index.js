@@ -5,7 +5,8 @@ import asyncComponent from '../../utils/asyncComponent';
 import styles from './style.module.css'
 import './temp.css'
 import ibetoLogo from '../../img/ibetologo.png'
-import excellogo from '../../img/e.svg'
+import excellogo from './excel_logo.png'
+import meclogo from './mec_logo.png'
 import hackfortomorrow from '../../img/hftlogo.png'
 
 export default class Home extends React.Component {
@@ -127,13 +128,12 @@ export default class Home extends React.Component {
    as well as a random Lipsum generator. </div>
 </div>
 
-<div className="grid">
-  
-  <div>
-      <div id="mec_logo" className="logo"></div>
+<div className="logo-grid">
+  <div> 
+    <img src={meclogo}/>
   </div>
   <div>
-      <div id="excel_logo" className="logo"></div>
+    <img src={excellogo}/>
   </div>
 </div>
 

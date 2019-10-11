@@ -341,3 +341,22 @@ body{
   transform:scale(0.7);
 }
 }
+
+/*new logo code*/
+.logo-grid{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 5vh;
+}
+
+.logo-grid img{
+  width:15vw;
+}
+
+@media only screen and (max-width:680px){
+  .logo-grid img{
+    width:40vw;
+  }
+}
