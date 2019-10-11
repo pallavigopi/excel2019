@@ -168,3 +168,9 @@
         padding-bottom:30px;
     }
 }
+
+@media (max-width: 380px){
+    .nav-icons--container {
+        top:93vh;
+    }
+}
