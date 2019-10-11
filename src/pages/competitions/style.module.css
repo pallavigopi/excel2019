@@ -12,6 +12,7 @@ body {
 }
 
 #comp-grid {
+  margin-top:30px;
   padding: 2rem 3rem;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr));
@@ -19,15 +20,29 @@ body {
 }
 
 .header {
-  text-align: center;
   padding: 4rem;
+  width: 50rem;
+  margin: auto 11rem;
 }
 
 .title {
   color: aliceblue;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 3rem;
   font-weight: 700;
+}
+
+.subtitle {
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffffaa;
+  font-size: 1.7rem;
+  padding: 0rem 1rem;
+  font-weight: 100;
+}
+.underline {
+  width: calc(100vw - 30rem);
+  margin: auto auto;
+  border-bottom: #ffffff55 2px solid;
 }
 
 .comp-filter-dept {
@@ -35,6 +50,7 @@ body {
   position: absolute;
   color:white;
   left: 100px;
+  margin-top:30px;
 }
 
 .comp-filter-type {
@@ -42,19 +58,37 @@ body {
   position: absolute;
   color:white;
   right: 100px;
+  margin-top:30px;
 }
 
 
 
+@media screen and (max-width: 800px) {
+  .header {
+      text-align: center;
+      width: auto;
+      margin: auto auto;
+      border: none;
+      display: flex;
+      flex-direction: column;
+  }
+  .title {
+      font-size: 2.5rem;
+  }
+  .subtitle {
+      text-align: center;
+      font-size: 1rem;
+  }
+  .underline {
+    display: none;
+}
+}
 @media screen and (max-width: 600px) {
   #comp-grid {
     grid-template-columns: auto;
     padding: 0rem;
     grid-gap: 0rem;
     margin-top: 5rem;
-  }
-  .title {
-    font-size: 2.5rem;
   }
 
   .comp-filter-dept {

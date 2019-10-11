@@ -33,11 +33,6 @@ export default class Home extends React.Component {
 
         return (
           <div id="parent">
-            <div id="h1" class="title">EXCEL 2019<br /><span style={{color:"grey",fontSize:"3vh"}}>Inspire Innovate Engineer</span></div> 
-
-
-  <div id="space_before"></div>           
-
 
   <div id="all">
 
@@ -131,6 +126,23 @@ export default class Home extends React.Component {
   </div>
   <div id="sp4" className="sponsor">
       <div className="t1">sponsor</div>
+  </div>
+</div>
+
+<div id="h4" class="title">Legacy</div>
+  
+  <div id="legacy">Reference site about Lorem Ipsum, giving information on its origins, Lorem Ipsum: usage Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content. It's also called placeholder (or filler) text. It's a convenient tool for mock-ups.
+ Lorem Ipsum: usage Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content. It's also called placeholder (or filler) text. It's a convenient tool for mock-ups.
+ Lorem Ipsum: usage Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content. It's also called placeholder (or filler) text. It's a convenient tool for mock-ups.
+ as well as a random Lipsum generator. </div>
+ 
+<div id="grid2">
+  
+  <div>
+      <div className="mec"></div>
+  </div>
+  <div>
+      <div className="excel"></div>
   </div>
 </div>
 

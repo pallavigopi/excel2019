@@ -71,7 +71,7 @@ export default class Nav extends React.Component {
                     <ul>
                     <li className={styles["nav-link--gap"]}></li>
                         <li className={styles["nav-link"]}><Link to="/home" style={{ textDecoration: 'none' }}><span className={styles["nav-link--text"]} onClick={this.handleChange}>Home</span></Link></li>
-                        <li className={styles["nav-link"]}><Link to="/competitions" style={{ textDecoration: 'none' }}><span className={styles["nav-link--text"]} onClick={this.handleChange}>Competiton</span></Link></li>
+                        <li className={styles["nav-link"]}><Link to="/competitions" style={{ textDecoration: 'none' }}><span className={styles["nav-link--text"]} onClick={this.handleChange}>Competitions</span></Link></li>
                         <li className={styles["nav-link"]}><Link to="/events" style={{ textDecoration: 'none' }}><span className={styles["nav-link--text"]} onClick={this.handleChange}>Events</span></Link></li>
                         <li className={styles["nav-link"]}><Link to="/workshops" style={{ textDecoration: 'none' }}><span className={styles["nav-link--text"]} onClick={this.handleChange}>Workshops</span></Link></li>
                         <li className={styles["nav-link"]}><Link to="/talks" style={{ textDecoration: 'none' }}><span className={styles["nav-link--text"]} onClick={this.handleChange}>Talks</span></Link></li>

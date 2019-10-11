@@ -1,9 +1,10 @@
 .nav-cross {
     margin:0;
+    top:0;
     position: fixed;
     padding: 15px 30px;
-    width:60px;
-    height:60px;
+    width:70px;
+    height:70px;
     z-index:10006;
     cursor: pointer;
 }

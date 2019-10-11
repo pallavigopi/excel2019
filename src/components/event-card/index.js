@@ -8,7 +8,7 @@ export default class EventCard extends React.Component {
         return(
             <div className={styles["event-card"]}>
                 <div className = {styles["event-logo"]}>
-                    <a target="_blank"><img className={styles["logos"]} src={this.props.details.imgsrc}/></a>
+                    <a target="_blank"><img className={styles["logos"]} src={this.props.details.img}/></a>
                 </div>
                 <div className = {styles["event"]}>
                     <div className = {styles["event-name"]}>
