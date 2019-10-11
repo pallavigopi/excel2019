@@ -387,7 +387,6 @@ body{
   height:1200px;
   left: 50%;
   top: 50%;
-
   transform: translate(-50%, -50%) scale(0.5);
 
   transform: translate(-50%, -50%) scale(0.6);
@@ -398,7 +397,7 @@ body{
   }
   #h1{
   padding-top:15vh;
-}
+  }
 }
 
 
@@ -417,6 +416,21 @@ body{
   }
 
 }
+@media only screen and (max-width: 900px) {
+  #all {  
+  position: absolute;
+  width:1000px;
+  height:1200px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0.5);
+  margin-top:30px;
+  }
+#parent{
+  overflow-x: hidden;
+}
+
+}
 
 @media only screen and (max-width: 600px) {
   #all {  
@@ -432,20 +446,23 @@ body{
   }
   #parent{
   overflow-x: hidden;
-}
-.excel{
+  }
+  .excel{
   transform:scale(0.4);
-}
-.mec{
+  }
+  .mec{
   width:600px;
   height:600px;
   background-image:url('mec.png');
   transform:scale(0.5);
-}
-#legacy{
+  }
+  #legacy{
   width:88%;
-}
-.title{
+  }
+  .title{
   margin-left:5vw;
+  }
 }
+@media only screen and (max-width: 900px) {
+
 }
