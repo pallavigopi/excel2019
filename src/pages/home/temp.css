@@ -62,31 +62,64 @@ body{
   justify-content: center;
   padding-bottom:1vh;
 }
-#legacy{
-  width:96%;
-  color:white;
-  font-family:montserrat;
-  font-size:2.4vh;
-  margin-top:10vh;
-  padding:4vh;
-  line-height: 40px;
-  letter-spacing: 2px;
-  padding-right:10px;
-  text-align:justify;
-  text-justify: inter-character;
-}
+
 .excel{
   width:600px;
   height:600px;
-  background-image:url('logo.png');
-  transform:scale(0.5);
+  background-image:url('excel_logo.png');
+  transform:scale(0.7);
 }
 .mec{
   width:600px;
   height:600px;
-  background-image:url('mec.png');
+  background-image:url('mec_logo.png');
   transform:scale(0.7);
 }
+#grid3{
+  position:relative;
+  left:0;
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: center;
+}
+#legacy{
+  width:50%;
+  color:white;
+  font-family:montserrat;
+  font-size:2.4vh;
+  padding:5vh;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-align:justify;
+  text-justify: inter-character;
+}
+#mec{
+  width:600px;
+  height:600px;
+  background-image:url('mec.png');
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #title{
   filter:blur(5px);
   margin-top:400px;
@@ -166,7 +199,7 @@ body{
   margin-top:345px;
   width:70px;
   height:70px;
-  background-color:black;
+  background-color:rgba(30,30,30,1);
   border-radius:100%;
   border:orange 10px solid;
 }
@@ -265,7 +298,7 @@ body{
   width:750px;
   height:750px;
   border-radius:100%;
-  background-color:black;
+  background-color:rgba(30,30,30,1);
   animation:code 25s linear infinite;
 }
 .code_text{
@@ -305,7 +338,7 @@ body{
   height:650px;
   border-radius:100%;
   transform-style: preserve-3d;
-  background-color:black;
+  background-color:rgba(30,30,30,1);
   animation:maze 25s linear infinite;
 }
 @keyframes zoom{
@@ -376,7 +409,7 @@ body{
   height:700px;
   margin:150px 150px;
   border-radius:100%;
-  background-color:black;
+  background-color:rgba(30,30,30,1);
   animation:race 25s linear infinite;
 }
 
@@ -448,12 +481,12 @@ body{
   overflow-x: hidden;
   }
   .excel{
-  transform:scale(0.4);
+  transform:scale(0.5);
   }
   .mec{
   width:600px;
   height:600px;
-  background-image:url('mec.png');
+  background-image:url('mec_logo.png');
   transform:scale(0.5);
   }
   #legacy{
