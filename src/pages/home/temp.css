@@ -387,7 +387,30 @@ body{
   height:1200px;
   left: 50%;
   top: 50%;
+
   transform: translate(-50%, -50%) scale(0.5);
+
+  transform: translate(-50%, -50%) scale(0.6);
+  margin-top:30px;
+  }
+  #space_after{
+  height:700px;
+  }
+  #h1{
+  padding-top:15vh;
+}
+}
+
+
+@media only screen and (max-height: 800px) {
+  #all {  
+  position: absolute;
+  width:1000px;
+  height:1200px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0.5);
+  margin-top:30px;
   }
   #space_after{
   height:1000px;
