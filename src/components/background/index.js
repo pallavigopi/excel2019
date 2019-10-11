@@ -47,7 +47,7 @@ export default class Background extends React.Component {
 	                "mode": "bubble"
 	            },
 	            "onclick": {
-	                "enable": false,
+	                "enable": true,
 	                "mode": "repulse"
 	            }
 	        },

@@ -23,7 +23,11 @@ const StyledSelect = withStyles({
     borderBottom: 'solid 2px white',
     fontFamily: '"Montserrat", sans-serif',
     fontSize: '1.1rem',
-    fontWeight: '900'
+    fontWeight: '900',
+    ['@media (max-width:415px)']: { // eslint-disable-line no-useless-computed-key
+      fontSize: '0.9rem',
+      fontWeight: '800',
+    }
   },
   icon: {
     color: 'white'

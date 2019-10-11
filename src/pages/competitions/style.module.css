@@ -4,7 +4,7 @@
 html,
 body {
   width: 100%;
-  background-color: #000000;;
+  background-color: rgba(30,30,30,1);
 }
 
 body {
@@ -97,6 +97,17 @@ body {
   
   .comp-filter-type {
     right: 7.5vw;
+  }
+  
+}
+@media screen and (max-width: 415px) {
+
+  .comp-filter-dept {
+    left: 5.5vw;
+  }
+  
+  .comp-filter-type {
+    right: 5.5vw;
   }
   
 }
