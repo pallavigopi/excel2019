@@ -2,8 +2,8 @@
 
 .card{
 	position: relative;
-	height:25rem;
-	width: 20rem;
+	height:17.5rem;
+	width:17.5rem;
 	background-color: black;
 	/* border-radius: 10px; */
 	z-index: 0;
@@ -12,8 +12,8 @@
 
 .card img{
 	position: relative;
-	height:25rem;
-	width: 20rem;
+	height:17.5rem;
+	width:17.5rem;
 	/* border-radius: 10px; */
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -147,12 +147,12 @@ a{
 
       @media screen and (max-width:1300px){
         .card{
-                height:25rem;
-	        width: 20rem;
+                height:17.5rem;
+	        width: 17.5rem;
         }
         .card img{
-                height:25rem;
-                width: 20rem;
+                height:17.5rem;
+	        width:17.5rem;;
         }
         .card-info{
                 bottom:.5vh;
@@ -191,11 +191,11 @@ a{
 
       @media screen and (max-width:450px){
               .card{
-                      height: 50vh;
+                      height: 75vw;
                       width: 75vw;
               }
               .card img{
-                height: 50vh;
+                height: 75vw;
                 width: 75vw;
               }
         .card-info{
