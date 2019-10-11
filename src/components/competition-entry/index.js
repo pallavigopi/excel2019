@@ -83,7 +83,7 @@ export default class CompetitionEntry extends React.Component {
               <div target="_blank" className={styles["logo-container"]}>
                 <img
                   className={styles["logos"]}
-                  src={this.props.details.imgsrc}
+                  src={this.props.details.img}
                 />
               </div>
             </div>
@@ -111,7 +111,7 @@ export default class CompetitionEntry extends React.Component {
             <div className={styles["modal-image"]}>
               <img
                 className={styles["modal-image-logo"]}
-                src={this.props.details.imgsrc}
+                src={this.props.details.img}
               />
             </div>
             <div className={styles["modal-title"]}>

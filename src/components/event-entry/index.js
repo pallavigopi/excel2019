@@ -47,7 +47,7 @@ export default class EventEntry extends React.Component {
                         {/* <div className={styles["event-card-" + (this.props.direction == true ? "left" : "right")]} > */}
                         <div className={styles["event-logo-name-container-left"]}>
                             <div className={styles["event-logo"]}>
-                                <div target="_blank" className={styles["logo-container"]}><img className={styles["logos"]} src={this.props.details.imgsrc} /></div>
+                                <div target="_blank" className={styles["logo-container"]}><img className={styles["logos"]} src={this.props.details.img} /></div>
                             </div>
 
                         </div>

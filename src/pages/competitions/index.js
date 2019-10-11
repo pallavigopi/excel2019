@@ -22,10 +22,11 @@ const StyledSelect = withStyles({
     color: 'white',
     borderBottom: 'solid 2px white',
     fontFamily: '"Montserrat", sans-serif',
-    fontSize: '0.8rem',
+    fontSize: '1.1rem',
+    fontWeight: '900'
   },
   icon: {
-    color: 'white',
+    color: 'white'
   },
 })(Select);
 
@@ -172,9 +173,10 @@ export default class Competitions extends React.Component {
 
     return (
       <div>
-        <div className={styles["header"]}>
-          <a style={{zIndex:3}} className={styles["title"]}>Excel 2019 Competitions!</a>
-        </div>
+       <div className={styles["header"]}>
+                    <a className={styles["title"]}>Competitions</a><a className={styles["subtitle"]}>Excel 2019</a>
+                </div>
+                <div className={styles["underline"]}></div>
         <div className={styles["comp-filter-dept"]}>
           <FormControl>
             <StyledSelect

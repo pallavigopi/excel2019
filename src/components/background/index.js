@@ -23,8 +23,8 @@ export default class Background extends React.Component {
 
 	        },
 	        "size": {
-	            "value": 5,
-	            "random": true,
+	            "value": 3,
+	            "random": false,
 	            "anim": {
 	                "speed": 2	,
 	                "size_min": 0.3
@@ -43,11 +43,11 @@ export default class Background extends React.Component {
 	    "interactivity": {
 	        "events": {
 	            "onhover": {
-	                "enable": true,
+	                "enable": false,
 	                "mode": "bubble"
 	            },
 	            "onclick": {
-	                "enable": true,
+	                "enable": false,
 	                "mode": "repulse"
 	            }
 	        },
