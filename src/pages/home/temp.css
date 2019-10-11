@@ -5,10 +5,13 @@
 ::-webkit-scrollbar-thumb {
     background: orange; 
 }
-body{
-  overflow-y: scroll;
+html,body{
+  overflow-y: auto;
   overflow-x: hidden;
 } 
+#parent{
+  overflow-X: hidden;
+}
 .title{
   z-index:3;
   position:relative; 
@@ -408,6 +411,9 @@ body{
   #space_after{
   height:700px;
   }
+  #parent{
+  overflow-X: hidden;
+}
 #legacy{
   width:88%;
 }
