@@ -43,25 +43,9 @@ body{
   margin-top:160px;
   text-align:center;
 }
-
 #space_after{
   height:110vh;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #all{
   position: absolute;
   width:1000px;
@@ -74,18 +58,14 @@ body{
 #all *{
   position:absolute;
 }
-
-
 #heading{
 margin-top:-250px;
 }
-
 #EXCEL{
 position: absolute;
 font-size:100px;
 width:1000px;
 text-align:center;
-
 }
 #EXCEL_DATE{
 width:500px;  
@@ -93,12 +73,6 @@ position: absolute;
 font-size:50px;
 margin:150px 300px;
 }
-
-
-
-
-
-
 .caption{
   width:1000px;
   text-align:center;
@@ -134,7 +108,6 @@ margin:150px 300px;
   62%,80%{opacity:1;}
 }
 #t5{animation: t5 25s linear infinite;}
-
 @keyframes t6{
   0%,79%{opacity:0;}
   80%,100%{opacity:1;}
@@ -175,7 +148,6 @@ margin:150px 300px;
   animation:array 10s linear infinite;
   animation-direction: reverse;
 }
-
 @keyframes logo{
   62%{stroke-dashoffset:2300;}
   80%{stroke-dashoffset:4600;}
@@ -244,7 +216,6 @@ margin:150px 300px;
 #rest1{
   margin:250px 40px;
 }
-
 @keyframes maze{
   0%,31%,45%,100%{opacity:0;}
   32%,44%{opacity:1;}
@@ -328,7 +299,6 @@ margin:150px 300px;
   border-radius:100%;
   animation:race 25s linear infinite;
 }
-
 @media only screen and (max-height: 900px) {
   #all {  
   transform: translate(-50%, -50%) scale(0.55);
@@ -360,7 +330,6 @@ margin:150px 300px;
   transform:scale(0.7);
 }
 }
-
 /*new logo code*/
 .logo-grid{
   display: flex;
@@ -369,11 +338,9 @@ margin:150px 300px;
   justify-content: center;
   padding-bottom: 7.5vh;
 }
-
 .logo-grid img{
   width:15vw;
 }
-
 .legacy-grid{
   display: flex;
   flex-direction: row;
@@ -382,14 +349,12 @@ margin:150px 300px;
   padding: 3rem;
   text-align: center;
 }
-
 .logo-grid img{
   width:15vw;
 }
 .legacy-grid img{
   width:30vw;
 }
-
 @media only screen and (max-width:680px){
   .logo-grid img{
     width:40vw;
