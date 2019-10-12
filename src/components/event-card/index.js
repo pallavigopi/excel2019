@@ -86,7 +86,7 @@ export default class EventCard extends React.Component {
                     transitionDuration={450}
                 >
                     <div className={styles["modal-container"]}>
-                        <div className={styles["modal-title"]}>{this.state.eventData.name}</div>
+                        {/* <div className={styles["modal-title"]}>{this.state.eventData.name}</div> */}
                         <div className={styles["modal-image"]}>
                             <img className={styles["modal-image-logo"]} src={this.state.eventData.img} alt=""/>
                         </div>

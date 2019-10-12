@@ -1,0 +1,28 @@
+.contact-mini-grid-item{
+    padding: 1rem;
+}
+
+.contact-grid-name{
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.contact-grid-designation{
+    padding: 4px 0px;
+    font-size: 1rem;
+    color: #fda642;
+}
+
+.contact-grid-phone{
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.contact-grid-phone img{
+    height: 0.8rem;
+    margin-right:4px; 
+}
+.contact-grid-name  img{
+    height: 1rem;
+    margin-right:4px; 
+}

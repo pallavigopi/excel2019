@@ -2,7 +2,8 @@ import React from 'react'
 import axios from 'axios'
 import SkyLight from 'react-skylight'
 import styles from './style.module.css'
-import AboutMiniGrid from "../about-mini-grid";
+import AboutMiniGrid from "../about-mini-grid"
+import AboutContactGrid from "../about-contact-grid"
 
 
 export default class CompetitionCard extends React.Component {
@@ -11,13 +12,13 @@ export default class CompetitionCard extends React.Component {
         super(props);
         this.state = {
           competitionData : {
-            about: '',
-            format: '',
-            rules: '',
-            contact: ''
+            about: '--',
+            format: '--',
+            rules: '--',
+            contact: '--'
           },  
           currentSubSection: "About",
-          content: '',
+          content: '--',
         }
         //this.handleExtraSectionContent= this.handleExtraSectionContent.bind(this);
       }
@@ -86,10 +87,18 @@ export default class CompetitionCard extends React.Component {
         return (
           <AboutMiniGrid details={this.state.competitionData} />
         );
-        if(name==="Contact")
-        return(
-          <h1> Contact </h1>
-        );
+        if(name==="Contact"){
+          var contactgrid = []
+          for(var i in this.state.competitionData.contact_numbers){
+          // console.log("item",this.state.competitionData.contact_numbers[i])
+          contactgrid.push(<AboutContactGrid details={this.state.competitionData.contact_numbers[i]}/>);
+        } 
+          return(
+            <div className={styles["about-contact-grid"]}>
+            {contactgrid}
+            </div>
+          );
+        }
       }
     
 
@@ -115,7 +124,7 @@ export default class CompetitionCard extends React.Component {
             marginRight: '2rem',
             marginTop: '1.25rem'
         };
-
+        console.log(this.state);
         return(
         <SkyLight 
           hideOnOverlayClicked
@@ -148,8 +157,7 @@ export default class CompetitionCard extends React.Component {
               </ul>
               <div className={styles["modal-subsection-container"]}>
                 {/* {this.state.content} */}
-                <span dangerouslySetInnerHTML={{__html: this.state.content}}>
-                  
+                <span dangerouslySetInnerHTML={{__html: this.state.content}}>  
                 </span>
                 {this.handleExtraSectionContent(this.state.currentSubSection)}
               </div>

@@ -56,6 +56,12 @@
     display: none;
   }
   
+  .about-contact-grid{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
   /* popup styling */
   
   .modal-container {
@@ -131,6 +137,12 @@
     .comp-card:hover {
       transform: scale(1);
     }
+      
+  .about-contact-grid{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
   }
   
   @media screen and (max-width: 600px) {
