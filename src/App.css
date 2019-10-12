@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'Lemon Milk';
+  src:local('Lemon Milk'),  url('./utils/LemonMilkbold.otf');
+  font-weight: normal;
+  font-style: normal;
+}
 html,body{
     padding: 0;
     margin: 0;
@@ -7,6 +13,8 @@ html,body{
     /*background-image: radial-gradient(circle, #04c04d, #00997c, #006d88, #00416c, #051937);*/
     background-color: rgba(30,30,30,1);
   }
+
+
   
   
   

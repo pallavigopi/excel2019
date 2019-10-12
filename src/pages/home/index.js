@@ -5,9 +5,9 @@ import asyncComponent from '../../utils/asyncComponent';
 import styles from './style.module.css'
 import './temp.css'
 import ibetoLogo from '../../img/ibetologo.png'
-import excellogo from './excel_logo.png'
-import meclogo from './mec_logo.png'
-import mecvector from './mec.png'
+import excellogo from '../../img/excel.png'
+import meclogo from '../../img/mec_logo.png'
+import mecvector from '../../img/mec.png'
 import hackfortomorrow from '../../img/hftlogo.png'
 
 export default class Home extends React.Component {

@@ -20,8 +20,8 @@ export default class ContactCard extends Component{
                 </div>
             </div>
             <div className={styles["below-card"]}>
-            <div>{this.props.details.name}</div>
-            <div>{this.props.details.desig}</div>
+            <div className={styles["name"]}>{this.props.details.name}</div>
+            <div className={styles["desig"]}>{this.props.details.desig}</div>
             </div>
 
             </div>

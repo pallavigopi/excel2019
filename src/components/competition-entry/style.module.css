@@ -7,7 +7,7 @@
   display: flex;
   transform: scale(0.9);
   flex-direction: column;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   transition: 0.3s ease;
 }
 
@@ -35,12 +35,16 @@
   margin-bottom: 0.1rem;
   text-align: center;
   padding: 0.5rem;
-  font-size: 1.1rem;
+  font-size: 1.25rem;
+  font-weight: 600;
 }
 
 .comp-description {
   text-align: center;
   font-size: 1rem;
+  color: #fda642;
+  font-weight: 600;
+
 }
 
 .logo-container {
@@ -61,7 +65,7 @@
 .modal-container {
   display: flex;
   flex-direction: column;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   margin-top: 2rem;
 }
 

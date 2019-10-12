@@ -21,7 +21,7 @@
 }
 
 .below-card{
-	font-family: 'Raleway', sans-serif;
+        font-family: 'Montserrat', sans-serif;
 	margin-top: 15px;
 	color: white;
 }
@@ -52,8 +52,8 @@
 	line-height: 24px;
 	z-index: 20;
 	opacity:1;
-	font-family: 'Raleway', sans-serif;
-  }
+        font-family: 'Montserrat', sans-serif;
+}
 
   .card-info img{
 	height: 15px;
@@ -70,6 +70,16 @@ a{
         width:25px !important;
         height:25px !important;
 }
+
+.name{
+        font-weight: 600;
+        font-size: 1.25rem;
+}
+
+.desig{
+        color: #fda642;
+}
+
 
 /* 
 

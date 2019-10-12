@@ -7,7 +7,7 @@
     display: flex;
     transform: scale(0.9);
     flex-direction: column;
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Montserrat', sans-serif;
     transition: 0.3s ease;
   }
   
@@ -61,7 +61,7 @@
   .modal-container {
     display: flex;
     flex-direction: column;
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin-top: 2rem;
   }
   
@@ -73,7 +73,7 @@
   
   .modal-prize-pool{
     text-align: center;
-    color: orangered;
+    color: #fda642;
     font-weight: 700;
     font-size: 22px;
   }
