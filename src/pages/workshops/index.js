@@ -24,6 +24,9 @@ export default class Workshops extends React.Component {
       this.setState({events: response.data.filter(a => a.type === "Workshop")})
       
     }
+    componentDidMount(){
+        window.scrollTo(0, 0)
+    }
    /* componentDidMount() {
         window.addEventListener("scroll", this.handleScroll);
     }

@@ -87,6 +87,9 @@ export default class Competitions extends React.Component {
   //     document.body.style.backgroundColor = colors[6];
   //   }
   // };
+  componentDidMount(){
+    window.scrollTo(0, 0)
+}
 
   formatWord = (input) => {
     let words = input.split('-')

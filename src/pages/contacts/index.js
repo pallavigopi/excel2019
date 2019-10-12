@@ -58,6 +58,9 @@ export default class Contacts extends Component{
             ]
         }
     }
+    componentDidMount(){
+        window.scrollTo(0, 0)
+    }
     render(){
         var grid = []
         for(var i=0 ; i<this.state.cardInfo.length ; i++){

@@ -22,6 +22,9 @@ export default class Talks extends React.Component {
       let response = await axios.get('https://api.excelmec.org/api/events')
       this.setState({events: response.data.filter(a => a.type === "Talk")})
     }
+    componentDidMount(){
+        window.scrollTo(0, 0)
+    }
     render() {
         var grid = []
         var events = this.state.events
