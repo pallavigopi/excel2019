@@ -36,7 +36,15 @@ export default class Home extends React.Component {
         return (
           <div id="parent">
 
+
+
+
   <div id="all">
+
+  <div id="heading">
+    <div id="EXCEL">EXCEL 2019  </div>
+    <div id="EXCEL_DATE">November 3, 4, 5 </div>
+  </div>
 
     <div id="t1" className="caption">"An engineer opens a door to a new world . . ."</div>
     <div id="t2" className="caption">". . . scale new heights to beyond . . ."</div>

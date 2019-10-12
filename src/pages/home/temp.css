@@ -42,49 +42,66 @@ body{
   margin-top:160px;
   text-align:center;
 }
-.logo{
-  width:600px;
-  height:300px;
-  transform:scale(0.5);
-}
-#excel_logo{
-  background-image:url('excel_logo.png');
-}
-#mec_logo{
-  background-image:url('mec_logo.png');
-}
-#legacy{
-  width:100%;
-  font-size:20px;
-  padding:5vh;
-}
-#mec{
-  width:600px;
-  height:300px;
-  background-image:url('mec.png');
-  transform:scale(1);
-}
+
 #space_after{
   height:110vh;
 }
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #all{
   position: absolute;
   width:1000px;
   height:1200px;
+  margin-top:100px;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%) scale(0.7);
+  transform: translate(-50%, -50%) scale(0.65);
 } 
 #all *{
   position:absolute;
 }
 
 
+#heading{
+margin-top:-250px;
+}
+
+#EXCEL{
+position: absolute;
+font-size:100px;
+width:1000px;
+text-align:center;
+
+}
+#EXCEL_DATE{
+width:500px;  
+position: absolute;
+font-size:50px;
+margin:150px 300px;
+}
+
+
+
+
+
+
 .caption{
   width:1000px;
   text-align:center;
-  margin:1100px 0px;
+  margin:1050px 0px;
   font-size:40px; 
 }
 @keyframes t1{
@@ -326,6 +343,7 @@ body{
 }
 @media only screen and (max-width: 600px) {
   #all {  
+  margin-top:50px;
   transform: translate(-50%, -50%) scale(0.3);
   }
   .logo{
