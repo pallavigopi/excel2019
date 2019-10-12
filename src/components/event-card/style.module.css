@@ -209,6 +209,13 @@
 }
 
 /* almost large*/
+.modal-image {
+    text-align: center;
+}
+
+.modal-image-logo {
+    max-height: 15vh;
+}
 
 @media only screen and (max-width:1300px) {
     .modal-event-body {
@@ -217,15 +224,11 @@
 }
 
 @media only screen and (max-width:800px) {
+    .modal-image-logo {
+        height: 12vh;
+    }
     .modal-event-body {
         padding: 20px 5vw;
     }
 }
 
-.modal-image {
-    text-align: center;
-}
-
-.modal-image-logo {
-    max-height: 16rem;
-}
