@@ -8,6 +8,7 @@
 body{
   overflow-y: auto;
   overflow-x: hidden;
+  max-width: 100vw;
   color:white;
   font-family: montserrat;
 } 
