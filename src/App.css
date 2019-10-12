@@ -3,6 +3,7 @@ html,body{
     margin: 0;
     height:auto;
     width:100%;
+    max-width: 100vw;
     /*background-image: radial-gradient(circle, #04c04d, #00997c, #006d88, #00416c, #051937);*/
     background-color: rgba(30,30,30,1);
   }
