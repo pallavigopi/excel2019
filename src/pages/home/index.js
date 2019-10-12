@@ -4,11 +4,11 @@ import Particles from 'react-particles-js'
 import asyncComponent from '../../utils/asyncComponent';
 import styles from './style.module.css'
 import './temp.css'
-import ibetoLogo from '../../img/ibetologo.png'
+import townScript from '../../img/townscript.webp'
 import excellogo from '../../img/excel.png'
 import meclogo from '../../img/mec_logo.png'
 import mecvector from '../../img/mec.png'
-import hackfortomorrow from '../../img/hftlogo.png'
+import litmus7 from '../../img/litmus7.png'
 
 export default class Home extends React.Component {
     constructor(props) {
@@ -98,18 +98,14 @@ export default class Home extends React.Component {
 <div id="h3" className="title">Our Sponsors <br /><span style={{color:"grey",fontSize:"3vh"}}>MEC Excel 2019 Sponsors</span></div>
 
 
-<div className="grid">
-  <div id="sp1" className="sponsor">
-    <div className="t1">sponsor</div>
+<div className="sponsor-grid">
+  <div className="sponsor-div">
+    <img className="sponsor-img" src={litmus7} />
+    <div className="sponsor-title">CS-Tech Sponsor</div>
   </div>
-  <div id="sp2" className="sponsor">
-      <div className="t1">sponsor</div>
-  </div>
-  <div id="sp3" className="sponsor">
-      <div className="t1">sponsor</div>
-  </div>
-  <div id="sp4" className="sponsor">
-      <div className="t1">sponsor</div>
+  <div className="sponsor-div">
+      <img className="sponsor-img1" src={townScript} />
+      <div className="sponsor-title">Ticketing Partner</div>
   </div>
 </div>
 
@@ -119,17 +115,14 @@ export default class Home extends React.Component {
     <img src={mecvector}/>
   </div>
   <div>
-  Reference site about Lorem Ipsum, giving information on its origins, Lorem Ipsum: usage Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content. It's also called placeholder (or filler) text. It's a convenient tool for mock-ups.
-   Lorem Ipsum: usage Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content. It's also called placeholder (or filler) text. It's a convenient tool for mock-ups.
-   Lorem Ipsum: usage Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content. It's also called placeholder (or filler) text. It's a convenient tool for mock-ups.
-   as well as a random Lipsum generator.</div>
+  Excel, the nation’s second and South India’s first ever fest of its kind started in 2001 by the students of Govt. Model Engineering College with a motto, Inspire, Innovate, Engineer. Over the years, Excel has grown exponentially, consistently playing host to some of the most talented students, the most illustrious speakers and the most reputed companies. Now gearing towards its 20th edition, Excel continues to excite the participants with its wide array of technical and non-technical events and with a promise to live upto its motto. What sets Excel apart is the drive towards delivering excellence. The fest is renowned for its quality, dynamism and active participation.</div>
 </div>
 
 
 <div className="logo-grid">
-  <div> 
+  <a href="http://mec.ac.in/" target="_blank" style={{zIndex:3,textDecoration:'none'}}> 
     <img src={meclogo}/>
-  </div>
+  </a>
   <div>
     <img src={excellogo}/>
   </div>

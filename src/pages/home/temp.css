@@ -358,6 +358,28 @@ color: #fda642;
 
 
 /*new logo code*/
+.sponsor-grid{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-top:4vh;
+}
+.sponsor-div{
+  margin-top:4vh;
+}
+.sponsor-img{
+  height:15vh;
+}
+.sponsor-img1{
+  height:20vh;
+}
+.sponsor-title{
+  margin-top:2vh; 
+  text-align: center;
+  font-size:20px; 
+  font-weight:600;
+}
 .logo-grid{
   display: flex;
   flex-direction: row;
@@ -375,6 +397,7 @@ color: #fda642;
   justify-content: center;
   padding: 3rem;
   text-align: center;
+  font-size: 17.5px;
 }
 .logo-grid img{
   width:15vw;
@@ -393,5 +416,32 @@ color: #fda642;
   }
   .legacy-grid img{
     width:80vw;
+  }
+  .sponsor-grid{
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    padding-top:4vh;
+  }
+  .sponsor-img{
+    width:150px;
+    height:auto;
+  }
+  .sponsor-img1{
+    width:200px;
+    height:auto;
+  }
+  .sponsor-title{
+    font-size:17px ;
+    font-weight: 500;
+  }
+  .sponsor-div{
+    margin-bottom:5vh;
+  }
+}
+@media only screen and (max-width:400px){
+  .sponsor-title{
+    font-size:15px;
+    font-weight: 500; 
   }
 }
