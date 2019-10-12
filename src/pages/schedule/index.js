@@ -198,6 +198,9 @@ class Schedule extends React.Component {
             events: this.totalEvents.filter(event => event.day === this.state.currentDay)
         })
     }
+    componentDidMount(){
+        window.scrollTo(0, 0)
+    }
 
     showFilterPopup = () => {
         this.setState({showFilterPopup: true})
