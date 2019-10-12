@@ -19,7 +19,7 @@ export default class Talks extends React.Component {
     }
 
     async componentWillMount() {
-      let response = await axios.get('http://34.93.246.77/api/events')
+      let response = await axios.get('https://api.excelmec.org/api/events')
       this.setState({events: response.data.filter(a => a.type === "Talk")})
     }
     render() {

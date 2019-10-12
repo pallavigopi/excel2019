@@ -55,7 +55,7 @@ export default class Competitions extends React.Component {
       let response = await axios.get('https://api.excelmec.org/api/competitions', 
       {
         headers:{
-          "Origin" : "http://api.excelmec.org/"
+          "Origin" : "https://api.excelmec.org/"
         }
       }
       )
