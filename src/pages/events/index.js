@@ -79,7 +79,7 @@ export default class Events extends React.Component {
         var cardOdd = true;
         for (var i in events) {
             var gridItem = (
-                <a target="_blank" key={i} className={styles["events"]} ><Link to={`events/${events[i].codename}`}><EventEntry details={events[i]} direction={cardOdd} /></Link></a>
+                <a target="_blank" key={i} className={styles["events"]} ><Link to={`events/${events[i].codename}`} style={{textDecoration:'none'}}><EventEntry details={events[i]} direction={cardOdd} /></Link></a>
             )
             cardOdd = !cardOdd;
             grid.push(gridItem)

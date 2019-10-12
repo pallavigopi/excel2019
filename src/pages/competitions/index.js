@@ -124,7 +124,7 @@ export default class Competitions extends React.Component {
             className={styles["events"]}
             // href={events[i].link}
           >
-            <Link to={`/competitions/${events[i].codename}`} ><CompetitionEntry details={events[i]} /></Link>
+            <Link to={`/competitions/${events[i].codename}`} style={{textDecoration:'none'}} ><CompetitionEntry details={events[i]} /></Link>
           </a>
         );
         grid.push(gridItem);
@@ -138,7 +138,7 @@ export default class Competitions extends React.Component {
             className={styles["events"]}
             // href={events[i].link}
           >
-            <Link to={`/competitions/${events[i].codename}`} ><CompetitionEntry details={events[i]} /></Link>
+            <Link to={`/competitions/${events[i].codename}`} style={{textDecoration:'none'}} ><CompetitionEntry details={events[i]} /></Link>
           </a>
           );
           grid.push(gridItem);
@@ -153,7 +153,7 @@ export default class Competitions extends React.Component {
             className={styles["events"]}
             // href={events[i].link}
           >
-            <Link to={`/competitions/${events[i].codename}`} ><CompetitionEntry details={events[i]} /></Link>
+            <Link to={`/competitions/${events[i].codename}`} style={{textDecoration:'none'}}><CompetitionEntry details={events[i]} /></Link>
           </a>
           );
           grid.push(gridItem);
@@ -168,7 +168,7 @@ export default class Competitions extends React.Component {
             className={styles["events"]}
             // href={events[i].link}
             >
-            <Link to={`/competitions/${events[i].codename}`} ><CompetitionEntry details={events[i]} /></Link>
+            <Link to={`/competitions/${events[i].codename}`} style={{textDecoration:'none'}}><CompetitionEntry details={events[i]} /></Link>
           </a>
           );
           grid.push(gridItem);
