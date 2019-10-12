@@ -1,6 +1,6 @@
 import React from 'react'
 import asyncComponent from '../../utils/asyncComponent'
-
+import {Route, Link} from 'react-router-dom'
 import styles from './style.module.css'
 import axios from 'axios'
 
