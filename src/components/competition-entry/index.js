@@ -8,76 +8,76 @@ export default class CompetitionEntry extends React.Component {
     super(props);
     this.state = {
       currentSubSection: "About",
-      content: this.props.details.about,
+      // content: this.props.details.about,
     }
     //this.handleExtraSectionContent= this.handleExtraSectionContent.bind(this);
   }
 
-  handleAbout = () => {
-    this.setState({
-      currentSubSection: "About",
-      content: this.props.details.about
-    });
-  }
+  // handleAbout = () => {
+  //   this.setState({
+  //     currentSubSection: "About",
+  //     content: this.props.details.about
+  //   });
+  // }
 
-  handleFormat = () => {
-    this.setState({
-      currentSubSection: "Format",
-      content: this.props.details.format
-    });
-  }
+  // handleFormat = () => {
+  //   this.setState({
+  //     currentSubSection: "Format",
+  //     content: this.props.details.format
+  //   });
+  // }
 
-  handleRules = () => {
-    this.setState({
-      currentSubSection: "Rules",
-      content: this.props.details.rules
-    });
-  }
+  // handleRules = () => {
+  //   this.setState({
+  //     currentSubSection: "Rules",
+  //     content: this.props.details.rules
+  //   });
+  // }
 
-  handleContact = () => {
-    this.setState({
-      currentSubSection: "Contact",
-      content: this.props.details.contact
-    });
-  }
+  // handleContact = () => {
+  //   this.setState({
+  //     currentSubSection: "Contact",
+  //     content: this.props.details.contact
+  //   });
+  // }
 
-  handleExtraSectionContent = (name) =>{
-    if(name=="About")
-    return (
-      <AboutMiniGrid details={this.props.details} />
-    );
-    if(name=="Contact")
-    return(
-      <h1> Contact </h1>
-    );
-  }
+  // handleExtraSectionContent = (name) =>{
+  //   if(name=="About")
+  //   return (
+  //     <AboutMiniGrid details={this.props.details} />
+  //   );
+  //   if(name=="Contact")
+  //   return(
+  //     <h1> Contact </h1>
+  //   );
+  // }
 
   render() {
-    var dialogStyles = {
-      padding: "2rem",
-      backgroundColor: "#000000",
-      color: "#ffffff",
-      position: "fixed",
-      top: "0px",
-      left: "0px",
-      margin: "0px",
-      width: "calc(100vw - 4rem)",
-      height: "calc(100vh - 4rem)",
-      overflowY: "scroll"
+  //   var dialogStyles = {
+  //     padding: "2rem",
+  //     backgroundColor: "#000000",
+  //     color: "#ffffff",
+  //     position: "fixed",
+  //     top: "0px",
+  //     left: "0px",
+  //     margin: "0px",
+  //     width: "calc(100vw - 4rem)",
+  //     height: "calc(100vh - 4rem)",
+  //     overflowY: "scroll"
   
-    };
+  //   };
 
-    var closeButtonStyle = {
-      cursor: 'pointer',
-      position: 'absolute',
-      fontSize: '3em',
-      marginRight: '2rem',
-      marginTop: '1.25rem'
-  };
+  //   var closeButtonStyle = {
+  //     cursor: 'pointer',
+  //     position: 'absolute',
+  //     fontSize: '3em',
+  //     marginRight: '2rem',
+  //     marginTop: '1.25rem'
+  // };
 
     return (
       <div>
-        <div onClick={() => this.simpleDialog.show()}>
+        <div>
           <div style={{zIndex:3}} className={styles["comp-card"]}>
             <div className={styles["comp-logo"]}>
               <div target="_blank" className={styles["logo-container"]}>
@@ -100,7 +100,7 @@ export default class CompetitionEntry extends React.Component {
             </div> */}
           </div>
         </div>
-        <SkyLight 
+        {/* <SkyLight 
           hideOnOverlayClicked
           ref={ref => (this.simpleDialog = ref)}
           dialogStyles={dialogStyles}
@@ -127,16 +127,16 @@ export default class CompetitionEntry extends React.Component {
                 <li><a className={styles[this.state.currentSubSection == "Rules" ? "li-active" : ""]} onClick={this.handleRules} id="Rules">Rules</a></li>
                 <li><a className={styles[this.state.currentSubSection == "Contact" ? "li-active" : ""]} onClick={this.handleContact} id="Contacts">Contact</a></li>
               </ul>
-              <div className={styles["modal-subsection-container"]}>
+              <div className={styles["modal-subsection-container"]}> */}
                 {/* {this.state.content} */}
-                <span dangerouslySetInnerHTML={{__html: this.state.content}}>
+                {/* <span dangerouslySetInnerHTML={{__html: this.state.content}}>
                   
                 </span>
                 {this.handleExtraSectionContent(this.state.currentSubSection)}
               </div>
             </div>
           </div>
-        </SkyLight>
+        </SkyLight> */}
       </div>
     );
   }

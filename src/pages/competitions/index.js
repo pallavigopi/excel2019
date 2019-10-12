@@ -12,6 +12,9 @@ import event2 from "../../img/spaceship.png";
 import event3 from "../../img/moon-rover.png"
 import event4 from "../../img/cloud-computing.png"
 import axios from "axios";
+import { Link, Route } from "react-router-dom";
+import CompetitionCard from "../../components/competition-card";
+import { style } from "@material-ui/system";
 
 
 const CompetitionEntryImport = () => import("components/competition-entry");
@@ -45,6 +48,7 @@ export default class Competitions extends React.Component {
       currentDept: 'All Departments',
       currentType: 'Online/Offline',
       scrollPos: window.scrollY,
+      loading: true
     };
   }
 
@@ -57,7 +61,7 @@ export default class Competitions extends React.Component {
         }
       }
       )
-      this.setState({events: response.data})
+      this.setState({events: response.data, loading: false})
   }
 
   // componentWillUnmount() {
@@ -96,14 +100,12 @@ export default class Competitions extends React.Component {
   }
 
   handleChange = (e, filterType) => {
-    console.log(e.target.value)
     if(filterType === "department") {
       this.setState({
         currentDept: e.target.value
       })
     }
     else {
-      console.log(e.target.value)
       this.setState({
         currentType: e.target.value
       })
@@ -114,16 +116,15 @@ export default class Competitions extends React.Component {
     var grid = [];
     var events = this.state.events;
     for (var i in events) {
-      console.log(this.state.currentDept, this.state.currentType)
       if(this.state.currentDept === "All Departments" && this.state.currentType === "Online/Offline") {
         var gridItem = (
           <a 
             target="_blank"
             key={i}
             className={styles["events"]}
-            href={events[i].link}
+            // href={events[i].link}
           >
-            <CompetitionEntry details={events[i]} />
+            <Link to={`/competitions/${events[i].codename}`} ><CompetitionEntry details={events[i]} /></Link>
           </a>
         );
         grid.push(gridItem);
@@ -131,14 +132,14 @@ export default class Competitions extends React.Component {
       else if(this.state.currentDept === "All Departments" && this.state.currentType !== "Online/Offline") {
         if(events[i].type === this.state.currentType) {
           var gridItem = (
-            <a 
-              target="_blank"
-              key={i}
-              className={styles["events"]}
-              href={events[i].link}
-            >
-              <CompetitionEntry details={events[i]} />
-            </a>
+<a 
+            target="_blank"
+            key={i}
+            className={styles["events"]}
+            // href={events[i].link}
+          >
+            <Link to={`/competitions/${events[i].codename}`} ><CompetitionEntry details={events[i]} /></Link>
+          </a>
           );
           grid.push(gridItem);
         }
@@ -147,13 +148,13 @@ export default class Competitions extends React.Component {
         if(events[i].category === this.state.currentDept) {
           var gridItem = (
             <a 
-              target="_blank"
-              key={i}
-              className={styles["events"]}
-              href={events[i].link}
-            >
-              <CompetitionEntry details={events[i]} />
-            </a>
+            target="_blank"
+            key={i}
+            className={styles["events"]}
+            // href={events[i].link}
+          >
+            <Link to={`/competitions/${events[i].codename}`} ><CompetitionEntry details={events[i]} /></Link>
+          </a>
           );
           grid.push(gridItem);
         }
@@ -162,13 +163,13 @@ export default class Competitions extends React.Component {
         if(events[i].category === this.state.currentDept && events[i].type === this.state.currentType) {
           var gridItem = (
             <a 
-              target="_blank"
-              key={i}
-              className={styles["events"]}
-              href={events[i].link}
+            target="_blank"
+            key={i}
+            className={styles["events"]}
+            // href={events[i].link}
             >
-              <CompetitionEntry details={events[i]} />
-            </a>
+            <Link to={`/competitions/${events[i].codename}`} ><CompetitionEntry details={events[i]} /></Link>
+          </a>
           );
           grid.push(gridItem);
         }
@@ -209,7 +210,16 @@ export default class Competitions extends React.Component {
                 </StyledSelect>
             </FormControl>
         </div>
-        <div id={styles["comp-grid"]}>{grid}</div>
+        {this.state.loading && 
+          <div id={styles["comp-grid"]}>
+          <img className={styles["loader"]} src={require('../../img/loader.gif')} />
+          </div>
+        }
+        {
+          !this.state.loading &&
+        <div id={styles["comp-grid"]}>{grid}</div>}
+
+        <Route path='/competitions/:competition' component={CompetitionCard}/>
         </div>
     );
   }

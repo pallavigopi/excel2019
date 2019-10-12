@@ -1,12 +1,17 @@
 import React from 'react'
 import asyncComponent from '../../utils/asyncComponent'
 
+import {Route, Link} from 'react-router-dom'
+
 import styles from './style.module.css'
 //testing
 import ibetoLogo from '../../img/ibetologo.png'
 import hackfortomorrow from '../../img/hftlogo.png'
 
 import axios from 'axios'
+
+const EventCardImport = () => import('components/event-card')
+const EventCard = asyncComponent(EventCardImport)
 
 const EventEntryImport = () => import('components/event-entry')
 const EventEntry = asyncComponent(EventEntryImport)
@@ -18,7 +23,7 @@ export default class Events extends React.Component {
         super(props)
         this.state = {
             events: [],
-
+            loading: true,
             scrollPos: window.scrollY
         }
     }
@@ -26,7 +31,7 @@ export default class Events extends React.Component {
     async componentWillMount() {
       console.log('working')
       let response = await axios.get('http://34.93.246.77/api/events')
-      this.setState({events: response.data.filter(a => a.type === "Event")})
+      this.setState({events: response.data.filter(a => a.type === "Event"), loading: false})
       
     }
 
@@ -74,7 +79,7 @@ export default class Events extends React.Component {
         var cardOdd = true;
         for (var i in events) {
             var gridItem = (
-                <a target="_blank" key={i} className={styles["events"]} href={events[i].link} ><EventEntry details={events[i]} direction={cardOdd} /></a>
+                <a target="_blank" key={i} className={styles["events"]} ><Link to={`events/${events[i].codename}`}><EventEntry details={events[i]} direction={cardOdd} /></Link></a>
             )
             cardOdd = !cardOdd;
             grid.push(gridItem)
@@ -86,10 +91,17 @@ export default class Events extends React.Component {
                     <a className={styles["title"]}>Events</a><a className={styles["subtitle"]}>Excel 2019</a>
                 </div>
                 <div className={styles["underline"]}></div>
+                {this.state.loading && 
+                    <div id={styles["event-grid"]}>
+                        <img className={styles["loader"]} src={require('../../img/loader.gif')} />
+                    </div>
+                }
+                { !this.state.loading &&
                 <div id={styles["event-grid"]}>
                     {grid}
                 </div>
-                
+                }
+                <Route path='/events/:event' component={EventCard}/>
             </div>
         )
     }

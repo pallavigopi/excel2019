@@ -10,39 +10,39 @@ export default class EventEntry extends React.Component {
 
     render() {
 
-        var buttons = []
-        for (var i in this.props.details.buttons) {
-            var con = this.props.details.buttons[i]
-            var button = (
-                <a href={con.link} target="_blank" className={styles["button-container"]}>{con.name}</a>
-            )
-            buttons.push(button)
-        }
+        // var buttons = []
+        // for (var i in this.props.details.buttons) {
+        //     var con = this.props.details.buttons[i]
+        //     var button = (
+        //         <a href={con.link} target="_blank" className={styles["button-container"]}>{con.name}</a>
+        //     )
+        //     buttons.push(button)
+        // }
 
-        var dialogStyles = {
-            padding: '2rem',
-            backgroundColor: '#000000',
-            color: '#ffffff',
-            position: 'fixed',
-            top: '0px',
-            left: '0px',
-            margin: '0px',
-            width: 'calc(100vw - 4rem)',
-            height: 'calc(100vh - 4rem)',
-            overflowY: 'scroll'
-        };
+        // var dialogStyles = {
+        //     padding: '2rem',
+        //     backgroundColor: '#000000',
+        //     color: '#ffffff',
+        //     position: 'fixed',
+        //     top: '0px',
+        //     left: '0px',
+        //     margin: '0px',
+        //     width: 'calc(100vw - 4rem)',
+        //     height: 'calc(100vh - 4rem)',
+        //     overflowY: 'scroll'
+        // };
 
-        var closeButtonStyle = {
-            cursor: 'pointer',
-            position: 'absolute',
-            fontSize: '3em',
-            marginRight: '2rem',
-            marginTop: '1.25rem'
-        }
+        // var closeButtonStyle = {
+        //     cursor: 'pointer',
+        //     position: 'absolute',
+        //     fontSize: '3em',
+        //     marginRight: '2rem',
+        //     marginTop: '1.25rem'
+        // }
 
         return (
             <div>
-                <div onClick={() => this.simpleDialog.show()}>
+                <div>
                     <div style={{ zIndex: 3 }} className={styles["event-card-left"]} >
                         {/* <div className={styles["event-card-" + (this.props.direction == true ? "left" : "right")]} > */}
                         <div className={styles["event-logo-name-container-left"]}>
@@ -65,16 +65,16 @@ export default class EventEntry extends React.Component {
                     </div>
                 </div>
 
-                <SkyLight
+                {/* <SkyLight
                     hideOnOverlayClicked
                     ref={ref => this.simpleDialog = ref}
                     dialogStyles={dialogStyles}
                     closeButtonStyle={closeButtonStyle}
                     transitionDuration={450}
                 >
-                    <div className={styles["modal-container"]}>
+                    <div className={styles["modal-container"]}> */}
                         {/*<div className={styles["modal-title"]}>{this.props.details.name}</div>*/}
-                        <div className={styles["modal-image"]}>
+                        {/* <div className={styles["modal-image"]}>
                             <img className={styles["modal-image-logo"]} src={this.props.details.img} />
                         </div>
                         {buttons}
@@ -83,7 +83,7 @@ export default class EventEntry extends React.Component {
                         </div>
 
                     </div>
-                </SkyLight>
+                </SkyLight> */}
             </div>
         )
     }
