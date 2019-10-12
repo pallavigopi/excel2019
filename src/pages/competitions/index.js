@@ -4,17 +4,15 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
 import { withStyles } from '@material-ui/core/styles';
-import NativeSelect from '@material-ui/core/NativeSelect';
 import styles from "./style.module.css";
 //testing
-import event1 from "../../img/space-robot.png";
-import event2 from "../../img/spaceship.png";
-import event3 from "../../img/moon-rover.png"
-import event4 from "../../img/cloud-computing.png"
+// import event1 from "../../img/space-robot.png";
+// import event2 from "../../img/spaceship.png";
+// import event3 from "../../img/moon-rover.png"
+// import event4 from "../../img/cloud-computing.png"
 import axios from "axios";
 import { Link, Route } from "react-router-dom";
 import CompetitionCard from "../../components/competition-card";
-import { style } from "@material-ui/system";
 
 
 const CompetitionEntryImport = () => import("components/competition-entry");
@@ -54,10 +52,10 @@ export default class Competitions extends React.Component {
 
   async componentWillMount() {
     console.log('working')
-      let response = await axios.get('http://34.93.246.77/api/competitions', 
+      let response = await axios.get('https://api.excelmec.org/api/competitions', 
       {
         headers:{
-          "Origin" : "http://34.93.246.77/"
+          "Origin" : "http://api.excelmec.org/"
         }
       }
       )
@@ -132,7 +130,7 @@ export default class Competitions extends React.Component {
       else if(this.state.currentDept === "All Departments" && this.state.currentType !== "Online/Offline") {
         if(events[i].type === this.state.currentType) {
           var gridItem = (
-<a 
+          <a 
             target="_blank"
             key={i}
             className={styles["events"]}
@@ -179,7 +177,7 @@ export default class Competitions extends React.Component {
     return (
       <div>
        <div className={styles["header"]}>
-                    <a className={styles["title"]}>Competitions</a><a className={styles["subtitle"]}>Excel 2019</a>
+                    <div className={styles["title"]}>Competitions</div><div className={styles["subtitle"]}>Excel 2019</div>
                 </div>
                 <div className={styles["underline"]}></div>
         <div className={styles["comp-filter-dept"]}>
@@ -212,7 +210,7 @@ export default class Competitions extends React.Component {
         </div>
         {this.state.loading && 
           <div id={styles["comp-grid"]}>
-          <img className={styles["loader"]} src={require('../../img/loader.gif')} />
+          <img className={styles["loader"]} src={require('../../img/loader.gif')} alt=""/>
           </div>
         }
         {

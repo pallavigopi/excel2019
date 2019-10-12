@@ -1,10 +1,6 @@
 import React from 'react'
 import asyncComponent from '../../utils/asyncComponent'
-
 import styles from './style.module.css'
-//testing
-import ibetoLogo from '../../img/ibetologo.png'
-import hackfortomorrow from '../../img/hftlogo.png'
 import axios from 'axios'
 
 const EventEntryImport = () => import('components/event-entry')
@@ -26,50 +22,13 @@ export default class Talks extends React.Component {
       let response = await axios.get('http://34.93.246.77/api/events')
       this.setState({events: response.data.filter(a => a.type === "Talk")})
     }
-
-   /* componentDidMount() {
-        window.addEventListener("scroll", this.handleScroll);
-    }
-
-    componentWillUnmount() {
-        window.removeEventListener("scroll", this.handleScroll);
-    }
-
-    handleScroll = () => {
-        this.setState({
-            scrollPos: window.scrollY
-        });
-        var currentPos = this.state.scrollPos;
-        if (currentPos < 200) {
-            document.body.style.backgroundColor = colors[0];
-        }
-        else if (currentPos > 200 && currentPos < 800) {
-            document.body.style.backgroundColor = colors[1];
-        }
-        else if (currentPos > 800 && currentPos < 1200) {
-            document.body.style.backgroundColor = colors[2];
-        }
-        else if (currentPos > 1200 && currentPos < 2000) {
-            document.body.style.backgroundColor = colors[3];
-        }
-        else if (currentPos > 2000 && currentPos < 3000) {
-            document.body.style.backgroundColor = colors[4];
-        }
-        else if (currentPos > 3000 && currentPos < 4000) {
-            document.body.style.backgroundColor = colors[5];
-        }
-        else if (currentPos > 4000 && currentPos < 5000) {
-            document.body.style.backgroundColor = colors[6];
-        }
-    }; */
-
     render() {
         var grid = []
         var events = this.state.events
         var cardOdd = true;
         for (var i in events) {
             var gridItem = (
-                <a target="_blank" key={i} className={styles["events"]} href={events[i].link} ><EventEntry details={events[i]} direction={cardOdd} /></a>
+                <a key={i} className={styles["events"]} href={events[i].link} ><EventEntry details={events[i]} direction={cardOdd} /></a>
             )
             cardOdd = !cardOdd;
             grid.push(gridItem)
@@ -78,7 +37,7 @@ export default class Talks extends React.Component {
         return (
             <div>
                 <div className={styles["header"]}>
-                    <a className={styles["title"]}>Talks</a><a className={styles["subtitle"]}>Excel 2019</a>
+                    <div className={styles["title"]}>Talks</div><div className={styles["subtitle"]}>Excel 2019</div>
                 </div>
                 <div className={styles["underline"]}></div>
                 <div id={styles["event-grid"]}>

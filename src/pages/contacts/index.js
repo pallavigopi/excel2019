@@ -68,7 +68,7 @@ export default class Contacts extends Component{
             <div>
                <div>
                <div className={styles["header"]}>
-                    <a className={styles["title"]}>Get in Touch With Us</a>
+                    <div className={styles["title"]}>Get in Touch With Us</div>
                 </div>
                     <div className={styles["container"]}>
                         {grid}

@@ -22,7 +22,7 @@ export default class EventCard extends React.Component {
 
     async componentWillMount() {
         var comp = this
-        let response = await axios.get('http://34.93.246.77/api/events')
+        let response = await axios.get('https://api.excelmec.org/api/events')
         console.log('RESPONSE',response.data)
         response.data.forEach(async (val) => {
             if(val.codename === comp.props.match.params['event']) {
@@ -50,7 +50,7 @@ export default class EventCard extends React.Component {
         for (var i in this.state.eventData.buttons) {
             var con = this.state.eventData.buttons[i]
             var button = (
-                <a href={con.link} target="_blank" className={styles["button-container"]}>{con.name}</a>
+                <a href={con.link} target="_blank"  rel="noopener noreferrer"  className={styles["button-container"]}>{con.name}</a>
             )
             buttons.push(button)
         }
@@ -88,7 +88,7 @@ export default class EventCard extends React.Component {
                     <div className={styles["modal-container"]}>
                         <div className={styles["modal-title"]}>{this.state.eventData.name}</div>
                         <div className={styles["modal-image"]}>
-                            <img className={styles["modal-image-logo"]} src={this.state.eventData.img} />
+                            <img className={styles["modal-image-logo"]} src={this.state.eventData.img} alt=""/>
                         </div>
                         {buttons}
                         <div className={styles["modal-event-body"]} dangerouslySetInnerHTML={{ __html: this.state.eventData.info }}>

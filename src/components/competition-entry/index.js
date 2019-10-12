@@ -1,7 +1,7 @@
 import React from "react";
-import SkyLight from "react-skylight";
+// import SkyLight from "react-skylight";
 import styles from "./style.module.css";
-import AboutMiniGrid from "../about-mini-grid";
+// import AboutMiniGrid from "../about-mini-grid";
 
 export default class CompetitionEntry extends React.Component {
   constructor(props) {

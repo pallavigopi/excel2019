@@ -23,7 +23,7 @@ const ScheduleEventCard = (props) => {
     return(
         <div className={styles["schedule-event--container"]}>
             
-            <div className={styles["event-image"]}><img src={props.data.img} /></div>
+            <div className={styles["event-image"]}><img src={props.data.img} alt="Event-logo"/></div>
             <div className={styles["event-desc"]}>
                 <span>{props.data.name}</span>
                 <div className={styles["event-detail"]}>

@@ -1,6 +1,6 @@
 import React from 'react'
-import SkyLight from 'react-skylight';
-import { Route, Link } from 'react-router-dom'
+// import SkyLight from 'react-skylight';
+// import { Route, Link } from 'react-router-dom'
 import styles from './style.module.css';
 
 export default class EventEntry extends React.Component {
@@ -47,7 +47,7 @@ export default class EventEntry extends React.Component {
                         {/* <div className={styles["event-card-" + (this.props.direction == true ? "left" : "right")]} > */}
                         <div className={styles["event-logo-name-container-left"]}>
                             <div className={styles["event-logo"]}>
-                                <div target="_blank" className={styles["logo-container"]}><img className={styles["logos"]} src={this.props.details.img} /></div>
+                                <div target="_blank" className={styles["logo-container"]}><img className={styles["logos"]} src={this.props.details.img} alt="" /></div>
                             </div>
 
                         </div>

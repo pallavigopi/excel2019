@@ -1,13 +1,10 @@
 import React from 'react'
 import asyncComponent from '../../utils/asyncComponent'
-
 import {Route, Link} from 'react-router-dom'
-
 import styles from './style.module.css'
 //testing
-import ibetoLogo from '../../img/ibetologo.png'
-import hackfortomorrow from '../../img/hftlogo.png'
-
+// import ibetoLogo from '../../img/ibetologo.png'
+// import hackfortomorrow from '../../img/hftlogo.png'
 import axios from 'axios'
 
 const EventCardImport = () => import('components/event-card')
@@ -30,7 +27,7 @@ export default class Events extends React.Component {
 
     async componentWillMount() {
       console.log('working')
-      let response = await axios.get('http://34.93.246.77/api/events')
+      let response = await axios.get('https://api.excelmec.org/api/events')
       this.setState({events: response.data.filter(a => a.type === "Event"), loading: false})
       
     }
@@ -79,7 +76,7 @@ export default class Events extends React.Component {
         var cardOdd = true;
         for (var i in events) {
             var gridItem = (
-                <a target="_blank" key={i} className={styles["events"]} ><Link to={`events/${events[i].codename}`} style={{textDecoration:'none'}}><EventEntry details={events[i]} direction={cardOdd} /></Link></a>
+                <div key={i} className={styles["events"]} ><Link to={`events/${events[i].codename}`} style={{textDecoration:'none'}}><EventEntry details={events[i]} direction={cardOdd} /></Link></div>
             )
             cardOdd = !cardOdd;
             grid.push(gridItem)
@@ -88,12 +85,12 @@ export default class Events extends React.Component {
         return (
             <div>
                 <div className={styles["header"]}>
-                    <a className={styles["title"]}>Events</a><a className={styles["subtitle"]}>Excel 2019</a>
+                    <div className={styles["title"]}>Events</div><div className={styles["subtitle"]}>Excel 2019</div>
                 </div>
                 <div className={styles["underline"]}></div>
                 {this.state.loading && 
                     <div id={styles["event-grid"]}>
-                        <img className={styles["loader"]} src={require('../../img/loader.gif')} />
+                        <img className={styles["loader"]} src={require('../../img/loader.gif')} alt=""/>
                     </div>
                 }
                 { !this.state.loading &&

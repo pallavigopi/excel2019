@@ -4,10 +4,6 @@ import asyncComponent from '../../utils/asyncComponent'
 import styles from './style.module.css'
 import axios from 'axios'
 
-//testing
-import ibetoLogo from '../../img/ibetologo.png'
-import hackfortomorrow from '../../img/hftlogo.png'
-
 const EventEntryImport = () => import('components/event-entry')
 const EventEntry = asyncComponent(EventEntryImport)
 
@@ -70,7 +66,7 @@ export default class Workshops extends React.Component {
         var cardOdd = true;
         for (var i in events) {
             var gridItem = (
-                <a target="_blank" key={i} className={styles["events"]} href={events[i].link} ><EventEntry details={events[i]} direction={cardOdd} /></a>
+                <a target="_blank"  rel="noopener noreferrer" key={i} className={styles["events"]} href={events[i].link} ><EventEntry details={events[i]} direction={cardOdd} /></a>
             )
             cardOdd = !cardOdd;
             grid.push(gridItem)
@@ -79,7 +75,7 @@ export default class Workshops extends React.Component {
         return (
             <div>
                 <div className={styles["header"]}>
-                    <a className={styles["title"]}>Workshops</a><a className={styles["subtitle"]}>Excel 2019</a>
+                    <div className={styles["title"]}>Workshops</div><div className={styles["subtitle"]}>Excel 2019</div>
                 </div>
                 <div className={styles["underline"]}></div>
                 <div id={styles["event-grid"]}>

@@ -52,7 +52,7 @@ export default class CompetitionCard extends React.Component {
 
       async componentWillMount() {
         var comp = this
-        let response = await axios.get('http://34.93.246.77/api/competitions')
+        let response = await axios.get('https://api.excelmec.org/api/competitions')
         console.log('RESPONSE',response.data)
         response.data.forEach(async (val) => {
             if(val.codename === comp.props.match.params['competition']) {
@@ -82,11 +82,11 @@ export default class CompetitionCard extends React.Component {
       }
     
       handleExtraSectionContent = (name) =>{
-        if(name=="About")
+        if(name==="About")
         return (
           <AboutMiniGrid details={this.state.competitionData} />
         );
-        if(name=="Contact")
+        if(name==="Contact")
         return(
           <h1> Contact </h1>
         );
@@ -130,6 +130,7 @@ export default class CompetitionCard extends React.Component {
               <img
                 className={styles["modal-image-logo"]}
                 src={this.state.competitionData.img}
+                alt="logo"
               />
             </div>
             <div className={styles["modal-title"]}>
@@ -140,10 +141,10 @@ export default class CompetitionCard extends React.Component {
             </div>
             <div className={styles["modal-event-body"]}>
               <ul className={styles["popup-navbar"]}>
-                <li><a className={styles[this.state.currentSubSection == "About" ? "li-active" : ""]} onClick={this.handleAbout} id="About">About</a></li>
-                <li><a className={styles[this.state.currentSubSection == "Format" ? "li-active" : ""]} onClick={this.handleFormat} id="Format">Format</a></li>
-                <li><a className={styles[this.state.currentSubSection == "Rules" ? "li-active" : ""]} onClick={this.handleRules} id="Rules">Rules</a></li>
-                <li><a className={styles[this.state.currentSubSection == "Contact" ? "li-active" : ""]} onClick={this.handleContact} id="Contacts">Contact</a></li>
+                <li><a className={styles[this.state.currentSubSection === "About" ? "li-active" : ""]} onClick={this.handleAbout} id="About">About</a></li>
+                <li><a className={styles[this.state.currentSubSection === "Format" ? "li-active" : ""]} onClick={this.handleFormat} id="Format">Format</a></li>
+                <li><a className={styles[this.state.currentSubSection === "Rules" ? "li-active" : ""]} onClick={this.handleRules} id="Rules">Rules</a></li>
+                <li><a className={styles[this.state.currentSubSection === "Contact" ? "li-active" : ""]} onClick={this.handleContact} id="Contacts">Contact</a></li>
               </ul>
               <div className={styles["modal-subsection-container"]}>
                 {/* {this.state.content} */}

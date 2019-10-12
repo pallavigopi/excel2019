@@ -1,6 +1,6 @@
 import React from 'react'
 import Particles from 'react-particles-js';
-import { inherits } from 'util';
+// import { inherits } from 'util';
 
 export default class Background extends React.Component {
     render() {
