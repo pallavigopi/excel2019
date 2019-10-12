@@ -69,7 +69,7 @@ export default class Workshops extends React.Component {
         var cardOdd = true;
         for (var i in events) {
             var gridItem = (
-                <a target="_blank"  rel="noopener noreferrer" key={i} className={styles["events"]} href={events[i].link} ><EventEntry details={events[i]} direction={cardOdd} /></a>
+                <a target="_blank"  rel="noopener noreferrer" key={i} className={styles["events"]} ><Link to={`events/${events[i].codename}`} style={{textDecoration:'none'}}><EventEntry details={events[i]} direction={cardOdd} /></Link></a>
             )
             cardOdd = !cardOdd;
             grid.push(gridItem)

@@ -31,7 +31,7 @@ export default class Talks extends React.Component {
         var cardOdd = true;
         for (var i in events) {
             var gridItem = (
-                <a key={i} className={styles["events"]} href={events[i].link} ><EventEntry details={events[i]} direction={cardOdd} /></a>
+                <a key={i} className={styles["events"]}><Link to={`events/${events[i].codename}`} style={{textDecoration:'none'}}><EventEntry details={events[i]} direction={cardOdd} /></Link></a>
             )
             cardOdd = !cardOdd;
             grid.push(gridItem)
