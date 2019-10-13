@@ -11,6 +11,24 @@
     padding: 1rem;
 }
 
+.event-logo {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    min-height: 7rem;
+    min-width: 7rem;
+    padding: 1rem;
+    border-radius: 12px;
+    margin: auto
+}
+
+.logos {
+    display: block;
+    margin: auto;
+    max-height: 7rem;
+    max-width: 7rem;
+}
+
 /* .event-card-right {
     color: white;
     background-color: #1f1f1f00;
@@ -45,18 +63,10 @@
     font-family: 'Lemon Milk';
 }
 
-.event-logo {
-    max-height: 9rem;
-    margin: auto;
-    max-width: 11rem;
-    background-color: white;
-    border-radius: 12px;
-}
-
-.event-logo-name-container-left {
+/* .event-logo-name-container-left {
     display: flex;
     flex-direction: row;
-}
+} */
 
 /* .event-logo-name-container-right {
     display: flex;
@@ -89,16 +99,12 @@
     line-height: 1.5rem;
 } */
 
-.logo-container {
+/* .logo-container {
     text-align: center;
     padding: 1rem;
-}
-
-.logos {
-    max-height: 7rem;
-    max-width: 7rem;
-    transition: 0.4s ease;
-}
+    min-width: 7rem;
+    min-height: 7rem;
+} */
 
 .learnmore-container {
     display: none;
