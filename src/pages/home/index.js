@@ -32,6 +32,8 @@ export default class Home extends React.Component {
     <div id="EXCEL_DATE">November 8, 9, 10</div>
   </div>
 
+  <div id="go_down"></div>
+
     <div id="t1" className="caption">"An engineer opens a door to a new world . . ."</div>
     <div id="t2" className="caption">". . . scale new heights to beyond . . ."</div>
     <div id="t3" className="caption">". . . and unravel the strange"</div>

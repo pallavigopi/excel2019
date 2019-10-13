@@ -60,6 +60,29 @@ body{
 #all *{
   position:absolute;
 }
+
+
+@keyframes go_down{
+  0%{transform:translateY(-30px);opacity:1;}
+  100%{transform:translateY(3 0px);opacity:0;}
+}
+
+#go_down{
+  margin:1200px 850px;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-top: 50px solid rgba(255,255,255,0.5);
+  animation:go_down 1s linear infinite;
+}
+
+
+
+
+
+
+
+
+
 #heading{
 margin:400px 1000px;
 font-family: 'Lemon Milk';
