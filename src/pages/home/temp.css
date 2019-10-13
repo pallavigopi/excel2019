@@ -70,6 +70,7 @@ position: absolute;
 font-size:100px;
 width:1000px;
 text-align:center;
+z-index: 3;
 }
 #EXCEL_DATE{
 width:500px;  
@@ -77,6 +78,7 @@ position: absolute;
 font-size:50px;
 margin:150px 200px;
 color: #ee551f;
+z-index: 3;
 }
 .caption{
   width:1000px;

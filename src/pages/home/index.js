@@ -95,7 +95,9 @@ export default class Home extends React.Component {
 <div id="space_after"></div>
 
 
-<div id="h3" className="title">Our Sponsors <br /><span style={{color:"grey",fontSize:"3vh"}}>MEC Excel 2019 Sponsors</span></div>
+<div id="h3" className="title">Our Sponsors <br />
+{/*<span style={{color:"grey",fontSize:"3vh"}}>MEC Excel 2019 Sponsors</span>*/}
+</div>
 
 
 <div className="sponsor-grid">
