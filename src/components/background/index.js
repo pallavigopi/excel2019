@@ -15,7 +15,7 @@ export default class Background extends React.Component {
     params={{
 	    "particles": {
 	        "number": {
-	            "value": 175,
+	            "value": 100,
 	            "speed":7,
 	            "density": {
 	                "enable": false
@@ -23,12 +23,12 @@ export default class Background extends React.Component {
 
 			},
 			"opacity": {
-				"value": 0.3
+				"value": 0.1
 			},
 			"shape": {
 				"type": "polygon",
 				"polygon": {
-					"nb_sides": 3
+					"nb_sides": 5
 				}
 			},
 	        "size": {
