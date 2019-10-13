@@ -15,7 +15,7 @@ export default class Background extends React.Component {
     params={{
 	    "particles": {
 	        "number": {
-	            "value": 175,
+	            "value": 155,
 	            "speed":7,
 	            "density": {
 	                "enable": false
