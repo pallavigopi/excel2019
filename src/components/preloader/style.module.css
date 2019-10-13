@@ -1,0 +1,55 @@
+
+.container-svg{
+    width:250px;
+    margin: auto;
+    margin-top:20vh;
+}
+.abstractAnimation{
+    animation: bganime 30s linear infinite ;
+    animation-delay: 0.5s;
+    transform: translate(-25000px,1300px);
+    filter:hue-rotate(60deg);
+    -webkit-filter:hue-rotate(60deg);
+}
+@keyframes bganime{
+    0%{
+        transform: translate(-16300px,-3800px);
+    }
+    16%{
+        transform: translate(-17000px,-5000px);
+    }
+    17%{
+        transform: translate(-11200px,-7300px);
+    }
+    32%{
+        transform: translate(-10000px,-5000px);
+    }
+    33%{
+        transform: translate(-1300px,-7300px);
+    }
+    48%{
+        transform: translate(-1300px,-4000px);
+    }
+    49%{
+        transform: translate(-1300px,-13000px);
+    }
+    64%{
+        transform: translate(-3000px,-15000px);
+    }
+    65%{
+        transform: translate(-8700px,-13000px);
+    }
+    80%{
+        transform: translate(-8700px,-16000px);
+    }
+    81%{
+        transform: translate(-16300px,-16500px);
+    }
+    98%{
+        transform: translate(-17500px,-15000px);
+    }
+    100%{
+        transform: translate(-16300px,-3800px);
+    }
+  
+}

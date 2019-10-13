@@ -6,6 +6,8 @@ import DialogActions from '@material-ui/core/DialogActions'
 import DialogContent from '@material-ui/core/DialogContent'
 import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
+import axios from 'axios'
+
 
 import styles from './style.module.css'
 import { read } from 'fs';
@@ -72,7 +74,8 @@ class Schedule extends React.Component {
             currentCategory: 'all',
             currentTime: ["morning", "afternoon", "evening"],
             nextCategory: 'all',
-            nextTime: ["morning", "afternoon", "evening"]
+            nextTime: ["morning", "afternoon", "evening"],
+            loading: true,
 
         }   
 
@@ -192,10 +195,13 @@ class Schedule extends React.Component {
         ]
     }
 
-    componentWillMount() {
+    async componentWillMount() {
         // get data from cms and update the state
+        let response = await axios.get('https://api.excelmec.org/api/schedule')
+        
         this.setState({
-            events: this.totalEvents.filter(event => event.day === this.state.currentDay)
+            totalEvents: response.data,
+            events: response.data.filter(event => event.day === this.state.currentDay)
         })
     }
     componentDidMount(){

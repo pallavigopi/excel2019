@@ -9,22 +9,29 @@ import excellogo from '../../img/excel.png'
 import meclogo from '../../img/mec_logo.png'
 import mecvector from '../../img/mec.png'
 import litmus7 from '../../img/litmus7.png'
+import Loader from '../../components/preloader';
+import { sizeHeight } from '@material-ui/system';
 
 export default class Home extends React.Component {
     constructor(props) {
         super(props)
+        this.state = {
+          loading: true
+        }
     }
     componentDidMount(){
+      this.setState({
+        loading: false
+      })
       window.scrollTo(0, 0)
   }
     render() {
 
+      if(this.state.loading)
+        return <Loader />
+      else 
         return (
           <div id="parent">
-
-
-
-
   <div id="all">
 
   <div id="heading">
