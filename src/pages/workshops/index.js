@@ -7,6 +7,9 @@ import axios from 'axios'
 const EventEntryImport = () => import('components/event-entry')
 const EventEntry = asyncComponent(EventEntryImport)
 
+const EventCardImport = () => import('components/event-card')
+const EventCard = asyncComponent(EventCardImport)
+
 // var colors = ["#000000", "#0065F9", "#6D589D", "#3B4257", "#e84a5f", "#07689f", "590d82"];
 
 export default class Workshops extends React.Component {
@@ -14,14 +17,14 @@ export default class Workshops extends React.Component {
         super(props)
         this.state = {
             events: [],
-
+            loading: true,
             scrollPos: window.scrollY
         }
     }
     async componentWillMount() {
       console.log('working')
       let response = await axios.get('https://api.excelmec.org/api/events')
-      this.setState({events: response.data.filter(a => a.type === "Workshop")})
+      this.setState({events: response.data.filter(a => a.type === "Workshop"),loading: false})
       
     }
     componentDidMount(){
@@ -81,9 +84,17 @@ export default class Workshops extends React.Component {
                     <div className={styles["title"]}>Workshops</div><div className={styles["subtitle"]}>Excel 2019</div>
                 </div>
                 <div className={styles["underline"]}></div>
+                {this.state.loading && 
+                    <div id={styles["event-grid"]}>
+                        <img className={styles["loader"]} src={require('../../img/loader.gif')} alt=""/>
+                    </div>
+                }
+                { !this.state.loading &&
                 <div id={styles["event-grid"]}>
                     {grid}
                 </div>
+                }
+                <Route path='/workshops/:event' component={EventCard}/>
             </div>
         )
     }

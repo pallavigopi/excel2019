@@ -7,7 +7,9 @@
 	background-color: black;
 	/* border-radius: 10px; */
 	z-index: 0;
-	transition: box-shadow 0.5s, transform 0.5s;
+        transition: box-shadow 0.5s, transform 0.5s;
+        word-break: break-all !important;
+        
 }
 
 .card img{
@@ -51,7 +53,7 @@
 	font-style: 16px;
 	line-height: 24px;
 	z-index: 20;
-	opacity:1;
+        opacity:1;
         font-family: 'Montserrat', sans-serif;
 }
 
