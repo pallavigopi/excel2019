@@ -79,9 +79,9 @@ export default class Nav extends React.Component {
                         <li className={styles["nav-link"]}><Link to="/contacts" style={{ textDecoration: 'none' }}><span className={styles["nav-link--text"]} onClick={this.handleChange}>Contacts</span></Link></li>
                     </ul>
                     <div className={styles["nav-icons--container"]}>
-                        <a href="https://www.facebook.com/excelmec/" className={styles["nav-icon"]}><img className={styles["nav-icon-img"]} src={facebookLogo} alt="facebook"/></a>
-                        <a href="https://www.instagram.com/excelmec/?hl=en" className={styles["nav-icon"]}><img className={styles["nav-icon-img"]} src={instagramLogo} alt="instagram"/></a>
-                        <a href="https://www.youtube.com/channel/UCLP9HOgPekLpFzv2xIVwoFg" className={styles["nav-icon"]}><img className={styles["nav-icon-img"]} src={youtubeLogo} alt="youtube"/></a>
+                        <a href="https://www.facebook.com/excelmec/" target="_blank" className={styles["nav-icon"]}><img className={styles["nav-icon-img"]} src={facebookLogo} alt="facebook"/></a>
+                        <a href="https://www.instagram.com/excelmec/?hl=en" target="_blank" className={styles["nav-icon"]}><img className={styles["nav-icon-img"]} src={instagramLogo} alt="instagram"/></a>
+                        <a href="https://www.youtube.com/channel/UCLP9HOgPekLpFzv2xIVwoFg" target="_blank" className={styles["nav-icon"]}><img className={styles["nav-icon-img"]} src={youtubeLogo} alt="youtube"/></a>
                         {/* <span className={styles["nav-icon"]}><img className={styles["nav-icon-img"]} src={playstoreLogo} /></span> */}
                     </div>
                 </div>

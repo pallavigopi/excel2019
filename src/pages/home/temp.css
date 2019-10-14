@@ -369,6 +369,9 @@ z-index: 3;
 }
 .sponsor-div{
   margin-top:4vh;
+  text-decoration: none;
+  z-index:3;
+  color:white;
 }
 .sponsor-img{
   height:15vh;

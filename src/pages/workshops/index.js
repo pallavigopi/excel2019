@@ -1,10 +1,8 @@
 import React from 'react'
 import asyncComponent from '../../utils/asyncComponent'
-import {Route, Link} from 'react-router-dom'
 import styles from './style.module.css'
 import axios from 'axios'
-
-import {Link, Route} from 'react-router-dom'
+import {Route, Link} from 'react-router-dom'
 
 const EventCardImport = () => import('components/event-card')
 const EventCard = asyncComponent(EventCardImport)
@@ -12,8 +10,6 @@ const EventCard = asyncComponent(EventCardImport)
 const EventEntryImport = () => import('components/event-entry')
 const EventEntry = asyncComponent(EventEntryImport)
 
-const EventCardImport = () => import('components/event-card')
-const EventCard = asyncComponent(EventCardImport)
 
 // var colors = ["#000000", "#0065F9", "#6D589D", "#3B4257", "#e84a5f", "#07689f", "590d82"];
 
@@ -98,12 +94,8 @@ export default class Workshops extends React.Component {
                 <div id={styles["event-grid"]}>
                     {grid}
                 </div>
-<<<<<<< HEAD
-                <Route path='/events/:event' component={EventCard}/>
-=======
                 }
                 <Route path='/workshops/:event' component={EventCard}/>
->>>>>>> c412389bfcf282e71ed6aac2f8eadb02322dca71
             </div>
         )
     }

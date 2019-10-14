@@ -110,14 +110,14 @@ export default class Home extends React.Component {
 
 
 <div className="sponsor-grid">
-  <div className="sponsor-div">
+  <a href="https://litmus7.com/" target="_blank"  className="sponsor-div">
     <img className="sponsor-img" src={litmus7} />
     <div className="sponsor-title">CS-Tech Sponsor</div>
-  </div>
-  <div className="sponsor-div">
+  </a>
+  <a href="https://www.townscript.com/" target="_blank"  className="sponsor-div">
       <img className="sponsor-img1" src={townScript} />
       <div className="sponsor-title">Ticketing Partner</div>
-  </div>
+  </a>
 </div>
 
 <div id="h4" class="title">Legacy</div>
