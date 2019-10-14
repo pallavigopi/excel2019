@@ -42,7 +42,12 @@ export default class EventCard extends React.Component {
       }
 
       componentWillUnmount() {
-          this.props.history.push('/events')
+          if(this.state.eventData.Type==='Event')
+              this.props.history.push('/events')
+          else if(this.state.eventData.Type==='Talk') 
+              this.props.history.push('/talks')   
+          else if(this.state.eventData.Type==='Workshop') 
+              this.props.history.push('/workshops')  
       }
     
     render() {
