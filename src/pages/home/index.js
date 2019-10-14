@@ -126,7 +126,12 @@ export default class Home extends React.Component {
     <img src={mecvector}/>
   </div>
   <div>
-  Excel, the nation’s second and South India’s first ever fest of its kind started in 2001 by the students of Govt. Model Engineering College with a motto, Inspire, Innovate, Engineer. Over the years, Excel has grown exponentially, consistently playing host to some of the most talented students, the most illustrious speakers and the most reputed companies. Now gearing towards its 20th edition, Excel continues to excite the participants with its wide array of technical and non-technical events and with a promise to live upto its motto. What sets Excel apart is the drive towards delivering excellence. The fest is renowned for its quality, dynamism and active participation.</div>
+  Excel, the nation’s second and South India’s first ever fest of its kind, was started in 2001 by the students of Govt. Model Engineering College. The aim was simple: to inspire, innovate, engineer. Over the years, Excel has grown exponentially, consistently playing host to some of the most talented students, the most illustrious speakers and the most reputed companies. Now gearing towards the landmark 20th edition, Excel continues to excite the participants with its wide array of technical and non-technical events and with a promise to live up to its motto. 
+
+What sets Excel apart is the drive towards delivering excellence in all aspects. Excel is renowned for the dynamic nature of events and active participation amongst the student community.
+
+Excel 2019 incorporates a wide variety of technical, managerial and general events which includes both online and onsite competitions, workshops, summits, hackathons, exhibitions and so on.
+  </div>
 </div>
 
 
