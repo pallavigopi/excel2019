@@ -64,6 +64,18 @@ body{
 margin:400px 1000px;
 font-family: 'Lemon Milk';
 }
+@keyframes go_down{
+  0%{transform:translateY(-30px);opacity:0;}
+  100%{transform:translateY(30px);opacity:1;}
+}
+#go_down{
+  margin:1200px 850px;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-top: 50px solid white;
+  animation: go_down 1s linear infinite;
+}
+
 
 #EXCEL{
 position: absolute;
@@ -317,6 +329,14 @@ z-index: 3;
   #heading{
   margin:-250px 0px;
   }
+#go_down{
+  margin:1200px 450px;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-top: 50px solid white;
+  animation: go_down 1s linear infinite;
+}
+
 }
 
 
