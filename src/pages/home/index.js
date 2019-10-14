@@ -39,7 +39,11 @@ export default class Home extends React.Component {
     <div id="EXCEL_DATE">November 8, 9, 10</div>
   </div>
 
-  <div id="go_down"></div>
+  <div id="go_down">
+    <div id="g1" className="go_down">></div>
+    <div id="g2" className="go_down">></div>
+    <div id="g3" className="go_down">></div>
+  </div>
 
     <div id="t1" className="caption">"An engineer opens a door to a new world . . ."</div>
     <div id="t2" className="caption">". . . scale new heights to beyond . . ."</div>
