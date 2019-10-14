@@ -17,7 +17,7 @@ export default class AboutContactGrid extends React.Component {
                     </div>
                     <div className={styles["contact-grid-phone"]}>
                         <img  alt="" src={require('../../img/phone-receiver.png')}/>
-                        {this.props.details.phone_number}
+                        <a href={"tel:"+this.props.details.phone_number}>{this.props.details.phone_number}</a>
                     </div>
                 </div>   
         );

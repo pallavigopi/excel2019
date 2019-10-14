@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './style.module.css';
 import axios from 'axios';
 import SkyLight from 'react-skylight'
+import AboutContactGrid from "../about-contact-grid"
 
 export default class EventCard extends React.Component {
 
@@ -55,6 +56,11 @@ export default class EventCard extends React.Component {
             buttons.push(button)
         }
 
+        var contactgrid = []
+          for(var i in this.state.eventData.contact_numbers){
+          // console.log("item",this.state.competitionData.contact_numbers[i])
+          contactgrid.push(<AboutContactGrid details={this.state.eventData.contact_numbers[i]}/>);
+          }
         var dialogStyles = {
             padding: '2rem',
             backgroundColor: '#000000',
@@ -92,10 +98,12 @@ export default class EventCard extends React.Component {
                         </div>
                         {buttons}
                         <div className={styles["modal-event-body"]} dangerouslySetInnerHTML={{ __html: this.state.eventData.info }}>
-
+                        </div>
+                        <div className={styles["about-contact-grid"]}>
+                            {contactgrid}
+                                </div>
                         </div>
 
-                    </div>
             </SkyLight>
         );
     }
