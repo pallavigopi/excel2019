@@ -7,7 +7,7 @@
     height:70px;
     z-index:10006;
     cursor: pointer;
-    
+    -webkit-tap-highlight-color: transparent;
 }
 
 .navLine1 {
