@@ -20,9 +20,9 @@ export default class Home extends React.Component {
         }
     }
     componentDidMount(){
-      this.setState({
-        loading: false
-      })
+        // this.setState({
+        //   loading: false
+        // })
       window.scrollTo(0, 0)
   }
     render() {
