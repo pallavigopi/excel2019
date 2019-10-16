@@ -76,6 +76,16 @@ body {
 
 
 @media screen and (max-width: 800px) {
+
+  #comp-grid {
+    /* grid-template-columns: auto; */
+    grid-template-columns: repeat(2, minmax(1rem, 1fr));
+    padding: 0rem;
+    grid-gap: 0rem;
+    margin-top: 5rem;
+    margin-right: 1.5rem;
+  }
+
   .header {
       align-items: center;
       width: auto;
@@ -97,10 +107,12 @@ body {
 }
 @media screen and (max-width: 600px) {
   #comp-grid {
-    grid-template-columns: auto;
+    /* grid-template-columns: auto; */
+    grid-template-columns: repeat(2, minmax(1rem, 1fr));
     padding: 0rem;
     grid-gap: 0rem;
     margin-top: 5rem;
+    margin-right: 1.5rem;
   }
 
   .comp-filter-dept {

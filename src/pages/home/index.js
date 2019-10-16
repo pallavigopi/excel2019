@@ -9,6 +9,7 @@ import excellogo from '../../img/excel.png'
 import meclogo from '../../img/mec_logo.png'
 import mecvector from '../../img/mec.png'
 import litmus7 from '../../img/litmus7.png'
+import Play from '../../img/excel_play_logo.png'
 import Loader from '../../components/preloader';
 import { sizeHeight } from '@material-ui/system';
 
@@ -20,9 +21,12 @@ export default class Home extends React.Component {
         }
     }
     componentDidMount(){
-        // this.setState({
-        //   loading: false
-        // })
+      setTimeout(() =>{
+        this.setState({
+          loading: false
+        })
+      },
+      2000)
       window.scrollTo(0, 0)
   }
     render() {
@@ -107,6 +111,16 @@ export default class Home extends React.Component {
 
 <div id="space_after"></div>
 
+<div id="h3" className="title">Excel Play <br />
+</div>
+
+
+<div className="sponsor-grid">
+  <a href="http://play.excelmec.org" target="_blank"  className="sponsor-div">
+    <img className="sponsor-img" src={Play} />
+    <div className="sponsor-title">Excel Play</div>
+  </a>
+</div>
 
 <div id="h3" className="title">Our Sponsors <br />
 {/*<span style={{color:"grey",fontSize:"3vh"}}>MEC Excel 2019 Sponsors</span>*/}
