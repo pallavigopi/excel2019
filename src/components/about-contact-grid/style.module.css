@@ -16,8 +16,13 @@
 .contact-grid-phone{
     font-size: 1rem;
     font-weight: 600;
+    color:white;
+    text-decoration: none;
 }
-
+.contact-grid-phone>a{
+    color:white;
+    text-decoration: none;
+}
 .contact-grid-phone img{
     height: 0.8rem;
     margin-right:4px; 

@@ -4,11 +4,14 @@ import styles from './style.module.css'
 import {Route, Link} from 'react-router-dom'
 import axios from 'axios'
 
-const EventEntryImport = () => import('components/event-entry')
-const EventEntry = asyncComponent(EventEntryImport)
 
 const EventCardImport = () => import('components/event-card')
 const EventCard = asyncComponent(EventCardImport)
+
+const EventEntryImport = () => import('components/event-entry')
+const EventEntry = asyncComponent(EventEntryImport)
+
+
 
 // var colors = ["#000000", "#0065F9", "#6D589D", "#3B4257", "#e84a5f", "#07689f", "590d82"];
 
@@ -35,7 +38,7 @@ export default class Talks extends React.Component {
         var cardOdd = true;
         for (var i in events) {
             var gridItem = (
-                <a key={i} className={styles["events"]}><Link to={`events/${events[i].codename}`} style={{textDecoration:'none'}}><EventEntry details={events[i]} direction={cardOdd} /></Link></a>
+                <a key={i} className={styles["events"]}><Link to={`talks/${events[i].codename}`} style={{textDecoration:'none'}}><EventEntry details={events[i]} direction={cardOdd} /></Link></a>
             )
             cardOdd = !cardOdd;
             grid.push(gridItem)

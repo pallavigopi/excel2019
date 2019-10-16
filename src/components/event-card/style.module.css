@@ -57,7 +57,11 @@
     display: flex;
     flex-direction: row;
 }
-
+.about-contact-grid{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
 /* .event-logo-name-container-right {
     display: flex;
     flex-direction: row-reverse;
@@ -169,6 +173,11 @@
         text-align: center;
         margin: auto;
     }
+    .about-contact-grid{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
     .learnmore-container {
         display: block;
         padding: 0vw 5vw;
