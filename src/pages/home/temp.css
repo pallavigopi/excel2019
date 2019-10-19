@@ -370,6 +370,19 @@ z-index: 3;
   }
 }
 @media only screen and (max-width: 600px) {
+
+  .caption{
+    width:1000px;
+    text-align:center;
+    margin:1050px 0px;
+    font-size:65px; 
+    font-weight:900;
+  }
+
+  #go_down {
+    margin-top: 1250px;
+  }
+
   #all {  
   margin-top:50px;
   transform: translate(-50%, -50%) scale(0.3);
