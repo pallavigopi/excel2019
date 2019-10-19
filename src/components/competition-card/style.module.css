@@ -55,7 +55,22 @@
   .learnmore-container {
     display: none;
   }
-  
+  .button-container {
+    display: block;
+    padding: 0vw 3.5vw;
+    color: white;
+    border-radius: 4px;
+    margin: 0 auto 1rem auto;
+    margin-top: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    background-color: transparent;
+    width: 9vw;
+    padding: 1rem;
+    border: 1px solid white;
+    text-align: center;
+    text-decoration: none;
+}
   .about-contact-grid{
     display: flex;
     flex-direction: row;
@@ -143,6 +158,9 @@
     flex-direction: column;
     justify-content: center;
   }
+  .button-container {
+    width: 30vw;
+}
   }
   
   @media screen and (max-width: 600px) {

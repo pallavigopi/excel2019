@@ -103,6 +103,14 @@ export default class CompetitionCard extends React.Component {
     
 
     render() {
+      var buttons = []
+        for (var i in this.state.competitionData.buttons) {
+            var con = this.state.competitionData.buttons[i]
+            var button = (
+                <a href={con.link} target="_blank"  rel="noopener noreferrer"  className={styles["button-container"]}>{con.name}</a>
+            )
+            buttons.push(button)
+        }
         var dialogStyles = {
             padding: "2rem",
             backgroundColor: "#000000",
@@ -148,6 +156,7 @@ export default class CompetitionCard extends React.Component {
             <div className={styles["modal-prize-pool"]}>
             Prize Pool - {this.state.competitionData.prize}
             </div>
+            {buttons}
             <div className={styles["modal-event-body"]}>
               <ul className={styles["popup-navbar"]}>
                 <li><a className={styles[this.state.currentSubSection === "About" ? "li-active" : ""]} onClick={this.handleAbout} id="About">About</a></li>

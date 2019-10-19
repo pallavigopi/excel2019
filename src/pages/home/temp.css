@@ -115,7 +115,8 @@ z-index: 3;
   width:1000px;
   text-align:center;
   margin:1050px 0px;
-  font-size:40px; 
+  font-size:45px; 
+  font-weight:900;
 }
 @keyframes t1{
   13%,100%{opacity:0;}
