@@ -45,7 +45,6 @@
   font-size: 1rem;
   color: white;
   font-weight: 600;
-
 }
 
 .logo-container {
@@ -76,7 +75,7 @@
   text-align: center;
 }
 
-.modal-prize-pool{
+.modal-prize-pool {
   text-align: center;
   color: orangered;
   font-weight: 700;
@@ -129,6 +128,9 @@
 }
 
 @media screen and (max-width: 800px) {
+  .comp-logo {
+    width: auto;
+  }
   .comp-card {
     width: auto;
     transform: scale(0.8);
@@ -139,7 +141,7 @@
 }
 
 @media screen and (max-width: 600px) {
-  .comp{
+  .comp {
     height: auto;
   }
   .comp-card {
@@ -150,10 +152,10 @@
   .comp-card:hover {
     background: #ffffff00;
   }
-  .comp-logo{
-    margin-top:0px; 
+  .comp-logo {
+    width: auto;
+    margin-top: 0px;
   }
-
   .modal-subsection-container {
     padding: 0px 15px;
     font-size: 18px;
