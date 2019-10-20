@@ -1,20 +1,142 @@
 .comp-card {
-    color: white;
-    /* background-color: white; */
-    position: relative;
-    margin: 0.2rem 0.2rem;
-    border-radius: 10px;
-    display: flex;
-    transform: scale(0.9);
-    flex-direction: column;
-    font-family: 'Montserrat', sans-serif;
-    transition: 0.3s ease;
+  color: white;
+  /* background-color: white; */
+  position: relative;
+  margin: 0.2rem 0.2rem;
+  border-radius: 10px;
+  display: flex;
+  transform: scale(0.9);
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  transition: 0.3s ease;
+}
+
+.comp-card:hover {
+  transform: scale(1);
+}
+
+.comp {
+  height: 6rem;
+  color: white;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.comp-logo {
+  /* background-color: white; */
+  width: 14rem;
+  height: 11rem;
+  margin: 1rem auto 0rem auto;
+  border-radius: 12px;
+}
+
+.comp-name {
+  color: white;
+  margin-bottom: 0.1rem;
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.comp-description {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.logo-container {
+  text-align: center;
+  padding: 1rem;
+}
+
+.logos {
+  max-height: 9rem;
+}
+
+.learnmore-container {
+  display: none;
+}
+
+.about-contact-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* popup styling */
+
+.modal-container {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 2rem;
+}
+
+.modal-title {
+  font-weight: 600;
+  font-size: 28px;
+  text-align: center;
+}
+
+.modal-prize-pool {
+  text-align: center;
+  color: #fda642;
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.modal-image {
+  text-align: center;
+}
+
+.modal-image-logo {
+  max-height: 16rem;
+}
+
+/* popup navbar styling */
+
+.popup-navbar {
+  text-align: center;
+  padding: 3rem 0rem;
+  margin: 0rem;
+  list-style: none;
+  font-size: 18px;
+}
+
+.popup-navbar>li {
+  padding: 0.2rem;
+  display: inline;
+}
+
+.popup-navbar>li>a {
+  border-radius: 6px;
+  padding: 1rem 1.5rem;
+  transition: 0.2s ease;
+}
+
+.li-active {
+  background-color: white;
+  color: black;
+}
+
+.modal-subsection-container {
+  padding: 0px 150px;
+  font-size: 18px;
+}
+
+@media screen and (min-width: 800px) {
+  .popup-navbar>li>a:hover {
+    background-color: #ffffff22;
   }
-  
+}
+
+@media screen and (max-width: 800px) {
+  .comp-card {
+    width: auto;
+    transform: scale(0.8);
+  }
   .comp-card:hover {
     transform: scale(1);
-  }
-  
+  }  
   .comp {
     height: 6rem;
     color: white;
@@ -73,122 +195,39 @@
 }
   .about-contact-grid{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
   }
+}
 
-  /* popup styling */
-  
-  .modal-container {
-    display: flex;
-    flex-direction: column;
-    font-family: 'Montserrat', sans-serif;
-    margin-top: 2rem;
+@media screen and (max-width: 600px) {
+  .comp {
+    height: auto;
   }
-  
-  .modal-title {
-    font-weight: 600;
-    font-size: 28px;
-    text-align: center;
+  .comp-card {
+    width: auto;
+    border-radius: 5px 5px 5px 5px;
+    margin: 0rem 0rem;
   }
-  
-  .modal-prize-pool{
-    text-align: center;
-    color: #fda642;
-    font-weight: 700;
-    font-size: 22px;
+  .comp-card:hover {
+    background: #ffffff00;
   }
-  
-  .modal-image {
-    text-align: center;
+  .comp-logo {
+    margin-top: 0px;
   }
-  
-  .modal-image-logo {
-    max-height: 16rem;
-  }
-  
-  /* popup navbar styling */
-  
-  .popup-navbar {
-    text-align: center;
-    padding: 3rem 0rem;
-    margin: 0rem;
-    list-style: none;
-    font-size: 18px;
-  }
-  
-  .popup-navbar>li {
-    padding: 0.2rem;
-    display: inline;
-  }
-  
-  .popup-navbar>li>a {
-    border-radius: 6px;
-    padding: 1rem 1.5rem;
-    transition: 0.2s ease;
-  }
-  
-  .li-active {
-    background-color: white;
-    color: black;
-  }
-  
   .modal-subsection-container {
-    padding: 0px 150px;
+    padding: 0px 15px;
     font-size: 18px;
   }
-  
-  @media screen and (min-width: 800px) {
-    .popup-navbar>li>a:hover {
-      background-color: #ffffff22;
-    }
+  /* popup */
+  .popup-navbar>li>a {
+    font-size: 0.9rem;
+    padding: 0.8rem;
   }
-  
-  @media screen and (max-width: 800px) {
-    .comp-card {
-      width: auto;
-      transform: scale(0.8);
-    }
-    .comp-card:hover {
-      transform: scale(1);
-    }
-      
-  .about-contact-grid{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  .popup-navbar>li {
+    padding: 0rem;
   }
   .button-container {
     width: 30vw;
+  }
 }
-  }
-  
-  @media screen and (max-width: 600px) {
-    .comp{
-      height: auto;
-    }
-    .comp-card {
-      width: auto;
-      border-radius: 5px 5px 5px 5px;
-      margin: 0rem 0rem;
-    }
-    .comp-card:hover {
-      background: #ffffff00;
-    }
-    .comp-logo{
-      margin-top:0px; 
-    }
-  
-    .modal-subsection-container {
-      padding: 0px 15px;
-      font-size: 18px;
-    }
-    /* popup */
-    .popup-navbar>li>a {
-      font-size: 0.9rem;
-      padding: 0.8rem;
-    }
-    .popup-navbar>li {
-      padding: 0rem;
-    }
-  }
