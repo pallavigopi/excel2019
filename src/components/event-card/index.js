@@ -101,6 +101,7 @@ export default class EventCard extends React.Component {
                         <div className={styles["modal-image"]}>
                             <img className={styles["modal-image-logo"]} src={this.state.eventData.img} alt=""/>
                         </div>
+                        <div className={styles["event-title"]}>{this.state.eventData.name}</div>
                         {buttons}
                         <div className={styles["modal-event-body"]} dangerouslySetInnerHTML={{ __html: this.state.eventData.info }}>
                         </div>
