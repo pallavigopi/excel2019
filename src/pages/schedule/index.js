@@ -80,127 +80,17 @@ class Schedule extends React.Component {
         }   
 
         this.changeDay = this.changeDay.bind(this)
-        this.totalEvents = [
-            {
-                name: "Event One Name",
-                venue: "Event One Venue",
-                date: "1st Oct",
-                time: "10:00am - 12:00am",
-                img: testImage,
-                day: 1,
-                category: "computer-science",
-                daytime: "morning",
-            },
-            {
-                name: "Event One Name",
-                venue: "Event One Venue",
-                date: "1st Oct",
-                time: "10:00am - 12:00am",
-                img: testImage,
-                day: 1,
-                category: "computer-science",
-                daytime: "morning",
-            },
-            {
-                name: "Event One Name",
-                venue: "Event One Venue",
-                date: "1st Oct",
-                time: "10:00am - 12:00am",
-                img: testImage,
-                day: 1,
-                category: "computer-science",
-                daytime: "morning",
-            },
-            {
-                name: "Event One Name",
-                venue: "Event One Venue",
-                date: "1st Oct",
-                time: "10:00am - 12:00am",
-                img: testImage,
-                day: 1,
-                category: "computer-science",
-                daytime: "morning",
-            },
-            {
-                name: "Event One Name",
-                venue: "Event One Venue",
-                date: "1st Oct",
-                time: "10:00am - 12:00am",
-                img: testImage,
-                day: 1,
-                category: "computer-science",
-                daytime: "morning",
-            },
-            {
-                name: "Event One Name",
-                venue: "Event One Venue",
-                date: "1st Oct",
-                time: "10:00am - 12:00am",
-                img: testImage,
-                day: 1,
-                category: "computer-science",
-                daytime: "morning",
-            },
-            {
-                name: "Event One Name",
-                venue: "Event One Venue",
-                date: "1st Oct",
-                time: "10:00am - 12:00am",
-                img: testImage,
-                day: 1,
-                category: "computer-science",
-                daytime: "morning",
-            },
-            {
-                name: "Event One Name",
-                venue: "Event One Venue",
-                date: "1st Oct",
-                time: "10:00am - 12:00am",
-                img: testImage,
-                day: 1,
-                category: "computer-science",
-                daytime: "morning",
-            },
-            {
-                name: "Event One Name",
-                venue: "Event One Venue",
-                date: "1st Oct",
-                time: "10:00am - 12:00am",
-                img: testImage,
-                day: 1,
-                category: "computer-science",
-                daytime: "morning",
-            },
-            {
-                name: "Event One Name",
-                venue: "Event One Venue",
-                date: "1st Oct",
-                time: "10:00am - 12:00am",
-                img: testImage,
-                day: 1,
-                category: "computer-science",
-                daytime: "morning",
-            },
-            {
-                name: "Event One Name",
-                venue: "Event One Venue",
-                date: "1st Oct",
-                time: "10:00am - 12:00am",
-                img: testImage,
-                category: "electrical",
-                day: 2,
-                daytime: "evening"
-                
-            }
-        ]
+        this.totalEvents = []
     }
 
     async componentWillMount() {
         // get data from cms and update the state
         let response = await axios.get('https://api.excelmec.org/api/schedule')
-        
+        this.totalEvents= response.data;
+
         this.setState({
             totalEvents: response.data,
+            loading:false,
             events: response.data.filter(event => event.day === this.state.currentDay)
         })
     }
@@ -291,8 +181,14 @@ class Schedule extends React.Component {
                         </Tabs>
                      </div>
                 </div>
+                {this.state.loading && 
+                 <div className="schedule-content--container">
+                     <img className={styles["loader"]} src={require('../../img/loader.gif')} alt=""/>
+                 </div>
+                }
+                { !this.state.loading &&
                 <div className="schedule-content--container">
-                    {
+                    { this.totalEvents.length ? (
                         this.state.events.length ? (
                             this.state.events.map((data, idx) => {
                                 if(this.state.currentCategory === "all") 
@@ -316,8 +212,16 @@ class Schedule extends React.Component {
                                 No Events To Display
                             </div>
                         )
+                    ) : (
+                        <div className={styles["schedule-noevent--container"]}>
+                                {/* IF THERE ARE NO EVENTS TO DISPLAY */}
+                                Coming soon
+                            </div>
+                    )
                     }
                 </div>
+                }
+                
             </div>
             <ScheduleFilter 
                 isOpen={this.state.showFilterPopup} 
