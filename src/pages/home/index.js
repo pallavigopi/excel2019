@@ -10,6 +10,7 @@ import meclogo from '../../img/mec_logo.png'
 import mecvector from '../../img/mec.png'
 import litmus7 from '../../img/litmus7.png'
 import Play from '../../img/excel_play_logo.png'
+import EventOz from '../../img/EVENTOZ-logo.png'
 import Loader from '../../components/preloader';
 import { sizeHeight } from '@material-ui/system';
 
@@ -111,14 +112,14 @@ export default class Home extends React.Component {
 
 <div id="space_after"></div>
 
-<div id="h3" className="title">Excel Play <br />
-</div>
+{/*<div id="h3" className="title">Excel Play <br />
+</div>*/}
 
 
 <div className="sponsor-grid">
   <a href="http://play.excelmec.org" target="_blank"  className="sponsor-div">
     <img className="sponsor-img" src={Play} />
-    <div className="sponsor-title">Excel Play</div>
+    {/*<div className="sponsor-title">Excel Play</div>*/}
   </a>
 </div>
 
@@ -135,6 +136,10 @@ export default class Home extends React.Component {
   <a href="https://www.townscript.com/" target="_blank"  className="sponsor-div">
       <img className="sponsor-img1" src={townScript} />
       <div className="sponsor-title">Ticketing Partner</div>
+  </a>
+  <a href="https://www.eventoz.co.in/" target="_blank"  className="sponsor-div">
+      <img className="sponsor-img2" src={EventOz} />
+      <div className="sponsor-title">Media Partner</div>
   </a>
 </div>
 

@@ -428,6 +428,11 @@ z-index: 3;
 .sponsor-img1{
   height:20vh;
 }
+.sponsor-img2{
+ 
+  height:12vh;
+
+}
 .sponsor-title{
   margin-top:2vh; 
   text-align: center;
@@ -482,6 +487,10 @@ z-index: 3;
     height:auto;
   }
   .sponsor-img1{
+    width:200px;
+    height:auto;
+  }
+  .sponsor-img2{
     width:200px;
     height:auto;
   }
