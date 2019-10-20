@@ -4,7 +4,7 @@ import Particles from 'react-particles-js'
 import asyncComponent from '../../utils/asyncComponent';
 import styles from './style.module.css'
 import './temp.css'
-import townScript from '../../img/townscript.webp'
+import townScript from '../../img/townscript.png'
 import excellogo from '../../img/excel.png'
 import meclogo from '../../img/mec_logo.png'
 import mecvector from '../../img/mec.png'
@@ -116,9 +116,9 @@ export default class Home extends React.Component {
 </div>*/}
 
 
-<div className="sponsor-grid">
-  <a href="http://play.excelmec.org" target="_blank"  className="sponsor-div">
-    <img className="sponsor-img" src={Play} />
+<div className="play-grid">
+  <a href="http://play.excelmec.org" target="_blank"  className="play-div">
+    <img className="play-img" src={Play} />
     {/*<div className="sponsor-title">Excel Play</div>*/}
   </a>
 </div>
@@ -135,11 +135,11 @@ export default class Home extends React.Component {
   </a>
   <a href="https://www.townscript.com/" target="_blank"  className="sponsor-div">
       <img className="sponsor-img1" src={townScript} />
-      <div className="sponsor-title">Ticketing Partner</div>
+      <div className="sponsor-title1">Ticketing Partner</div>
   </a>
   <a href="https://www.eventoz.co.in/" target="_blank"  className="sponsor-div">
-      <img className="sponsor-img2" src={EventOz} />
-      <div className="sponsor-title">Media Partner</div>
+      <img className="sponsor-img1" src={EventOz} />
+      <div className="sponsor-title1">Media Partner</div>
   </a>
 </div>
 
