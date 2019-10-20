@@ -148,7 +148,7 @@ export default class Home extends React.Component {
   <div> 
     <img src={mecvector}/>
   </div>
-  <div>
+  <div className="legacy-text">
   Excel, the nation’s second and South India’s first ever fest of its kind, was started in 2001 by the students of Govt. Model Engineering College. The aim was simple: to inspire, innovate, engineer. Over the years, Excel has grown exponentially, consistently playing host to some of the most talented students, the most illustrious speakers and the most reputed companies. Now gearing towards the landmark 20th edition, Excel continues to excite the participants with its wide array of technical and non-technical events and with a promise to live up to its motto. 
 
 What sets Excel apart is the drive towards delivering excellence in all aspects. Excel is renowned for the dynamic nature of events and active participation amongst the student community.
