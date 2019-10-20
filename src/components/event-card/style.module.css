@@ -1,112 +1,10 @@
-.event-card-left {
-    color: white;
-    background-color: #1f1f1f00;
-    position: relative;
-    margin: 0.3rem auto;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: row;
-    font-family: 'Montserrat', sans-serif;
-    transition: 0.3s ease;
-    padding: 1rem;
-}
 
-/* .event-card-right {
-    color: white;
-    background-color: #1f1f1f00;
-    position: relative;
-    margin: 0.3rem auto;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    font-family: 'Montserrat', sans-serif;
-    transition: 0.3s ease;
-    padding: 1rem;
-} */
 
-.event-card-left:hover {
-    background: #ffffff22;
-    /* padding: 1.5rem; */
-}
-
-/* .event-card-right:hover {
-    background: #ffffff22;
-    padding: 1.5rem;
-} */
-
-.event {
-    padding: 1.5rem 0rem;
-    margin: auto 0rem;
-}
-
-.event-name {
-    margin: auto 1rem;
-    font-size: 2rem;
-    font-family: 'Lemon Milk';
-}
-
-.event-logo {
-    max-height: 9rem;
-    margin: auto;
-    max-width: 11rem;
-    background-color: white;
-    border-radius: 12px;
-}
-
-.event-logo-name-container-left {
-    display: flex;
-    flex-direction: row;
-}
 .about-contact-grid{
     display: flex;
     flex-direction: row;
     justify-content: center;
   }
-/* .event-logo-name-container-right {
-    display: flex;
-    flex-direction: row-reverse;
-} */
-
-.event-card-left>.event>.event-name {
-    margin-bottom: 0.1rem;
-    text-align: left;
-    padding: 0.5rem 0rem;
-}
-
-.event-card-left>.event>.event-description {
-    text-align: left;
-    font-size: 0.9rem;
-    margin: auto 1rem;
-    line-height: 1.5rem;
-}
-
-/* .event-card-right>.event>.event-name {
-    margin-bottom: 0.1rem;
-    text-align: right;
-    padding: 0.5rem 0rem;
-}
-
-.event-card-right>.event>.event-description {
-    text-align: right;
-    font-size: 0.9rem;
-    margin-left: 9rem;
-    line-height: 1.5rem;
-} */
-
-.logo-container {
-    text-align: center;
-    padding: 1rem;
-}
-
-.logos {
-    max-height: 7rem;
-    max-width: 7rem;
-    transition: 0.4s ease;
-}
-
-.learnmore-container {
-    display: none;
-}
 
 .button-container {
     display: block;
@@ -133,74 +31,11 @@
 
 
 @media screen and (max-width: 800px) {
-    .event-card-left {
-        width: 100vw;
-        border-radius: 0px;
-        flex-direction: column;
-        padding: 0rem;
-    }
-    .event-card-right {
-        width: 100vw;
-        border-radius: 0px;
-        flex-direction: column;
-        padding: 0rem;
-    }
-    .event-card-left:hover {
-        background: transparent;
-        /* padding: 0rem; */
-    }
-    .event-card-right:hover {
-        background: transparent;
-        /* padding: 0rem; */
-    }
-    .event-logo {
-        margin: auto auto;
-    }
-    .event-logo-name-container-left {
-        flex-direction: column;
-    }
-    .event-logo-name-container-right {
-        flex-direction: column;
-    }
-    .event-name {
-        padding-top: 1rem;
-        text-align: center;
-    }
-    .event-card-left>.event>.event-name {
-        text-align: center;
-    }
-    .event-card-left>.event>.event-description {
-        text-align: center;
-        margin: auto auto;
-        padding: 0rem 1rem;
-    }
-    .event-card-right>.event>.event-name {
-        text-align: center;
-    }
-    .event-card-right>.event>.event-description {
-        text-align: center;
-        margin: auto;
-    }
     .about-contact-grid{
         display: flex;
         flex-direction: column;
         justify-content: center;
       }
-    .learnmore-container {
-        display: block;
-        padding: 0vw 5vw;
-    }
-    .learn-more {
-        color: white;
-        border-radius: 4px;
-        margin: 0 auto 1rem auto;
-        font-family: 'Montserrat', sans-serif;
-        font-size: 1rem;
-        background-color: transparent;
-        width: 90vw;
-        padding: 1rem;
-        border: 1px solid white;
-    }
     .button-container {
         width: 30vw;
     }
