@@ -11,30 +11,30 @@ import mecvector from '../../img/mec.png'
 import litmus7 from '../../img/litmus7.png'
 import Play from '../../img/excel_play_logo.png'
 import EventOz from '../../img/EVENTOZ-logo.png'
-import Loader from '../../components/preloader';
+/*import Loader from '../../components/preloader';*/
 import { sizeHeight } from '@material-ui/system';
 
 export default class Home extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-          loading: true
+         /* loading: true*/
         }
     }
     componentDidMount(){
-      setTimeout(() =>{
+      /*setTimeout(() =>{
         this.setState({
           loading: false
         })
       },
-      2000)
+      2000)*/
       window.scrollTo(0, 0)
   }
     render() {
 
-      if(this.state.loading)
+      {/*if(this.state.loading)
         return <Loader />
-      else 
+      else */}
         return (
           <div id="parent">
   <div id="all">
