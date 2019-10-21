@@ -61,7 +61,7 @@ class Schedule extends React.Component {
         this.state = {
             events: [],
             filter: {
-                types: [ "all", "computer-science", "electronics", "electrical","events", "robotics","workshops", "talks"],
+                types: [ "all", "computer-science", "gen-tech", "non-tech","events", "robotics","workshops", "talks"],
                 time: ["morning", "afternoon", "evening"],
                 default : {
                     type: "all",
