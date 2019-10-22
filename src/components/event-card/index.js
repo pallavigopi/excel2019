@@ -38,7 +38,7 @@ export default class EventCard extends React.Component {
       handleClose() {
         setTimeout( () => {
             window.history.back();
-        }, 450)
+        }, 100)
       }
 
     //   componentWillUnmount() {
