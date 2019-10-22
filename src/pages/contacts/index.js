@@ -36,7 +36,7 @@ export default class Contacts extends Component{
                {desig:"General Secretary",name:"Akhil Abraham",descp:"",email:"akhilabraham.mec@gmail.com",phno:"+91 9061128759",img:Akhil,linkln:"http://linkedin.com/in/akhilabrahamt"},
                {desig:"Joint Secretary",name:"Sharat Kurup",descp:"",email:"sharat.mec@gmail.com ",phno:"+91 9717950672",img:Sharat,linkln:"https://linkedin.com/in/sharat-kurup-525aa3164"},
                {desig:"Event Manager",name:"Sreehari.A.C",descp:"",email:"sreehariac.mec@gmail.com",phno:"+91 8606224648",img:Sreehari,linkln:"https://linkedin.com/in/sreehari-ac-576681183"},
-               {desig:"Event Manager",name:"Sujith K",descp:"",email:"sujithk.mec@gmail.com",phno:"+91 No:8281515845",img:Sujith,linkln:"https://linkedin.com/in/sujith-k-8a4a3217b"},
+               {desig:"Event Manager",name:"Sujith K",descp:"",email:"sujithk.mec@gmail.com",phno:"+91 8281515845",img:Sujith,linkln:"https://linkedin.com/in/sujith-k-8a4a3217b"},
                {desig:"Marketing Manager ",name:"Anjali Sunil",descp:"",email:"anjalisunil.mec@gmail.com",phno:"+91 8547746060",img:Anjali,linkln:"https://linkedin.com/in/anjalisunil939423162"},
                {desig:"Marketing Manager(PC)",name:"Anand N Santhosh",descp:"",email:"anandsanthosh.mec@gmail.com",phno:"+91 9562355862",img:Anand,linkln:"https://linkedin.com/in/anand-santhosh-17a805163"},
                {desig:"Finance Manager",name:"Labeeb Ali Koleth",descp:"",email:"labeebalik.mec@gmail.com ",phno:"+91 8129924095",img:Labeeb,linkln:"https://linkedin.com/in/labeeb-ali-2040a7163"},
