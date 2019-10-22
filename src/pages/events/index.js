@@ -26,7 +26,6 @@ export default class Events extends React.Component {
     }
 
     async componentWillMount() {
-      console.log('working')
       let response = await axios.get('https://api.excelmec.org/api/events')
       this.setState({events: response.data.filter(a => a.type === "Event"), loading: false})
       

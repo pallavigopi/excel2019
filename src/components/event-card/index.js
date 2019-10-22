@@ -24,7 +24,7 @@ export default class EventCard extends React.Component {
     async componentWillMount() {
         var comp = this
         let response = await axios.get('https://api.excelmec.org/api/events')
-        console.log('RESPONSE',response.data)
+        // console.log('RESPONSE',response.data)
         response.data.forEach(async (val) => {
             if(val.codename === comp.props.match.params['event']) {
                 // let data = await axios.get(`http://34.93.246.77/api/competitions/${val.id}`);

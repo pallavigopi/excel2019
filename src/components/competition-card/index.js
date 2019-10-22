@@ -54,7 +54,7 @@ export default class CompetitionCard extends React.Component {
       async componentWillMount() {
         var comp = this
         let response = await axios.get('https://api.excelmec.org/api/competitions')
-        console.log('RESPONSE',response.data)
+        // console.log('RESPONSE',response.data)
         response.data.forEach(async (val) => {
             if(val.codename === comp.props.match.params['competition']) {
                 // let data = await axios.get(`http://34.93.246.77/api/competitions/${val.id}`);
@@ -132,7 +132,7 @@ export default class CompetitionCard extends React.Component {
             marginRight: '2rem',
             marginTop: '1.25rem'
         };
-        console.log(this.state);
+        // console.log(this.state);
         return(
         <SkyLight 
           hideOnOverlayClicked

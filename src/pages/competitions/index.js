@@ -51,7 +51,6 @@ export default class Competitions extends React.Component {
   }
 
   async componentWillMount() {
-    console.log('working')
       let response = await axios.get('https://api.excelmec.org/api/competitions', 
       {
         headers:{
