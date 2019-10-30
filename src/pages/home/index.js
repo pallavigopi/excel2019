@@ -50,7 +50,7 @@ export default class Home extends React.Component {
     <div id="g3" className="go_down">></div>
   </div>
 
-  <a href="https://www.townscript.com/e/excel-2019-002323"><div id="register">REGISTER</div></a>
+
 
     <div id="t1" className="caption">It is that time of the year</div>
     <div id="t2" className="caption">To stretch your imagination</div>
