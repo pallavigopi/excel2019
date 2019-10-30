@@ -50,6 +50,8 @@ export default class Home extends React.Component {
     <div id="g3" className="go_down">></div>
   </div>
 
+  <a href="https://www.townscript.com/e/excel-2019-002323"><div id="register">REGISTER</div></a>
+
     <div id="t1" className="caption">It is that time of the year</div>
     <div id="t2" className="caption">To stretch your imagination</div>
     <div id="t3" className="caption">Break yourself out of the box</div>
@@ -135,7 +137,7 @@ export default class Home extends React.Component {
   </a>
   <a href="https://www.townscript.com/" target="_blank"  className="sponsor-div">
       <img className="sponsor-img1" src={townScript} />
-      <div className="sponsor-title1">Ticketing Partner</div>
+      <div className="sponsor-title1">Online Promoter</div>
   </a>
   <a href="https://www.eventoz.co.in/" target="_blank"  className="sponsor-div">
       <img className="sponsor-img1" src={EventOz} />

@@ -70,9 +70,28 @@ font-family: 'Lemon Milk';
   0%{transform:translateY(-30px);opacity:0;}
   100%{transform:translateY(30px);opacity:1;}
 }
+
+#register{
+  margin:700px 1250px;
+  width:500px;
+  height:100px;
+  border:white 10px solid;
+  text-align:center;
+  padding-top:50px;
+  border-radius:30px;
+  font-size:40px;
+  font-family: 'Lemon Milk';
+  color:white;
+}
+
+#register:hover {
+background-color:white;
+color:grey;
+}
+
 #go_down{
   transform:rotateZ(90deg);
-  margin:700px 1600px;
+  margin:900px 1600px;
 }
 .go_down{
   position:absolute;
@@ -350,8 +369,11 @@ z-index: 3;
   margin:-250px 0px;
   }
 #go_down{
-  margin:1200px 600px;
+  margin:1400px 600px;
 }
+#register{
+  margin:1170px 250px;
+  }
 
 }
 
@@ -378,11 +400,12 @@ z-index: 3;
     font-size:65px; 
     font-weight:900;
   }
-
   #go_down {
-    margin-top: 1250px;
+  margin-top:1550px;
   }
-
+  #register{
+  margin:1300px 250px;
+  }
   #all {  
   margin-top:50px;
   transform: translate(-50%, -50%) scale(0.3);
@@ -390,8 +413,6 @@ z-index: 3;
   #heading{
   margin:-250px 0px;
   }
-
-
   .logo{
   transform:scale(0.4);
   }
@@ -538,4 +559,3 @@ z-index: 3;
     font-weight: 500; 
   }
 }
-
