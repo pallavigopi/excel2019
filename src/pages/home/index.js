@@ -117,6 +117,8 @@ export default class Home extends React.Component {
 {/*<div id="h3" className="title">Excel Play <br />
 </div>*/}
 
+<div id="h3" className="title">Book your tickets here! <br />
+</div>
 <div className="register-grid">
   <a href="https://www.townscript.com/e/excel-2019-002323" target="_blank"  className="register-div">
     {/* <img className="play-img" src={Play} /> */}
@@ -149,7 +151,7 @@ export default class Home extends React.Component {
   </a>
   <a href="https://www.eventoz.co.in/" target="_blank"  className="sponsor-div">
       <img className="sponsor-img1" src={EventOz} />
-      <div className="sponsor-title1">Media Partner</div>
+      <div className="sponsor-title1">Online Promoter</div>
   </a>
 </div>
 
