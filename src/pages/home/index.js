@@ -117,6 +117,14 @@ export default class Home extends React.Component {
 {/*<div id="h3" className="title">Excel Play <br />
 </div>*/}
 
+<div className="register-grid">
+  <a href="https://www.townscript.com/e/excel-2019-002323" target="_blank"  className="register-div">
+    {/* <img className="play-img" src={Play} /> */}
+    REGISTER
+    {/*<div className="sponsor-title">Excel Play</div>*/}
+  </a>
+</div>
+
 
 <div className="play-grid">
   <a href="http://play.excelmec.org" target="_blank"  className="play-div">
