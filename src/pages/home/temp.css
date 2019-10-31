@@ -442,8 +442,8 @@ z-index: 3;
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  margin-top: -1vh;
-  margin-bottom: 2vh;
+  margin-top: -3vh;
+  margin-bottom: 7vh;
   padding-bottom:5vh;
 }
 .register-div {
@@ -452,7 +452,8 @@ z-index: 3;
   z-index:3;
   color:white;
   border: 2px solid white;
-  padding: 25px;
+  padding: 25px 45px;
+  font-size: 20px;
 }
 
 .play-grid{
@@ -568,7 +569,7 @@ z-index: 3;
     margin-bottom:5vh;
   }
   .register-grid{
-    margin-top: 2vh;
+    margin-top: 3vh;
     margin-bottom:5vh;
   }
   .sponsor-div{

@@ -126,12 +126,12 @@ export default class Home extends React.Component {
 </div>
 
 
-<div className="play-grid">
+{/* <div className="play-grid">
   <a href="http://play.excelmec.org" target="_blank"  className="play-div">
-    <img className="play-img" src={Play} />
+    <img className="play-img" src={Play} /> */}
     {/*<div className="sponsor-title">Excel Play</div>*/}
-  </a>
-</div>
+  {/* </a>
+</div> */}
 
 <div id="h3" className="title">Our Sponsors <br />
 {/*<span style={{color:"grey",fontSize:"3vh"}}>MEC Excel 2019 Sponsors</span>*/}
