@@ -61,20 +61,20 @@ class Schedule extends React.Component {
         this.state = {
             events: [],
             filter: {
-                types: [ "all", "computer-science", "gen-tech", "non-tech","events", "robotics","workshops", "talks"],
-                time: ["morning", "afternoon", "evening"],
+                types: [ "All", "Computer-Science", "Gen-Tech", "Non-Tech","Event", "Robotics","Workshops", "Talks"],
+                time: ["Morning", "Afternoon", "Evening"],
                 default : {
-                    type: "all",
-                    time: ["morning", "afternoon", "evening"]
+                    type: "All",
+                    time: ["Morning", "Afternoon", "Evening"]
                 }
             },
             showFilterPopup: false,
             days: [1,2,3],
             currentDay: 1,
-            currentCategory: 'all',
-            currentTime: ["morning", "afternoon", "evening"],
-            nextCategory: 'all',
-            nextTime: ["morning", "afternoon", "evening"],
+            currentCategory: 'All',
+            currentTime: ["Morning", "Afternoon", "Evening"],
+            nextCategory: 'All',
+            nextTime: ["Morning", "Afternoon", "Evening"],
             loading: true,
 
         }   
@@ -191,7 +191,7 @@ class Schedule extends React.Component {
                     { this.totalEvents.length ? (
                         this.state.events.length ? (
                             this.state.events.map((data, idx) => {
-                                if(this.state.currentCategory === "all") 
+                                if(this.state.currentCategory === "All") 
                                     return <ScheduleEventCard data={data} id={idx} />   
 
                                 if(data.category === this.state.currentCategory && this.state.currentTime.includes(data.daytime)) 
