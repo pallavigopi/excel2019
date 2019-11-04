@@ -61,7 +61,7 @@ class Schedule extends React.Component {
         this.state = {
             events: [],
             filter: {
-                types: [ "All", "Computer-Science", "Gen-Tech", "Non-Tech","Event", "Robotics","Workshops", "Talks"],
+                types: [ "All", "Computer Science", "Gen-Tech", "Non-Tech","Event", "Robotics","Workshops", "Talks"],
                 time: ["Morning", "Afternoon", "Evening"],
                 default : {
                     type: "All",
@@ -158,6 +158,17 @@ class Schedule extends React.Component {
     render() {
 
         let noEventFlag = 0
+        let Events = []
+        this.state.events.forEach((data, idx) => {
+            if(this.state.currentCategory === "All" && this.state.currentTime.includes(data.daytime)) 
+                Events.push(<ScheduleEventCard data={data} id={idx} /> )  
+
+            if(data.category === this.state.currentCategory && this.state.currentTime.includes(data.daytime)) 
+                Events.push(<ScheduleEventCard data={data} id={idx} />  )
+        })
+
+        if( Events.length == 0) 
+            Events.push(<div className={styles["schedule-noevent--container"]}>No Events To Display</div>)
 
         return(
             <div className={styles["schedule"]}>
@@ -174,7 +185,7 @@ class Schedule extends React.Component {
                             {
                                 this.state.days.map((val) => {
                                     return (
-                                        <Tab style={{fontSize: 16, fontWeight: 600, zIndex:3}} value={val} label={`Day ${val}`} {...{id:`simple-tab-${val}`, 'aria-controls': `simple-tabpanel-${val}`}} />
+                                        <Tab style={{fontSize: 16, fontW0eight: 600, zIndex:3}} value={val} label={`Day ${val}`} {...{id:`simple-tab-${val}`, 'aria-controls': `simple-tabpanel-${val}`}} />
                                     )
                                 })
                             }
@@ -188,37 +199,7 @@ class Schedule extends React.Component {
                 }
                 { !this.state.loading &&
                 <div className="schedule-content--container">
-                    { this.totalEvents.length ? (
-                        this.state.events.length ? (
-                            this.state.events.map((data, idx) => {
-                                if(this.state.currentCategory === "All") 
-                                    return <ScheduleEventCard data={data} id={idx} />   
-
-                                if(data.category === this.state.currentCategory && this.state.currentTime.includes(data.daytime)) 
-                                    return <ScheduleEventCard data={data} id={idx} />  
-
-                                noEventFlag++
-                                if(noEventFlag === 1)
-                                    return (
-                                        <div className={styles["schedule-noevent--container"]}>
-                                            {/* IF THERE ARE NO EVENTS TO DISPLAY */}
-                                            No Events To Display
-                                        </div>
-                                    )
-                            })
-                        ) : (
-                            <div className={styles["schedule-noevent--container"]}>
-                                {/* IF THERE ARE NO EVENTS TO DISPLAY */}
-                                No Events To Display
-                            </div>
-                        )
-                    ) : (
-                        <div className={styles["schedule-noevent--container"]}>
-                                {/* IF THERE ARE NO EVENTS TO DISPLAY */}
-                                Coming soon
-                            </div>
-                    )
-                    }
+                    {Events}
                 </div>
                 }
                 
