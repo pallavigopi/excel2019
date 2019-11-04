@@ -193,7 +193,7 @@ export default class Home extends React.Component {
           <a href="http://excelmec.org/excel2015" target="_blank" style={{ zIndex: 3 }}><img className="legacy-icon" src={excel2015} /></a>
           <a href="http://excelmec.org/excel2016" target="_blank" style={{ zIndex: 3 }}><img className="legacy-icon" src={excel2016} /></a>
           <a href="http://excelmec.org/excel2017" target="_blank" style={{ zIndex: 3 }}><img className="legacy-icon" src={excel2017} /></a>
-          <a href="http://excelmec.org/excel2018" target="_blank" style={{ zIndex: 3 }}><img className="legacy-icon-quick-fix" src={excel2018} /></a>
+          <a href="http://excelmec.org/excel2018" target="_blank" style={{ zIndex: 3 }}><img className="legacy-icon" src={excel2018} /></a>
         </div>
 
       </div >
