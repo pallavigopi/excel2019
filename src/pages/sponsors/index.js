@@ -88,7 +88,7 @@ export default class Sponsors extends Component {
                         <img className={styles["sponsor-img"]} src={ThinkPalm} />
                         <div className={styles["sponsor-title"]}>Think Palm</div>
                     </a>
-                    
+
                     <a href="http://www.nest.com/" target="_blank" className="sponsor-div">
                         <img className={styles["sponsor-img"]} src={Decalogo} />
                         <div className={styles["sponsor-title"]}>DECATHLON</div>
