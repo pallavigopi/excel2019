@@ -54,13 +54,17 @@ html, body {
 .sponsor-img {
     margin: 0rem auto;
     display: block;
+    max-height: 15rem;
     max-width: 15rem;
+    
 }
 
 .sponsor-img-alt {
     margin: 4rem auto 5.5rem auto;
     display: block;
+    max-height: 15rem;
     max-width: 15rem;
+    background-color: white;
 }
 
 .sponsor-title {
