@@ -1,89 +1,88 @@
 .nav-cross {
-    margin:0;
-    top:0;
+    margin: 0;
+    top: 0;
     position: fixed;
     padding: 15px 30px;
-    width:70px;
-    height:70px;
-    z-index:10006;
+    width: 70px;
+    height: 70px;
+    z-index: 10006;
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
 }
 
 .navLine1 {
-    margin:35px 0px;
-    position:fixed;
-    width:34px;
-    height:3px;
-    background-color:white;
-    transition:0.2s;
-    transform:translateY(-10px);
-    border-radius:100px;
+    margin: 35px 0px;
+    position: fixed;
+    width: 34px;
+    height: 3px;
+    background-color: white;
+    transition: 0.2s;
+    transform: translateY(-10px);
+    border-radius: 100px;
 }
 
 .navLine2 {
-    margin:40px 0px;
-    position:fixed;
-    width:34px;
-    height:3px;
-    background-color:white;
-    transition:0.2s;
-    border-radius:100px;
+    margin: 40px 0px;
+    position: fixed;
+    width: 34px;
+    height: 3px;
+    background-color: white;
+    transition: 0.2s;
+    border-radius: 100px;
 }
 
 .nav-content--container {
     position: fixed;
-    width:100%;
-    height:110%;
-    background-color:rgba(30,30,30,0.95);
-    transition:0.5s;
+    width: 100%;
+    height: 110%;
+    background-color: rgba(30, 30, 30, 0.95);
+    transition: 0.5s;
     transition-timing-function: ease;
-    margin-left:-100%;
-    margin-top:-1vh;
+    margin-left: -100%;
+    margin-top: -1vh;
     z-index: 105;
 }
 
 .nav-link {
-    list-style-type:none;
+    list-style-type: none;
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
-    font-size:30px;
-    color:white;
-    padding:20px;
-    padding-left:100px;
+    font-size: 30px;
+    color: white;
+    padding: 16px;
+    padding-left: 100px;
 }
 
-.nav-link:hover{    
-    color:black;
+.nav-link:hover {
+    color: black;
 }
 
 .nav-link--text {
     color: white;
 }
-.nav-link--text:hover {    
-    color: #fda642;
 
+.nav-link--text:hover {
+    color: #fda642;
 }
 
 .nav-link--gap {
-    margin-top:10vh;
+    margin-top: 10vh;
 }
 
 .nav-icons--container {
     position: absolute;
-    top:30vh;
+    top: 30vh;
     bottom: 70vh;
-    left:90vw;
+    left: 90vw;
     display: flex;
     flex-flow: column;
     justify-content: flex-start;
     width: auto;
-    
 }
 
 .nav-icon {
     margin: 0 20px;
-    padding-bottom:30px;
+    padding-bottom: 30px;
     cursor: pointer;
 }
 
@@ -112,54 +111,52 @@
 }
  */
 
- @media (max-width: 900px){
+@media (max-width: 900px) {
     .nav-link {
-        font-size:27px;
-        padding:20px;
-        padding-left:50px;
+        font-size: 27px;
+        padding: 20px;
+        padding-left: 50px;
     }
     .nav-icons--container {
-      
-        left:85vw;
+        left: 85vw;
     }
 }
-@media (max-width: 600px){
+
+@media (max-width: 600px) {
     .nav-cross {
-        margin:0px;
-        padding:20px 20px;
+        margin: 0px;
+        padding: 20px 20px;
     }
     .navLine1 {
-        margin:15px 0px;
-        position:fixed;
-        width:30px;
-        height:3px;
+        margin: 15px 0px;
+        position: fixed;
+        width: 30px;
+        height: 3px;
     }
-    
     .navLine2 {
-        margin:20px 0px;
-        position:fixed;
-        width:30px;
-        height:3px;
+        margin: 20px 0px;
+        position: fixed;
+        width: 30px;
+        height: 3px;
     }
     .nav-link {
-        font-size:20px;
+        font-size: 20px;
     }
     .nav-content--container {
-        margin-top:-1vh;
+        margin-top: -1vh;
     }
     .nav-icons--container {
         position: absolute;
-        top:87vh;
-        bottom:20px;
-        left:65px;
+        top: 87vh;
+        bottom: 20px;
+        left: 65px;
         display: flex;
         flex-flow: row;
         justify-content: flex-start;
         width: 100%;
-        
     }
     .nav-link--gap {
-        margin-top:5vh;
+        margin-top: 5vh;
     }
     .nav-icon-img {
         width: 25px;
@@ -167,12 +164,12 @@
     }
     .nav-icon {
         margin: 0 15px;
-        padding-bottom:30px;
+        padding-bottom: 30px;
     }
 }
 
-@media (max-width: 380px){
+@media (max-width: 380px) {
     .nav-icons--container {
-        top:93vh;
+        top: 93vh;
     }
 }

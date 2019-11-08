@@ -41,8 +41,8 @@ export default class Competitions extends React.Component {
     super(props);
     this.state = {
       events: [],
-      filterDepts : ['All Departments', 'Computer Science', 'Robotics', 'Gen-Tech', 'Non-Tech'],
-      filterTypes : ['Online/Offline', 'Online', 'Offline'],
+      filterDepts: ['All Departments', 'Computer Science', 'Robotics', 'Gen-Tech', 'Non-Tech'],
+      filterTypes: ['Online/Offline', 'Online', 'Offline'],
       currentDept: 'All Departments',
       currentType: 'Online/Offline',
       scrollPos: window.scrollY,
@@ -51,14 +51,14 @@ export default class Competitions extends React.Component {
   }
 
   async componentWillMount() {
-      let response = await axios.get('https://api.excelmec.org/api/competitions', 
+    let response = await axios.get('https://api.excelmec.org/api/competitions',
       {
-        headers:{
-          "Origin" : "https://api.excelmec.org/"
+        headers: {
+          "Origin": "https://api.excelmec.org/"
         }
       }
-      )
-      this.setState({events: response.data, loading: false})
+    )
+    this.setState({ events: response.data, loading: false })
   }
 
   // componentWillUnmount() {
@@ -86,21 +86,21 @@ export default class Competitions extends React.Component {
   //     document.body.style.backgroundColor = colors[6];
   //   }
   // };
-  componentDidMount(){
+  componentDidMount() {
     window.scrollTo(0, 0)
-}
+  }
 
   formatWord = (input) => {
     let words = input.split('-')
 
     words.forEach((val, i) => {
-        words[i] = val.charAt(0).toUpperCase() + val.slice(1).toLowerCase()
+      words[i] = val.charAt(0).toUpperCase() + val.slice(1).toLowerCase()
     })
     return words.join(' ')
   }
 
   handleChange = (e, filterType) => {
-    if(filterType === "department") {
+    if (filterType === "department") {
       this.setState({
         currentDept: e.target.value
       })
@@ -109,67 +109,67 @@ export default class Competitions extends React.Component {
       this.setState({
         currentType: e.target.value
       })
-    } 
+    }
   }
 
   render() {
     var grid = [];
     var events = this.state.events;
     for (var i in events) {
-      if(this.state.currentDept === "All Departments" && this.state.currentType === "Online/Offline") {
+      if (this.state.currentDept === "All Departments" && this.state.currentType === "Online/Offline") {
         var gridItem = (
-          <a 
+          <a
             target="_blank"
             key={i}
             className={styles["events"]}
-            // href={events[i].link}
+          // href={events[i].link}
           >
-            <Link to={`/competitions/${events[i].codename}`} style={{textDecoration:'none'}} ><CompetitionEntry details={events[i]} /></Link>
+            <Link to={`/competitions/${events[i].codename}`} style={{ textDecoration: 'none' }} ><CompetitionEntry details={events[i]} /></Link>
           </a>
         );
         grid.push(gridItem);
       }
-      else if(this.state.currentDept === "All Departments" && this.state.currentType !== "Online/Offline") {
-        if(events[i].type === this.state.currentType) {
+      else if (this.state.currentDept === "All Departments" && this.state.currentType !== "Online/Offline") {
+        if (events[i].type === this.state.currentType) {
           var gridItem = (
-          <a 
-            target="_blank"
-            key={i}
-            className={styles["events"]}
+            <a
+              target="_blank"
+              key={i}
+              className={styles["events"]}
             // href={events[i].link}
-          >
-            <Link to={`/competitions/${events[i].codename}`} style={{textDecoration:'none'}} ><CompetitionEntry details={events[i]} /></Link>
-          </a>
+            >
+              <Link to={`/competitions/${events[i].codename}`} style={{ textDecoration: 'none' }} ><CompetitionEntry details={events[i]} /></Link>
+            </a>
           );
           grid.push(gridItem);
         }
       }
-      else if(this.state.currentDept !== "All Departments" && this.state.currentType === "Online/Offline") {
-        if(events[i].category === this.state.currentDept) {
+      else if (this.state.currentDept !== "All Departments" && this.state.currentType === "Online/Offline") {
+        if (events[i].category === this.state.currentDept) {
           var gridItem = (
-            <a 
-            target="_blank"
-            key={i}
-            className={styles["events"]}
+            <a
+              target="_blank"
+              key={i}
+              className={styles["events"]}
             // href={events[i].link}
-          >
-            <Link to={`/competitions/${events[i].codename}`} style={{textDecoration:'none'}}><CompetitionEntry details={events[i]} /></Link>
-          </a>
+            >
+              <Link to={`/competitions/${events[i].codename}`} style={{ textDecoration: 'none' }}><CompetitionEntry details={events[i]} /></Link>
+            </a>
           );
           grid.push(gridItem);
         }
       }
       else {
-        if(events[i].category === this.state.currentDept && events[i].type === this.state.currentType) {
+        if (events[i].category === this.state.currentDept && events[i].type === this.state.currentType) {
           var gridItem = (
-            <a 
-            target="_blank"
-            key={i}
-            className={styles["events"]}
+            <a
+              target="_blank"
+              key={i}
+              className={styles["events"]}
             // href={events[i].link}
             >
-            <Link to={`/competitions/${events[i].codename}`} style={{textDecoration:'none'}}><CompetitionEntry details={events[i]} /></Link>
-          </a>
+              <Link to={`/competitions/${events[i].codename}`} style={{ textDecoration: 'none' }}><CompetitionEntry details={events[i]} /></Link>
+            </a>
           );
           grid.push(gridItem);
         }
@@ -178,10 +178,10 @@ export default class Competitions extends React.Component {
 
     return (
       <div>
-       <div className={styles["header"]}>
-                    <div className={styles["title"]}>Competitions</div><div className={styles["subtitle"]}>Excel 2019</div>
-                </div>
-                <div className={styles["underline"]}></div>
+        <div className={styles["header"]}>
+          <div className={styles["title"]}>Competitions</div><div className={styles["subtitle"]}>Excel 2019</div>
+        </div>
+        <div className={styles["underline"]}></div>
         <div className={styles["comp-filter-dept"]}>
           <FormControl>
             <StyledSelect
@@ -193,34 +193,34 @@ export default class Competitions extends React.Component {
                   return <MenuItem value={val}>{val}</MenuItem>
                 })
               }
-              </StyledSelect>
+            </StyledSelect>
           </FormControl>
         </div>
         <div className={styles["comp-filter-type"]}>
           <FormControl>
-              <StyledSelect
-                value={this.state.currentType}
-                onChange={e => this.handleChange(e, 'type')}
-              >
-                {
-                  this.state.filterTypes.map(val => {
-                    return <MenuItem value={val}>{val}</MenuItem>
-                  })
-                }
-                </StyledSelect>
-            </FormControl>
+            <StyledSelect
+              value={this.state.currentType}
+              onChange={e => this.handleChange(e, 'type')}
+            >
+              {
+                this.state.filterTypes.map(val => {
+                  return <MenuItem value={val}>{val}</MenuItem>
+                })
+              }
+            </StyledSelect>
+          </FormControl>
         </div>
-        {this.state.loading && 
+        {this.state.loading &&
           <div id={styles["comp-grid"]}>
-          <img className={styles["loader"]} src={require('../../img/loader.gif')} alt=""/>
+            <img className={styles["loader"]} src={require('../../img/loader.gif')} alt="" />
           </div>
         }
         {
           !this.state.loading &&
-        <div id={styles["comp-grid"]}>{grid}</div>}
+          <div id={styles["comp-grid"]}>{grid}</div>}
 
-        <Route path='/competitions/:competition' component={CompetitionCard}/>
-        </div>
+        <Route path='/competitions/:competition' component={CompetitionCard} />
+      </div>
     );
   }
 }

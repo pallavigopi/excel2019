@@ -1,6 +1,6 @@
 import React from 'react'
 import asyncComponent from './utils/asyncComponent'
-import {Switch, Route} from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
 import './App.css'
 
 
@@ -33,13 +33,17 @@ const Talks = asyncComponent(TalksImport)
 const BackgroundImport = () => import('components/background')
 const Background = asyncComponent(BackgroundImport)
 
+const SponsorsImport = () => import('pages/sponsors')
+const Sponsors = asyncComponent(SponsorsImport)
+
 export default class App extends React.Component {
     render() {
-        return(
+        return (
             <div className="pageContainer">
                 <Background />
                 <Nav />
                 <Switch>
+                    <Route path="/sponsors" component={Sponsors} />
                     <Route path="/contacts" component={ContactsPage} />
                     <Route path="/home" component={Home} />
                     <Route path="/test" component={TestPage} />
